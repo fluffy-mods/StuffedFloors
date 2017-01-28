@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Carpets</defName>
+        <label>carpets</label>
+        <description>Carpets</description>
+        <defNames>
+            <!-- Minerals & Materials -->
+            <li>CarpetRed</li>
+            <li>CarpetYellow</li>
+            <li>CarpetGreen</li>
+            <li>CarpetBlue</li>
+            <li>CarpetPurple</li>
+            <li>CarpetCream</li>
+            <li>CarpetDark</li>
+
+            <!-- [T] More Floors -->
+            <!-- <li>CarpetYellow</li> -->
+            <li>CarpetTurquoise</li>
+            <!-- <li>CarpetPurple</li> -->
+            <li>CarpetWhite</li>
+            <li>CarpetBlack</li>
+        </defNames>
+        <designationCategory>Floors</designationCategory>
+        <debug>true</debug>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <!-- [T] More Floors -->
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_CheckCarpets</defName>
+        <label>checkered carpets</label>
+        <description>checker pattern carpets</description>
+        <defNames>
+            <li>CheckCarpetRed</li>
+            <li>CheckCarpetOrange</li>
+            <li>CheckCarpetYellow</li>
+            <li>CheckCarpetCream</li>
+            <li>CheckCarpetGreen</li>
+            <li>CheckCarpetTurquoise</li>
+            <li>CheckCarpetBlue</li>
+            <li>CheckCarpetPurple</li>
+            <li>CheckCarpetWhite</li>
+            <li>CheckCarpetDark</li>
+            <li>CheckCarpetBlack</li>
+        </defNames>
+        <designationCategory>Floors</designationCategory>
+        <debug>true</debug>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <!-- [T] More Floors -->
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_WoolCarpets</defName>
+        <label>woolen carpets</label>
+        <description>woolen carpets</description>
+        <defNames>
+            <li>WoolCarpetRed</li>
+            <li>WoolCarpetOrange</li>
+            <li>WoolCarpetYellow</li>
+            <li>WoolCarpetCream</li>
+            <li>WoolCarpetGreen</li>
+            <li>WoolCarpetTurquoise</li>
+            <li>WoolCarpetBlue</li>
+            <li>WoolCarpetPurple</li>
+            <li>WoolCarpetWhite</li>
+            <li>WoolCarpetDark</li>
+            <li>WoolCarpetBlack</li>
+        </defNames>
+        <designationCategory>Floors</designationCategory>
+        <debug>true</debug>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+</Defs>

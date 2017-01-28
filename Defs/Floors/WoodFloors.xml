@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <StuffedFloors.FloorTypeDef>
+    	<defName>StuffedWoodFloor1</defName>
+    	<label>plank floor</label>
+    	<description>An intricate interwoven design.</description>
+        <texturePath>Floors/WoodFloor1</texturePath>
+    	<stuffCategories>
+            <li>Woody</li>
+        </stuffCategories>
+        <layerable>true</layerable>
+        <affordances>
+            <li>Light</li>
+            <li>Heavy</li>
+            <li>SmoothHard</li>
+        </affordances>
+        <statBases>
+            <Beauty>3</Beauty>
+            <WorkToBuild>135</WorkToBuild>
+        </statBases>
+        <stuffCost>5</stuffCost>
+        <Fertility>0</Fertility>
+        <constructEffect>ConstructDirt</constructEffect>
+        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </StuffedFloors.FloorTypeDef>
+	
+    <StuffedFloors.FloorTypeDef>
+    	<defName>StuffedWoodFloor2</defName>
+    	<label>plank floor</label>
+    	<description>An intricate interwoven design.</description>
+        <texturePath>Floors/WoodFloor2</texturePath>
+    	<stuffCategories>
+            <li>Woody</li>
+        </stuffCategories>
+        <layerable>true</layerable>
+        <affordances>
+            <li>Light</li>
+            <li>Heavy</li>
+            <li>SmoothHard</li>
+        </affordances>
+        <statBases>
+            <Beauty>3</Beauty>
+            <WorkToBuild>135</WorkToBuild>
+        </statBases>
+        <stuffCost>5</stuffCost>
+        <Fertility>0</Fertility>
+        <constructEffect>ConstructDirt</constructEffect>
+        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </StuffedFloors.FloorTypeDef>
+    
+        <StuffedFloors.FloorTypeDef>
+    	<defName>StuffedWoodFloor3</defName>
+    	<label>plank floor</label>
+    	<description>An intricate interwoven design.</description>
+        <texturePath>Floors/WoodFloor3</texturePath>
+    	<stuffCategories>
+            <li>Woody</li>
+        </stuffCategories>
+        <layerable>true</layerable>
+        <affordances>
+            <li>Light</li>
+            <li>Heavy</li>
+            <li>SmoothHard</li>
+        </affordances>
+        <statBases>
+            <Beauty>3</Beauty>
+            <WorkToBuild>135</WorkToBuild>
+        </statBases>
+        <stuffCost>5</stuffCost>
+        <Fertility>0</Fertility>
+        <constructEffect>ConstructDirt</constructEffect>
+        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </StuffedFloors.FloorTypeDef>
+    
+        <StuffedFloors.FloorTypeDef>
+    	<defName>StuffedWoodFloor4</defName>
+    	<label>plank floor</label>
+    	<description>An intricate interwoven design.</description>
+        <texturePath>Floors/WoodFloor4</texturePath>
+    	<stuffCategories>
+            <li>Woody</li>
+        </stuffCategories>
+        <layerable>true</layerable>
+        <affordances>
+            <li>Light</li>
+            <li>Heavy</li>
+            <li>SmoothHard</li>
+        </affordances>
+        <statBases>
+            <Beauty>3</Beauty>
+            <WorkToBuild>135</WorkToBuild>
+        </statBases>
+        <stuffCost>5</stuffCost>
+        <Fertility>0</Fertility>
+        <constructEffect>ConstructDirt</constructEffect>
+        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </StuffedFloors.FloorTypeDef>
+    
+    <StuffedFloors.FloorTypeDef>
+    	<defName>StuffedWoodFloor5</defName>
+    	<label>plank floor</label>
+    	<description>An intricate interwoven design.</description>
+        <texturePath>Floors/WoodFloor5</texturePath>
+    	<stuffCategories>
+            <li>Woody</li>
+        </stuffCategories>
+        <layerable>true</layerable>
+        <affordances>
+            <li>Light</li>
+            <li>Heavy</li>
+            <li>SmoothHard</li>
+        </affordances>
+        <statBases>
+            <Beauty>3</Beauty>
+            <WorkToBuild>135</WorkToBuild>
+        </statBases>
+        <stuffCost>5</stuffCost>
+        <Fertility>0</Fertility>
+        <constructEffect>ConstructDirt</constructEffect>
+        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </StuffedFloors.FloorTypeDef>
+    
+    <StuffedFloors.FloorTypeDef>
+    	<defName>StuffedWoodFloor6</defName>
+    	<label>plank floor</label>
+    	<description>An intricate interwoven design.</description>
+        <texturePath>Floors/WoodFloor6</texturePath>
+    	<stuffCategories>
+            <li>Woody</li>
+        </stuffCategories>
+        <layerable>true</layerable>
+        <affordances>
+            <li>Light</li>
+            <li>Heavy</li>
+            <li>SmoothHard</li>
+        </affordances>
+        <statBases>
+            <Beauty>3</Beauty>
+            <WorkToBuild>135</WorkToBuild>
+        </statBases>
+        <stuffCost>5</stuffCost>
+        <Fertility>0</Fertility>
+        <constructEffect>ConstructDirt</constructEffect>
+        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </StuffedFloors.FloorTypeDef>    
+    
+    <StuffedFloors.FloorTypeDef>
+    	<defName>StuffedWoodFloor7</defName>
+    	<label>plank floor</label>
+    	<description>An intricate interwoven design.</description>
+        <texturePath>Floors/WoodFloor7</texturePath>
+    	<stuffCategories>
+            <li>Woody</li>
+        </stuffCategories>
+        <layerable>true</layerable>
+        <affordances>
+            <li>Light</li>
+            <li>Heavy</li>
+            <li>SmoothHard</li>
+        </affordances>
+        <statBases>
+            <Beauty>3</Beauty>
+            <WorkToBuild>135</WorkToBuild>
+        </statBases>
+        <stuffCost>5</stuffCost>
+        <Fertility>0</Fertility>
+        <constructEffect>ConstructDirt</constructEffect>
+        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </StuffedFloors.FloorTypeDef>
+</Defs>

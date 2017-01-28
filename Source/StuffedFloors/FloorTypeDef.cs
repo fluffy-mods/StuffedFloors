@@ -14,7 +14,7 @@ namespace StuffedFloors
         // can leave designationCategory on null for the floorType, and we don't have to deal
         // with the game adding the category placeholder itself as a buildable floor. This is 
         // not exactly a perfect solution, and should be refactored at some point in the (near)
-        // future.a
+        // future.
         public int stuffCost;
 
         public override IEnumerable<string> ConfigErrors()
@@ -83,6 +83,10 @@ namespace StuffedFloors
                     terrain.costList.Add( new ThingCountClass( cost.thingDef, cost.count ) );
             if (stuffCost > 0)
                 terrain.costList.Add( new ThingCountClass( stuffThingDef, (int)( stuffCost / stuffThingDef.VolumePerUnit ) ) );
+
+#if DEBUG_IMPLIED_DEFS
+            Log.Message($"Created {terrain.defName} from {stuffThingDef.defName}");
+#endif
 
             // TODO: Implement stuff stat offsets
 
