@@ -31,7 +31,7 @@
             <li>CarpetBlack</li>
         </defNames>
         <designationCategory>Floors</designationCategory>
-        <debug>true</debug>
+        <preview>false</preview>
     </ArchitectSense.DesignationSubCategoryDef>
 
     <!-- [T] More Floors -->
@@ -53,7 +53,7 @@
             <li>CheckCarpetBlack</li>
         </defNames>
         <designationCategory>Floors</designationCategory>
-        <debug>true</debug>
+        <preview>false</preview>
     </ArchitectSense.DesignationSubCategoryDef>
 
     <!-- [T] More Floors -->
@@ -75,7 +75,24 @@
             <li>WoolCarpetBlack</li>
         </defNames>
         <designationCategory>Floors</designationCategory>
-        <debug>true</debug>
+        <preview>false</preview>
     </ArchitectSense.DesignationSubCategoryDef>
 
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_StoneFloorChequered</defName>
+        <label>Chequered stone tiles</label>
+        <description>Beautiful floors created out of multiple types of stone in a chequered pattern.</description>
+        <defNames>
+            <li>FloorStoneChequerMarbleSlate</li>
+            <li>FloorStoneChequerMarbleSandstone</li>
+            <li>FloorStoneChequerMarbleGranite</li>
+            <li>FloorStoneChequerLimestoneSlate</li>
+            <li>FloorStoneChequerLimestoneSandstone</li>
+            <li>FloorStoneChequerLimestoneGranite</li>
+            <li>FloorStoneChequerSlateSandstone</li>
+            <li>FloorStoneChequerSlateGranite</li>
+        </defNames>
+        <designationCategory>Floors</designationCategory>
+        <preview>false</preview>
+    </ArchitectSense.DesignationSubCategoryDef>
 </Defs>
