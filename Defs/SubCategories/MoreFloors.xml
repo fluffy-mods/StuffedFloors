@@ -80,8 +80,8 @@
 
     <ArchitectSense.DesignationSubCategoryDef>
         <defName>SubCategory_StoneFloorChequered</defName>
-        <label>Chequered stone tiles</label>
-        <description>Beautiful floors created out of multiple types of stone in a chequered pattern.</description>
+        <label>Chequered slabs</label>
+        <description>Stone slab floors created out of multiple types of stone in a chequered pattern. Perfect for playing human chess!</description>
         <defNames>
             <li>FloorStoneChequerMarbleSlate</li>
             <li>FloorStoneChequerMarbleSandstone</li>
