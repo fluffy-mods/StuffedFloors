@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <StuffedFloors.FloorTypeDef Name="StuffedFloorsMetalBase" Abstract="True">
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <layerable>true</layerable>
+        <affordances>
+            <li>Light</li>
+            <li>Heavy</li>
+            <li>SmoothHard</li>
+        </affordances>
+        <Fertility>0</Fertility>
+        <constructEffect>ConstructMetal</constructEffect>
+        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>        
+    </StuffedFloors.FloorTypeDef>
+
+    <StuffedFloors.FloorTypeDef Name="StuffedFloorsMetalBasicBase" ParentName="StuffedFloorsMetalBase" Abstract="True">
+        <statBases>
+            <Beauty>1</Beauty>
+            <WorkToBuild>500</WorkToBuild>
+        </statBases>
+        <stuffCost>3</stuffCost>
+    </StuffedFloors.FloorTypeDef>
+
+    <StuffedFloors.FloorTypeDef Name="StuffedFloorsMetalPrettyBase" ParentName="StuffedFloorsMetalBase" Abstract="True">
+        <statBases>
+            <Beauty>3</Beauty>
+            <WorkToBuild>2500</WorkToBuild>
+        </statBases>
+        <stuffCost>5</stuffCost>
+    </StuffedFloors.FloorTypeDef>
+
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsMetalBasicBase">
+      <defName>StuffedFloorsMetalTile</defName>
+      <label>metal tile</label>
+      <description>A generic metal flooring.</description>
+        <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+        <!-- this is the vanilla tile texture, quie a few obsoletions -->
+        <obsoletes>
+            <!-- vanilla -->
+            <li>MetalTile</li>
+            <li>SilverTile</li>
+            <li>GoldTile</li>
+            <!-- <li>SterileTile</li> -->
+
+            <!-- Glitter Tech -->
+            <li>TitatiumTile</li>
+            <li>AlphaTile</li>
+            <li>BetaTile</li>
+
+            <!-- oddly, Minerals & Materials doesn't define terrains for the metals it adds. -->
+        </obsoletes>
+    </StuffedFloors.FloorTypeDef>
+</Defs>

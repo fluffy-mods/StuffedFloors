@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <!-- Since I don't want to actually add stuffs for cloth, let's use Architect Sense subcategories to clean up these floors -->
     <ArchitectSense.DesignationSubCategoryDef>
         <defName>SubCategory_Carpets</defName>
         <label>carpets</label>
         <description>Carpets</description>
         <defNames>
-            <!-- Minerals & Materials -->
+            <!-- Core -->
             <li>CarpetRed</li>
-            <li>CarpetYellow</li>
             <li>CarpetGreen</li>
             <li>CarpetBlue</li>
-            <li>CarpetPurple</li>
             <li>CarpetCream</li>
             <li>CarpetDark</li>
 
+            <!-- Minerals & Materials -->
+            <!-- <li>CarpetRed</li> -->
+            <li>CarpetYellow</li>
+            <!-- <li>CarpetGreen</li> -->
+            <!-- <li>CarpetBlue</li> -->
+            <li>CarpetPurple</li>
+            <!-- <li>CarpetCream</li> -->
+            <!-- <li>CarpetDark</li> -->
+
             <!-- [T] More Floors -->
+            <li>CarpetOrange</li>
             <!-- <li>CarpetYellow</li> -->
             <li>CarpetTurquoise</li>
             <!-- <li>CarpetPurple</li> -->

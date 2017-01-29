@@ -1,177 +1,138 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <StuffedFloors.FloorTypeDef>
-    	<defName>StuffedStoneFloor1</defName>
-    	<label>checkered stone</label>
-    	<description>An intricate interwoven design.</description>
-        <texturePath>Floors/CheckeredStone</texturePath>
-    	<stuffCategories>
-            <li>Stony</li>
-        </stuffCategories>
+    <StuffedFloors.FloorTypeDef Name="StuffedFloorsStoneBase" Abstract="True">
         <layerable>true</layerable>
         <affordances>
             <li>Light</li>
             <li>Heavy</li>
             <li>SmoothHard</li>
         </affordances>
-        <statBases>
-            <Beauty>3</Beauty>
-            <WorkToBuild>135</WorkToBuild>
-        </statBases>
-        <stuffCost>5</stuffCost>
         <Fertility>0</Fertility>
         <constructEffect>ConstructDirt</constructEffect>
         <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <stuffCategories>
+            <li>Stony</li>
+        </stuffCategories>
     </StuffedFloors.FloorTypeDef>
+
+    <StuffedFloors.FloorTypeDef Name="StuffedFloorsStoneBasicBase" ParentName="StuffedFloorsStoneBase" Abstract="True">
+        <statBases>
+            <WorkToBuild>350</WorkToBuild>
+            <Beauty>1</Beauty>
+        </statBases>
+        <stuffCost>3</stuffCost>
+    </StuffedFloors.FloorTypeDef>
+
+    <StuffedFloors.FloorTypeDef Name="StuffedFloorsStonePrettyBase" ParentName="StuffedFloorsStoneBase" Abstract="True">
+        <statBases>
+            <WorkToBuild>2000</WorkToBuild>
+            <Beauty>3</Beauty>
+        </statBases>
+        <stuffCost>5</stuffCost>
+    </StuffedFloors.FloorTypeDef>
+
+<!-- This one really requires two stuffs to make sense, let's leave it to MoreFloors and just move it over.
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
+    	<defName>StuffedStoneCheckered</defName>
+    	<label>checkered stone</label>
+    	<description>An intricate checkered design.</description>
+        <texturePath>Floors/CheckeredStone</texturePath>
+    </StuffedFloors.FloorTypeDef> 
+-->
 	
-    <StuffedFloors.FloorTypeDef>
-    	<defName>StuffedStoneFloor2</defName>
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
+    	<defName>StuffedStoneBlocks</defName>
     	<label>stone block</label>
     	<description>An intricate interwoven design.</description>
         <texturePath>Floors/StoneBlocky</texturePath>
-    	<stuffCategories>
-            <li>Stony</li>
-        </stuffCategories>
-        <layerable>true</layerable>
-        <affordances>
-            <li>Light</li>
-            <li>Heavy</li>
-            <li>SmoothHard</li>
-        </affordances>
-        <statBases>
-            <Beauty>3</Beauty>
-            <WorkToBuild>135</WorkToBuild>
-        </statBases>
-        <stuffCost>5</stuffCost>
-        <Fertility>0</Fertility>
-        <constructEffect>ConstructDirt</constructEffect>
-        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <obsoletes>
+            <!-- [T] More Floors -->
+            <li>FloorStoneRandomSandstone</li>
+            <li>FloorStoneRandomGranite</li>
+            <li>FloorStoneRandomLimestone</li>
+            <li>FloorStoneRandomSlate</li>
+            <li>FloorStoneRandomMarble</li>
+        </obsoletes>
     </StuffedFloors.FloorTypeDef>
     
-        <StuffedFloors.FloorTypeDef>
-    	<defName>StuffedStoneFloor3</defName>
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
+    	<defName>StuffedStoneHex</defName>
     	<label>stone hex</label>
-    	<description>An intricate interwoven design.</description>
+    	<description>An intricate hexagonical design.</description>
         <texturePath>Floors/StoneHex</texturePath>
-    	<stuffCategories>
-            <li>Stony</li>
-        </stuffCategories>
-        <layerable>true</layerable>
-        <affordances>
-            <li>Light</li>
-            <li>Heavy</li>
-            <li>SmoothHard</li>
-        </affordances>
-        <statBases>
-            <Beauty>3</Beauty>
-            <WorkToBuild>135</WorkToBuild>
-        </statBases>
-        <stuffCost>5</stuffCost>
-        <Fertility>0</Fertility>
-        <constructEffect>ConstructDirt</constructEffect>
-        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <obsoletes>
+            <!-- [T] More Floors -->
+            <li>FloorStoneHexSandstone</li>
+            <li>FloorStoneHexGranite</li>
+            <li>FloorStoneHexLimestone</li>
+            <li>FloorStoneHexSlate</li>
+            <li>FloorStoneHexMarble</li>
+        </obsoletes>
     </StuffedFloors.FloorTypeDef>
     
-        <StuffedFloors.FloorTypeDef>
-    	<defName>StuffedStoneFloor4</defName>
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
+    	<defName>StuffedStoneMosaic</defName>
     	<label>stone mosaic</label>
     	<description>An intricate interwoven design.</description>
         <texturePath>Floors/StoneMosaic</texturePath>
-    	<stuffCategories>
-            <li>Stony</li>
-        </stuffCategories>
-        <layerable>true</layerable>
-        <affordances>
-            <li>Light</li>
-            <li>Heavy</li>
-            <li>SmoothHard</li>
-        </affordances>
-        <statBases>
-            <Beauty>3</Beauty>
-            <WorkToBuild>135</WorkToBuild>
-        </statBases>
-        <stuffCost>5</stuffCost>
-        <Fertility>0</Fertility>
-        <constructEffect>ConstructDirt</constructEffect>
-        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <obsoletes>
+            <!-- [T] More Floors -->
+            <li>FloorStoneMosaicSandstone</li>
+            <li>FloorStoneMosaicGranite</li>
+            <li>FloorStoneMosaicLimestone</li>
+            <li>FloorStoneMosaicSlate</li>
+            <li>FloorStoneMosaicMarble</li>
+        </obsoletes>
     </StuffedFloors.FloorTypeDef>
     
-    <StuffedFloors.FloorTypeDef>
-    	<defName>StuffedStoneFloor5</defName>
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
+    	<defName>StuffedStoneRoughTiles</defName>
     	<label>rough stone blocks</label>
-    	<description>An intricate interwoven design.</description>
+    	<description>rough stone tiles.</description>
         <texturePath>Floors/StoneRough</texturePath>
-    	<stuffCategories>
-            <li>Stony</li>
-        </stuffCategories>
-        <layerable>true</layerable>
-        <affordances>
-            <li>Light</li>
-            <li>Heavy</li>
-            <li>SmoothHard</li>
-        </affordances>
-        <statBases>
-            <Beauty>3</Beauty>
-            <WorkToBuild>135</WorkToBuild>
-        </statBases>
-        <stuffCost>5</stuffCost>
-        <Fertility>0</Fertility>
-        <constructEffect>ConstructDirt</constructEffect>
-        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <obsoletes>
+            <!-- [T] More Floors -->
+            <li>FloorStoneRoughSandstone</li>
+            <li>FloorStoneRoughGranite</li>
+            <li>FloorStoneRoughLimestone</li>
+            <li>FloorStoneRoughSlate</li>
+            <li>FloorStoneRoughMarble</li>
+        </obsoletes>
     </StuffedFloors.FloorTypeDef>
     
-    <StuffedFloors.FloorTypeDef>
-    	<defName>StuffedStoneFloor6</defName>
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
+    	<defName>StuffedStoneSlabs</defName>
     	<label>stone slabs</label>
-    	<description>An intricate interwoven design.</description>
+    	<description>slabs, when looking for that neolithic vibe.</description>
         <texturePath>Floors/StoneSlabs</texturePath>
-    	<stuffCategories>
-            <li>Stony</li>
-        </stuffCategories>
-        <layerable>true</layerable>
-        <affordances>
-            <li>Light</li>
-            <li>Heavy</li>
-            <li>SmoothHard</li>
-        </affordances>
-        <statBases>
-            <Beauty>3</Beauty>
-            <WorkToBuild>135</WorkToBuild>
-        </statBases>
-        <stuffCost>5</stuffCost>
-        <Fertility>0</Fertility>
-        <constructEffect>ConstructDirt</constructEffect>
-        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <obsoletes>
+            <!-- [T] More Floors -->
+            <li>FloorStoneSlabsSandstone</li>
+            <li>FloorStoneSlabsGranite</li>
+            <li>FloorStoneSlabsLimestone</li>
+            <li>FloorStoneSlabsSlate</li>
+            <li>FloorStoneSlabsMarble</li>
+        </obsoletes>
     </StuffedFloors.FloorTypeDef>    
     
-    <StuffedFloors.FloorTypeDef>
-    	<defName>StuffedStoneFloor7</defName>
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
+    	<defName>StuffedStoneTiles</defName>
     	<label>stone tile</label>
-    	<description>An intricate interwoven design.</description>
+    	<description>simple stone tiles.</description>
         <texturePath>Floors/TileStone</texturePath>
-    	<stuffCategories>
-            <li>Stony</li>
-        </stuffCategories>
-        <layerable>true</layerable>
-        <affordances>
-            <li>Light</li>
-            <li>Heavy</li>
-            <li>SmoothHard</li>
-        </affordances>
-        <statBases>
-            <Beauty>3</Beauty>
-            <WorkToBuild>135</WorkToBuild>
-        </statBases>
-        <stuffCost>5</stuffCost>
-        <Fertility>0</Fertility>
-        <constructEffect>ConstructDirt</constructEffect>
-        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <obsoletes>
+            <!-- vanilla -->
+            <li>TileSandstone</li>
+            <li>TileGranite</li>
+            <li>TileLimestone</li>
+            <li>TileSlate</li>
+            <li>TileMarble</li>
+
+            <!-- Minerals & Materials -->
+            <li>TileYellow</li>
+            <li>TileGreen</li>
+            <li>TilePurple</li>
+        </obsoletes>
     </StuffedFloors.FloorTypeDef>
 </Defs>

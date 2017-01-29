@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <StuffedFloors.FloorTypeDef>
-    	<defName>StuffedWoodFloor1</defName>
-    	<label>plank floor</label>
-    	<description>An intricate interwoven design.</description>
-        <texturePath>Floors/WoodFloor1</texturePath>
-    	<stuffCategories>
+    <StuffedFloors.FloorTypeDef Name="StuffedFloorsWoodBase" Abstract="True">
+        <stuffCategories>
             <li>Woody</li>
         </stuffCategories>
         <layerable>true</layerable>
@@ -14,164 +10,123 @@
             <li>Heavy</li>
             <li>SmoothHard</li>
         </affordances>
-        <statBases>
-            <Beauty>3</Beauty>
-            <WorkToBuild>135</WorkToBuild>
-        </statBases>
-        <stuffCost>5</stuffCost>
         <Fertility>0</Fertility>
         <constructEffect>ConstructDirt</constructEffect>
         <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>        
+    </StuffedFloors.FloorTypeDef>
+
+    <StuffedFloors.FloorTypeDef Name="StuffedFloorsWoodBasicBase" ParentName="StuffedFloorsWoodBase" Abstract="True">
+        <statBases>
+            <Beauty>1</Beauty>
+            <WorkToBuild>250</WorkToBuild>
+        </statBases>
+        <stuffCost>3</stuffCost>
+    </StuffedFloors.FloorTypeDef>
+
+    <StuffedFloors.FloorTypeDef Name="StuffedFloorsWoodPrettyBase" ParentName="StuffedFloorsWoodBase" Abstract="True">
+        <statBases>
+            <Beauty>3</Beauty>
+            <WorkToBuild>1500</WorkToBuild>
+        </statBases>
+        <stuffCost>5</stuffCost>
+    </StuffedFloors.FloorTypeDef>
+
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodBasicBase">
+    	<defName>StuffedWoodFloor1</defName>
+    	<label>vertical planks</label>
+    	<description>A basic plank flooring.</description>
+        <texturePath>Floors/WoodFloor1</texturePath>
+        <!-- this is the vanilla floor texture, lots of obsoletions -->
+        <obsoletes>
+             <!-- vanilla wood plank -->
+            <li>WoodPlankFloor</li>
+    
+            <!-- extended woodworking -->
+            <li>WoodPlankFloor_Oak</li>
+            <li>WoodPlankFloor_Poplar</li>
+            <li>WoodPlankFloor_Pine</li>
+            <li>WoodPlankFloor_Birch</li>
+            <li>WoodPlankFloor_Cecropia</li>
+            <li>WoodPlankFloor_Teak</li>
+            <li>WoodPlankFloor_Red</li>
+            <li>WoodPlankFloor_Green</li>
+            <li>WoodPlankFloor_Blue</li>
+            <li>WoodPlankFloor_Yellow</li>
+            <li>WoodPlankFloor_White</li>
+            <li>WoodPlankFloor_Black</li>
+
+            <!-- Minerals and Materials -->
+            <li>WoodPlankDark</li>
+            <li>WoodPlankLight</li>
+            <li>WoodPlankRose</li>
+            <li>WoodPlankWalnut</li>
+        </obsoletes>
     </StuffedFloors.FloorTypeDef>
 	
-    <StuffedFloors.FloorTypeDef>
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodBasicBase">
     	<defName>StuffedWoodFloor2</defName>
-    	<label>plank floor</label>
-    	<description>An intricate interwoven design.</description>
+    	<label>rough horizontal planks</label>
+    	<description>A rough plank flooring.</description>
         <texturePath>Floors/WoodFloor2</texturePath>
-    	<stuffCategories>
-            <li>Woody</li>
-        </stuffCategories>
-        <layerable>true</layerable>
-        <affordances>
-            <li>Light</li>
-            <li>Heavy</li>
-            <li>SmoothHard</li>
-        </affordances>
-        <statBases>
-            <Beauty>3</Beauty>
-            <WorkToBuild>135</WorkToBuild>
-        </statBases>
-        <stuffCost>5</stuffCost>
-        <Fertility>0</Fertility>
-        <constructEffect>ConstructDirt</constructEffect>
-        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <obsoletes>
+            <!-- [T] More Floors -->
+            <li>FloorWood1</li>
+        </obsoletes>
     </StuffedFloors.FloorTypeDef>
     
-        <StuffedFloors.FloorTypeDef>
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodBasicBase">
     	<defName>StuffedWoodFloor3</defName>
-    	<label>plank floor</label>
-    	<description>An intricate interwoven design.</description>
+    	<label>horizontal planks</label>
+    	<description>A basic plank flooring.</description>
         <texturePath>Floors/WoodFloor3</texturePath>
-    	<stuffCategories>
-            <li>Woody</li>
-        </stuffCategories>
-        <layerable>true</layerable>
-        <affordances>
-            <li>Light</li>
-            <li>Heavy</li>
-            <li>SmoothHard</li>
-        </affordances>
-        <statBases>
-            <Beauty>3</Beauty>
-            <WorkToBuild>135</WorkToBuild>
-        </statBases>
-        <stuffCost>5</stuffCost>
-        <Fertility>0</Fertility>
-        <constructEffect>ConstructDirt</constructEffect>
-        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <obsoletes>
+            <!-- [T] More Floors -->
+            <li>FloorWood2</li>
+        </obsoletes>
     </StuffedFloors.FloorTypeDef>
     
-        <StuffedFloors.FloorTypeDef>
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodPrettyBase">
     	<defName>StuffedWoodFloor4</defName>
-    	<label>plank floor</label>
-    	<description>An intricate interwoven design.</description>
+    	<label>horizontal parquet</label>
+    	<description>A pretty interwoven parquet.</description>
         <texturePath>Floors/WoodFloor4</texturePath>
-    	<stuffCategories>
-            <li>Woody</li>
-        </stuffCategories>
-        <layerable>true</layerable>
-        <affordances>
-            <li>Light</li>
-            <li>Heavy</li>
-            <li>SmoothHard</li>
-        </affordances>
-        <statBases>
-            <Beauty>3</Beauty>
-            <WorkToBuild>135</WorkToBuild>
-        </statBases>
-        <stuffCost>5</stuffCost>
-        <Fertility>0</Fertility>
-        <constructEffect>ConstructDirt</constructEffect>
-        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <obsoletes>
+            <!-- [T] More Floors -->
+            <li>FloorWood3</li>
+        </obsoletes>
     </StuffedFloors.FloorTypeDef>
     
-    <StuffedFloors.FloorTypeDef>
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodPrettyBase">
     	<defName>StuffedWoodFloor5</defName>
-    	<label>plank floor</label>
-    	<description>An intricate interwoven design.</description>
+    	<label>mosaic parquet</label>
+    	<description>An intricate mosaic parquet.</description>
         <texturePath>Floors/WoodFloor5</texturePath>
-    	<stuffCategories>
-            <li>Woody</li>
-        </stuffCategories>
-        <layerable>true</layerable>
-        <affordances>
-            <li>Light</li>
-            <li>Heavy</li>
-            <li>SmoothHard</li>
-        </affordances>
-        <statBases>
-            <Beauty>3</Beauty>
-            <WorkToBuild>135</WorkToBuild>
-        </statBases>
-        <stuffCost>5</stuffCost>
-        <Fertility>0</Fertility>
-        <constructEffect>ConstructDirt</constructEffect>
-        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <obsoletes>
+            <!-- [T] More Floors -->
+            <li>FloorWood4</li>
+        </obsoletes>
     </StuffedFloors.FloorTypeDef>
     
-    <StuffedFloors.FloorTypeDef>
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodBasicBase">
     	<defName>StuffedWoodFloor6</defName>
-    	<label>plank floor</label>
-    	<description>An intricate interwoven design.</description>
+    	<label>rough vertical planks</label>
+    	<description>A rough plank flooring.</description>
         <texturePath>Floors/WoodFloor6</texturePath>
-    	<stuffCategories>
-            <li>Woody</li>
-        </stuffCategories>
-        <layerable>true</layerable>
-        <affordances>
-            <li>Light</li>
-            <li>Heavy</li>
-            <li>SmoothHard</li>
-        </affordances>
-        <statBases>
-            <Beauty>3</Beauty>
-            <WorkToBuild>135</WorkToBuild>
-        </statBases>
-        <stuffCost>5</stuffCost>
-        <Fertility>0</Fertility>
-        <constructEffect>ConstructDirt</constructEffect>
-        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <obsoletes>
+            <!-- [T] More Floors -->
+            <li>FloorWood5</li>
+        </obsoletes>
     </StuffedFloors.FloorTypeDef>    
     
-    <StuffedFloors.FloorTypeDef>
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodPrettyBase">
     	<defName>StuffedWoodFloor7</defName>
-    	<label>plank floor</label>
-    	<description>An intricate interwoven design.</description>
+    	<label>rustic planks</label>
+    	<description>A rustic but beautiful plank flooring.</description>
         <texturePath>Floors/WoodFloor7</texturePath>
-    	<stuffCategories>
-            <li>Woody</li>
-        </stuffCategories>
-        <layerable>true</layerable>
-        <affordances>
-            <li>Light</li>
-            <li>Heavy</li>
-            <li>SmoothHard</li>
-        </affordances>
-        <statBases>
-            <Beauty>3</Beauty>
-            <WorkToBuild>135</WorkToBuild>
-        </statBases>
-        <stuffCost>5</stuffCost>
-        <Fertility>0</Fertility>
-        <constructEffect>ConstructDirt</constructEffect>
-        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <obsoletes>
+            <!-- [T] More Floors -->
+            <li>FloorWood6</li>
+        </obsoletes>
     </StuffedFloors.FloorTypeDef>
 </Defs>
