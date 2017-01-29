@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <StuffedFloors.FloorTypeDef Name="StuffedFloorsMetalBase" Abstract="True">
+    <StuffedFloors.FloorTypeDef Name="StuffedFloorsMetalBase" ParentName="StuffedFloorsBase" Abstract="True">
         <stuffCategories>
             <li>Metallic</li>
         </stuffCategories>
-        <layerable>true</layerable>
-        <affordances>
-            <li>Light</li>
-            <li>Heavy</li>
-            <li>SmoothHard</li>
-        </affordances>
-        <Fertility>0</Fertility>
-        <constructEffect>ConstructMetal</constructEffect>
-        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>        
     </StuffedFloors.FloorTypeDef>
 
     <StuffedFloors.FloorTypeDef Name="StuffedFloorsMetalBasicBase" ParentName="StuffedFloorsMetalBase" Abstract="True">
         <statBases>
-            <Beauty>1</Beauty>
+            <Beauty>0</Beauty>
             <WorkToBuild>500</WorkToBuild>
         </statBases>
         <stuffCost>3</stuffCost>
@@ -26,7 +16,7 @@
 
     <StuffedFloors.FloorTypeDef Name="StuffedFloorsMetalPrettyBase" ParentName="StuffedFloorsMetalBase" Abstract="True">
         <statBases>
-            <Beauty>3</Beauty>
+            <Beauty>2</Beauty>
             <WorkToBuild>2500</WorkToBuild>
         </statBases>
         <stuffCost>5</stuffCost>

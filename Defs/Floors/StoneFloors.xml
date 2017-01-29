@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <StuffedFloors.FloorTypeDef Name="StuffedFloorsStoneBase" Abstract="True">
-        <layerable>true</layerable>
-        <affordances>
-            <li>Light</li>
-            <li>Heavy</li>
-            <li>SmoothHard</li>
-        </affordances>
-        <Fertility>0</Fertility>
-        <constructEffect>ConstructDirt</constructEffect>
-        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <StuffedFloors.FloorTypeDef Name="StuffedFloorsStoneBase" ParentName="StuffedFloorsBase" Abstract="True">
         <stuffCategories>
             <li>Stony</li>
         </stuffCategories>
@@ -19,7 +9,7 @@
     <StuffedFloors.FloorTypeDef Name="StuffedFloorsStoneBasicBase" ParentName="StuffedFloorsStoneBase" Abstract="True">
         <statBases>
             <WorkToBuild>350</WorkToBuild>
-            <Beauty>1</Beauty>
+            <Beauty>0</Beauty>
         </statBases>
         <stuffCost>3</stuffCost>
     </StuffedFloors.FloorTypeDef>
@@ -27,7 +17,7 @@
     <StuffedFloors.FloorTypeDef Name="StuffedFloorsStonePrettyBase" ParentName="StuffedFloorsStoneBase" Abstract="True">
         <statBases>
             <WorkToBuild>2000</WorkToBuild>
-            <Beauty>3</Beauty>
+            <Beauty>2</Beauty>
         </statBases>
         <stuffCost>5</stuffCost>
     </StuffedFloors.FloorTypeDef>

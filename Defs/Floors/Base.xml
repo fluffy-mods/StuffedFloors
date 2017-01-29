@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <StuffedFloors.FloorTypeDef Name="StuffedFloorsBase" Abstract="True">
+		<layerable>true</layerable>
+        <affordances>
+            <li>Light</li>
+            <li>Heavy</li>
+            <li>SmoothHard</li>
+        </affordances>
+        <Fertility>0</Fertility>
+        <constructEffect>ConstructDirt</constructEffect>
+        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <statsAffectedByStuff>
+            <li>WorkToBuild</li>
+            <li>Beauty</li>
+            <li>Cleanliness</li>
+            <li>MarketValue</li>
+        </statsAffectedByStuff>
+    </StuffedFloors.FloorTypeDef>
+</Defs>
