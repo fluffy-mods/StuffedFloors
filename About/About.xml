@@ -9,7 +9,7 @@
 &lt;size=24&gt;Important&lt;/size&gt;
 This mod &lt;b&gt;requires&lt;/b&gt; both HugsLib and Architect Sense to be loaded before it. HugsLib must be loaded before Architect Sense, and Architect Sense must be loaded before Stuffed Floors.
 
-You can safely add this mod to you save games, but &lt;b&gt;you can not remove it&lt;/b&gt; from save games. (If you really must do this, you’d have to remove all stuffed floors added by this mod first).
+You can safely add this mod to you save games, but &lt;i&gt;you can not remove it&lt;/i&gt; from save games. (If you really must do this, you’ll have to remove all built stuffed floors added by this mod first).
 
 &lt;size=24&gt;Features&lt;/size&gt;
 This mod does two things. First, using Architect Sense it provides a framework for modders to define their own stuffed floor types. Second, it uses this framework to create a number of new floors that are stuffed. 
@@ -25,7 +25,13 @@ Adds a custom FloorTypeDef that derives from TerrainDef, and allows modders to c
 &lt;size=24&gt;Known issues&lt;/size&gt;
 While this mod will happily generate more floors for any mods that add materials to the metallic, stony and/or woody stuff types, this mod only cleans up the floor types added by More Floors, Extended Woodworking, Minerals and Materials and GlitterTech. Any other mods that add floor types may appear as duplicates. If you encounter such an issue, or know of mods that add more floors, please let me know! 
 
-tag:Fluffylicious
+&lt;size=24&gt;Technical details&lt;/size&gt;
+&lt;b&gt;*:&lt;/b&gt; This mod doesn’t actually allow building stuffed floors. Rather, it spoofs this behaviour by generating TerrainDefs for each of the stuffDefs handed to it, and then using ArchitectSense to group these terrains together and give a user experience similar to stuff selection on buildings. This mod doesn’t do anything destructive, it doesn’t make any detours, and doesn’t remove any defs. It does however remove a number of designators from the architect in order to hide them from the user.
+
+&lt;size=24&gt;Contributors&lt;/size&gt;
+
+Telkir:    Original textures for most of the floors
+DarkSlayerEx:    Original idea, texture tweaks and moral support
 
 </description>
 </ModMetaData>

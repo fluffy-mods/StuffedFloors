@@ -3,7 +3,7 @@ Allows building floors out of stuff*.
 # Important
 This mod **requires** both [HugsLib](http://steamcommunity.com/sharedfiles/filedetails/?id=818773962) and [Architect Sense](http://steamcommunity.com/sharedfiles/filedetails/?id=852998459) to be loaded before it. HugsLib must be loaded before Architect Sense, and Architect Sense must be loaded before Stuffed Floors.
 
-You can safely add this mod to you save games, but **you can not remove it** from save games. (If you really must do this, you'd have to remove all stuffed floors added by this mod first).
+You can safely add this mod to you save games, but *you can not remove it* from save games. (If you really must do this, you'll have to remove all built stuffed floors added by this mod first).
 
 # Features
 This mod does two things. First, using Architect Sense it provides a framework for modders to define their own stuffed floor types. Second, it uses this framework to create a number of new floors that are stuffed. 
@@ -18,3 +18,6 @@ Adds a custom FloorTypeDef that derives from TerrainDef, and allows modders to c
 
 # Known issues
 While this mod will happily generate more floors for any mods that add materials to the metallic, stony and/or woody stuff types, this mod only cleans up the floor types added by More Floors, Extended Woodworking, Minerals and Materials and GlitterTech. Any other mods that add floor types may appear as duplicates. If you encounter such an issue, or know of mods that add more floors, please let me know! 
+
+# Technical details
+__*:__ This mod doesn't actually allow building stuffed floors. Rather, it spoofs this behaviour by generating TerrainDefs for each of the stuffDefs handed to it, and then using ArchitectSense to group these terrains together and give a user experience similar to stuff selection on buildings. This mod doesn't do anything destructive, it doesn't make any detours, and doesn't remove any defs. It does however remove a number of designators from the architect in order to hide them from the user.
