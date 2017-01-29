@@ -15,7 +15,15 @@ namespace StuffedFloors
         // with the game adding the category placeholder itself as a buildable floor. This is 
         // not exactly a perfect solution, and should be refactored at some point in the (near)
         // future.
+
+        // the stuffcost that will be used for all the generated terrains. Note that this is in addition 
+        // to the floorTypeDef's base cost.
         public int stuffCost;
+
+        // a list of vanilla or modded terrains that are made obsolete by this category and should be removed.
+        // Note that we're using strings instead of defs so that we can manually resolve references, and allow 
+        // for obsoleting of defs regardless of wether the mods they belong to are actually active.
+        public List<string> obsoletes = new List<string>();
 
         public override IEnumerable<string> ConfigErrors()
         {

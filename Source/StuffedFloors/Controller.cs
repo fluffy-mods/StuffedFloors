@@ -25,104 +25,12 @@ namespace StuffedFloors
             // for each type, generate a set of terrainDefs
             floorTypes.ForEach( GenerateTerrainDefs );
 
-            // hide some vanilla and modded floors
-            HideObsoleteFloors();
-        }
-        
-        public string[] obsoleteFloorDefs = new[]
-                                            {
-                                                // vanilla stone tiles
-                                                "TileSandstone",
-                                                "TileGranite",
-                                                "TileLimestone",
-                                                "TileSlate",
-                                                "TileMarble",
-
-                                                // vanilla wood plank
-                                                "WoodPlankFloor",
-
-                                                // extended woodworking
-                                                "WoodPlankFloor_Oak",
-                                                "WoodPlankFloor_Poplar",
-                                                "WoodPlankFloor_Pine",
-                                                "WoodPlankFloor_Birch",
-                                                "WoodPlankFloor_Cecropia",
-                                                "WoodPlankFloor_Teak",
-                                                "WoodPlankFloor_Red",
-                                                "WoodPlankFloor_Green",
-                                                "WoodPlankFloor_Blue",
-                                                "WoodPlankFloor_Yellow",
-                                                "WoodPlankFloor_White",
-                                                "WoodPlankFloor_Black",
-
-                                                // [T]More Floors - stone
-                                                "FloorStoneSlabsSandstone",
-                                                "FloorStoneSlabsGranite",
-                                                "FloorStoneSlabsLimestone",
-                                                "FloorStoneSlabsSlate",
-                                                "FloorStoneSlabsMarble",
-                                                "FloorStoneRoughSandstone",
-                                                "FloorStoneRoughGranite",
-                                                "FloorStoneRoughLimestone",
-                                                "FloorStoneRoughSlate",
-                                                "FloorStoneRoughMarble",
-                                                "FloorStoneHexSandstone",
-                                                "FloorStoneHexGranite",
-                                                "FloorStoneHexLimestone",
-                                                "FloorStoneHexSlate",
-                                                "FloorStoneHexMarble",
-                                                "FloorStoneMosaicSandstone",
-                                                "FloorStoneMosaicGranite",
-                                                "FloorStoneMosaicLimestone",
-                                                "FloorStoneMosaicSlate",
-                                                "FloorStoneMosaicMarble",
-                                                "FloorStoneRandomSandstone",
-                                                "FloorStoneRandomGranite",
-                                                "FloorStoneRandomLimestone",
-                                                "FloorStoneRandomSlate",
-                                                "FloorStoneRandomMarble",
-                                                "FloorStoneChequerMarbleSlate",
-                                                "FloorStoneChequerMarbleSandstone",
-                                                "FloorStoneChequerMarbleGranite",
-
-                                                // [T]More Floors - wood
-                                                "FloorWood1",
-                                                "FloorWood2",
-                                                "FloorWood3",
-                                                "FloorWood4",
-                                                "FloorWood5",
-                                                "FloorWood6",
-
-                                                // Minerals and Materials
-                                                "TileYellow",
-                                                "TileGreen",
-                                                "TilePurple",
-                                                "WoodPlankDark",
-                                                "WoodPlankLight",
-                                                "WoodPlankRose",
-                                                "WoodPlankWalnut"
-                                            };
-
-        public void HideObsoleteFloors()
-        {
-            List<DesignationCategoryDef> affectedCategories = new List<DesignationCategoryDef>();
-
-            foreach ( string defName in obsoleteFloorDefs )
+            // hide obsoleted vanilla and modded floors
+            foreach ( string defName in floorTypes.SelectMany( type => type.obsoletes ) )
             {
-                var terrain = DefDatabase<TerrainDef>.GetNamedSilentFail( defName );
-                if ( terrain != null )
-                {
-                    affectedCategories.Add( terrain.designationCategory );
-                    terrain.menuHidden = true;
-                    terrain.designationCategory = null;
-                    terrain.designationHotKey = null;
-                }
-            }
-
-            foreach ( DesignationCategoryDef cat in affectedCategories.Where( cat => cat != null ) )
-            {
-                // try re-resolving designators.
-                cat.ResolveReferences();
+                BuildableDef def = DefDatabase<TerrainDef>.GetNamedSilentFail( defName );
+                if ( def != null )
+                    ArchitectSense.Controller.HideDesignator( def );
             }
         }
 
@@ -146,7 +54,8 @@ namespace StuffedFloors
             DesignationSubCategoryDef subCategoryDef = new DesignationSubCategoryDef();
             subCategoryDef.label = floorType.label;
             subCategoryDef.designationCategory = floorType.designationCategory;
-            subCategoryDef.preview = false; // we want the stuff-like selector
+            //subCategoryDef.preview = false; // we want the stuff-like selector
+            subCategoryDef.preview = true; // actually, the preview is quite pretty?
 
             // poke ArchitectSense
             ArchitectSense.Controller.AddSubCategory( DefDatabase<DesignationCategoryDef>.GetNamed( "Floors" ), subCategoryDef, terrainDefs.ToList() );
