@@ -1,8 +1,12 @@
-﻿using System;
+﻿#if DEBUG
+#define DEBUG_STUFFING
+#endif
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace StuffedFloors
@@ -25,6 +29,9 @@ namespace StuffedFloors
         // for obsoleting of defs regardless of wether the mods they belong to are actually active.
         public List<string> obsoletes = new List<string>();
 
+        // list of relevant stats that should be affected by stuff
+        public List<StatDef> statsAffectedByStuff = new List<StatDef>();
+
         public override IEnumerable<string> ConfigErrors()
         {
             List<string> errors = base.ConfigErrors()?.ToList() ?? new List<string>();
@@ -40,44 +47,42 @@ namespace StuffedFloors
                 throw new ArgumentException( stuffThingDef.defName + " is not a stuff!" );
             
             // create new terrain
-            TerrainDef terrain = new TerrainDef
-            {
-                acceptFilth = acceptFilth,
-                acceptTerrainSourceFilth = acceptTerrainSourceFilth,
-                affordances = affordances.NullOrEmpty() 
-                                ? new List<TerrainAffordance>() 
-                                : new List<TerrainAffordance>( affordances ),
-                avoidWander = avoidWander,
-                altitudeLayer = altitudeLayer,
-                changeable = changeable,
-                driesTo = driesTo,
-                designationCategory = DefDatabase<DesignationCategoryDef>.GetNamed( "Floors" ),
-                edgeType = edgeType,
-                fertility = fertility,
-                holdSnow = holdSnow,
-                layerable = layerable,
-                menuHidden = menuHidden,
-                passability = passability,
-                pathCost = pathCost,
-                pathCostIgnoreRepeat = pathCostIgnoreRepeat,
-                placeWorkers = placeWorkers.NullOrEmpty() 
-                                ? new List<Type>() 
-                                : new List<Type>( placeWorkers ),
-                placingDraggableDimensions = placingDraggableDimensions,
-                renderPrecedence = renderPrecedence,
-                repairEffect = repairEffect,
-                researchPrerequisites = researchPrerequisites.NullOrEmpty() 
-                                            ? new List<ResearchProjectDef>() 
-                                            : new List<ResearchProjectDef>( researchPrerequisites ),
-                scatterType = scatterType,
-                smoothedTerrain = smoothedTerrain,
-                specialDisplayRadius = specialDisplayRadius,
-                statBases = statBases.NullOrEmpty() ? new List<StatModifier>() : new List<StatModifier>( statBases ),
-                texturePath = texturePath,
-                takeFootprints = takeFootprints,
-                terrainFilthDef = terrainFilthDef,
-                terrainAffordanceNeeded = terrainAffordanceNeeded
-            };
+            TerrainDef terrain = new TerrainDef();
+            terrain.acceptFilth = acceptFilth;
+            terrain.acceptTerrainSourceFilth = acceptTerrainSourceFilth;
+            terrain.affordances = affordances.NullOrEmpty()
+                                      ? new List<TerrainAffordance>()
+                                      : new List<TerrainAffordance>( affordances );
+            terrain.avoidWander = avoidWander;
+            terrain.altitudeLayer = altitudeLayer;
+            terrain.changeable = changeable;
+            terrain.driesTo = driesTo;
+            terrain.designationCategory = DefDatabase<DesignationCategoryDef>.GetNamed( "Floors" );
+            terrain.edgeType = edgeType;
+            terrain.fertility = fertility;
+            terrain.holdSnow = holdSnow;
+            terrain.layerable = layerable;
+            terrain.menuHidden = menuHidden;
+            terrain.passability = passability;
+            terrain.pathCost = pathCost;
+            terrain.pathCostIgnoreRepeat = pathCostIgnoreRepeat;
+            terrain.placeWorkers = placeWorkers.NullOrEmpty()
+                                       ? new List<Type>()
+                                       : new List<Type>( placeWorkers );
+            terrain.placingDraggableDimensions = placingDraggableDimensions;
+            terrain.renderPrecedence = renderPrecedence;
+            terrain.repairEffect = repairEffect;
+            terrain.researchPrerequisites = researchPrerequisites.NullOrEmpty()
+                                                ? new List<ResearchProjectDef>()
+                                                : new List<ResearchProjectDef>( researchPrerequisites );
+            terrain.scatterType = scatterType;
+            terrain.smoothedTerrain = smoothedTerrain;
+            terrain.specialDisplayRadius = specialDisplayRadius;
+            terrain.statBases = statBases.NullOrEmpty() ? new List<StatModifier>() : new List<StatModifier>( statBases );
+            terrain.texturePath = texturePath;
+            terrain.takeFootprints = takeFootprints;
+            terrain.terrainFilthDef = terrainFilthDef;
+            terrain.terrainAffordanceNeeded = terrainAffordanceNeeded;
             
             // apply stuff elements
             StuffProperties stuff = stuffThingDef.stuffProps;
@@ -90,13 +95,49 @@ namespace StuffedFloors
                 foreach ( ThingCountClass cost in costList )
                     terrain.costList.Add( new ThingCountClass( cost.thingDef, cost.count ) );
             if (stuffCost > 0)
-                terrain.costList.Add( new ThingCountClass( stuffThingDef, (int)( stuffCost / stuffThingDef.VolumePerUnit ) ) );
+                terrain.costList.Add( new ThingCountClass( stuffThingDef, Mathf.CeilToInt( stuffCost / stuffThingDef.VolumePerUnit ) ) );
 
 #if DEBUG_IMPLIED_DEFS
             Log.Message($"Created {terrain.defName} from {stuffThingDef.defName}");
 #endif
+            
+            // apply stuff offsets and factors, but apply them to a new list of statmodifiers, re-using the same list 
+            // keeps the actual statmodifier entries around as references, and leads to exponentially increasing stats 
+            // for terrains of the same base def and different stuffs
+            if ( !statsAffectedByStuff.NullOrEmpty() )
+            {
+                // prepare variables
+                var stats = new List<StatModifier>();
+                StringBuilder text = new StringBuilder();
 
-            // TODO: Implement stuff stat offsets
+                foreach ( StatDef stat in statsAffectedByStuff )
+                {
+                    // get base/default value
+                    float value = terrain.statBases.GetStatValueFromList( stat, stat.defaultBaseValue );
+                    text.AppendLine( $"Base {stat.label} for {terrain.label}: {value}" );
+
+                    // apply offset
+                    float offset = stuff.statOffsets.GetStatOffsetFromList( stat );
+
+                    // apply factor
+                    float factor = ( value >= 0 || stat.applyFactorsIfNegative )
+                                       ? stuff.statFactors.GetStatFactorFromList( stat )
+                                       : 1f;
+
+                    // calculate new value
+                    float final = ( value + offset ) * factor;
+                    text.AppendLine( $"\tstuffed: ({value} + {offset}) x {factor} = {final}" );
+
+                    StatUtility.SetStatValueInList( ref stats, stat, final );
+                }
+
+#if DEBUG_STUFFING
+                Log.Message( text.ToString() );
+#endif
+
+                // asign the stats, overwriting the statBases list
+                terrain.statBases = stats;
+            }
 
             // we need to assign hashes
             terrain.GiveShortHash();
