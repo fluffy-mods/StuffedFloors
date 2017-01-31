@@ -13,18 +13,9 @@ This mod does two things. First, using Architect Sense it provides a framework f
 **For players**
 Adds several floor types (borrowed with permission from Telkir's [More Floors](http://steamcommunity.com/sharedfiles/filedetails/?id=725623521), CuproPanda's [Extra Floors](https://ludeon.com/forums/index.php?topic=13400#msg135940) and Pravus' [Fences and Floors](http://steamcommunity.com/sharedfiles/filedetails/?id=784370602)) in a variety of stone, wood and metal types.
 
-Works great with other mods that add more resources, e.g.;
- - [Minerals and Materials](http://steamcommunity.com/sharedfiles/filedetails/?id=728233992)
- - [Extended Woodworking](http://steamcommunity.com/sharedfiles/filedetails/?id=836912371)
- - [GlitterTech](http://steamcommunity.com/sharedfiles/filedetails/?id=725576127). 
+Works great with other mods that add more resources, e.g. [Minerals and Materials](http://steamcommunity.com/sharedfiles/filedetails/?id=728233992), [Extended Woodworking](http://steamcommunity.com/sharedfiles/filedetails/?id=836912371) and [GlitterTech](http://steamcommunity.com/sharedfiles/filedetails/?id=725576127). 
 
-This mod also organizes and where needed, removes the floors added by;
- - Vanilla RimWorld
- - [More Floors](http://steamcommunity.com/sharedfiles/filedetails/?id=725623521)
- - [Extended Woodworking](http://steamcommunity.com/sharedfiles/filedetails/?id=836912371)
- - [Minerals and Materials](http://steamcommunity.com/sharedfiles/filedetails/?id=728233992)
- - [GlitterTech](http://steamcommunity.com/sharedfiles/filedetails/?id=725576127)
- - [Floored](http://steamcommunity.com/sharedfiles/filedetails/?id=801544922)
+This mod also organizes and where needed, removes the floors added by Vanilla RimWorld, [More Floors](http://steamcommunity.com/sharedfiles/filedetails/?id=725623521), [Extended Woodworking](http://steamcommunity.com/sharedfiles/filedetails/?id=836912371), [Minerals and Materials](http://steamcommunity.com/sharedfiles/filedetails/?id=728233992), [GlitterTech](http://steamcommunity.com/sharedfiles/filedetails/?id=725576127) and [Floored](http://steamcommunity.com/sharedfiles/filedetails/?id=801544922).
 
 **For modders**
 Adds a custom FloorTypeDef that derives from TerrainDef, and allows modders to create floortypes by setting a texture (grayscale for best effect, will be coloured by stuff) and a list of stuffCategories to generate terrain defs for. The resulting designators will be placed together in a category, and any vanilla or other mod's terrains made obsolete can also be provided in the XML, and will then be hidden for the user (but not removed, so it won't break save games).
@@ -55,4 +46,4 @@ All original content (e.g. text, imagery, sounds) in this mod is licensed under 
 Parts of the code in this mod, and some content may be licensed by their original authors. If this is the case, the original author & license will either be given in the source code, or be in a LICENSE file next to the content. Please do not decompile my mods, but use the original source code available on [GitHub](https://github.com/FluffierThanThou/StuffedFloors/), so license information in the source code is preserved.
 
 # Version
-This is version v0.16.0.2
+This is version v0.16.0.3

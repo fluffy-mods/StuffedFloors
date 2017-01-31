@@ -30,7 +30,15 @@ namespace StuffedFloors
             {
                 BuildableDef def = DefDatabase<TerrainDef>.GetNamedSilentFail( defName );
                 if ( def != null )
-                    ArchitectSense.Controller.HideDesignator( def );
+                    DesignatorUtility.HideDesignator( def );
+            }
+
+            // remove category added by More Floors
+            var moreFloorsCategory = DefDatabase<DesignationCategoryDef>.GetNamedSilentFail( "MoreFloors" );
+            if ( moreFloorsCategory != null )
+            {
+                var floorsCategory = DefDatabase<DesignationCategoryDef>.GetNamed( "Floors" );
+                DesignatorUtility.MergeDesignationCategories( floorsCategory, moreFloorsCategory );
             }
         }
 
@@ -57,7 +65,7 @@ namespace StuffedFloors
             subCategoryDef.preview = false; // we want the stuff-like selector
 
             // poke ArchitectSense
-            ArchitectSense.Controller.AddSubCategory( DefDatabase<DesignationCategoryDef>.GetNamed( "Floors" ), subCategoryDef, terrainDefs.ToList() );
+            DesignatorUtility.AddSubCategory( DefDatabase<DesignationCategoryDef>.GetNamed( "Floors" ), subCategoryDef, terrainDefs.ToList() );
         }
 
         private Dictionary<StuffCategoryDef, List<ThingDef>> _stuffCache = new Dictionary<StuffCategoryDef, List<ThingDef>>();

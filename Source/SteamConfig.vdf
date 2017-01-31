@@ -46,7 +46,9 @@ While this mod will happily generate more floors for any mods that add materials
 *: This mod doesn’t actually allow building stuffed floors. Rather, it spoofs this behaviour by generating TerrainDefs for each of the stuffDefs handed to it, and then using ArchitectSense to group these terrains together and give a user experience similar to stuff selection on buildings. This mod doesn’t do anything destructive, it doesn’t make any detours, and doesn’t remove any defs. It does however remove a number of designators from the architect in order to hide them from the user.
 
 [h1]Contributors[/h1]
- - Telkir: Original textures for most of the floors
+ - Telkir: Permission to use textures for many of the floors
+ - CuproPanda: Permission to use textures for even more floors
+ - Pravus: Permission to use textures for yet more floors
  - DarkSlayerEx: Original idea, texture tweaks and moral support
  
 
@@ -62,18 +64,10 @@ All original code in this mod is licensed under the [url=https://opensource.org/
 Parts of the code in this mod, and some content may be licensed by their original authors. If this is the case, the original author & license will either be given in the source code, or be in a LICENSE file next to the content. Please do not decompile my mods, but use the original source code available on [url=https://github.com/FluffierThanThou/StuffedFloors/]GitHub[/url], so license information in the source code is preserved.
 
 [h1]Version[/h1]
-This is version v0.16.0.2
+This is version v0.16.0.3
 
 "
-  "changenote" "update description
-add plywood floor from F&F
-better descriptions on subcats, add high-tech
-add Floored's plasteel tile to obsolete list
-desaturate, brighten and increase contrast of FAF textures
-add pravus' metal floors
-add extra floors metal plates, reorder floors
-add cuproPanda's extra floors stone floors
-move floor textures into separate folders"
+  "changenote" ""
   "publishedfileid" "853043503"
 }
 
