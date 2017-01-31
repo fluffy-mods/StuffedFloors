@@ -27,7 +27,7 @@
     	<defName>StuffedStoneCheckered</defName>
     	<label>checkered stone</label>
     	<description>An intricate checkered design.</description>
-        <texturePath>Floors/CheckeredStone</texturePath>
+        <texturePath>Floors/Stone/CheckeredStone</texturePath>
     </StuffedFloors.FloorTypeDef> 
 -->
 	
@@ -35,7 +35,7 @@
     	<defName>StuffedStoneBlocks</defName>
     	<label>stone block</label>
     	<description>An intricate interwoven design.</description>
-        <texturePath>Floors/StoneBlocky</texturePath>
+        <texturePath>Floors/Stone/StoneBlocky</texturePath>
         <obsoletes>
             <!-- [T] More Floors -->
             <li>FloorStoneRandomSandstone</li>
@@ -50,7 +50,7 @@
     	<defName>StuffedStoneHex</defName>
     	<label>stone hex</label>
     	<description>An intricate hexagonical design.</description>
-        <texturePath>Floors/StoneHex</texturePath>
+        <texturePath>Floors/Stone/StoneHex</texturePath>
         <obsoletes>
             <!-- [T] More Floors -->
             <li>FloorStoneHexSandstone</li>
@@ -65,7 +65,7 @@
     	<defName>StuffedStoneMosaic</defName>
     	<label>stone mosaic</label>
     	<description>An intricate interwoven design.</description>
-        <texturePath>Floors/StoneMosaic</texturePath>
+        <texturePath>Floors/Stone/StoneMosaic</texturePath>
         <obsoletes>
             <!-- [T] More Floors -->
             <li>FloorStoneMosaicSandstone</li>
@@ -80,7 +80,7 @@
     	<defName>StuffedStoneRoughTiles</defName>
     	<label>rough stone blocks</label>
     	<description>rough stone tiles.</description>
-        <texturePath>Floors/StoneRough</texturePath>
+        <texturePath>Floors/Stone/StoneRough</texturePath>
         <obsoletes>
             <!-- [T] More Floors -->
             <li>FloorStoneRoughSandstone</li>
@@ -95,7 +95,7 @@
     	<defName>StuffedStoneSlabs</defName>
     	<label>stone slabs</label>
     	<description>slabs, when looking for that neolithic vibe.</description>
-        <texturePath>Floors/StoneSlabs</texturePath>
+        <texturePath>Floors/Stone/StoneSlabs</texturePath>
         <obsoletes>
             <!-- [T] More Floors -->
             <li>FloorStoneSlabsSandstone</li>
@@ -110,7 +110,7 @@
     	<defName>StuffedStoneTiles</defName>
     	<label>stone tile</label>
     	<description>simple stone tiles.</description>
-        <texturePath>Floors/TileStone</texturePath>
+        <texturePath>Floors/Stone/TileStone</texturePath>
         <obsoletes>
             <!-- vanilla -->
             <li>TileSandstone</li>

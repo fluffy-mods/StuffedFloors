@@ -26,7 +26,7 @@
     	<defName>StuffedWoodFloor1</defName>
     	<label>vertical planks</label>
     	<description>A basic plank flooring.</description>
-        <texturePath>Floors/WoodFloor1</texturePath>
+        <texturePath>Floors/Wood/WoodFloor1</texturePath>
         <!-- this is the vanilla floor texture, lots of obsoletions -->
         <obsoletes>
              <!-- vanilla wood plank -->
@@ -58,7 +58,7 @@
     	<defName>StuffedWoodFloor2</defName>
     	<label>rough horizontal planks</label>
     	<description>A rough plank flooring.</description>
-        <texturePath>Floors/WoodFloor2</texturePath>
+        <texturePath>Floors/Wood/WoodFloor2</texturePath>
         <obsoletes>
             <!-- [T] More Floors -->
             <li>FloorWood1</li>
@@ -69,7 +69,7 @@
     	<defName>StuffedWoodFloor3</defName>
     	<label>horizontal planks</label>
     	<description>A basic plank flooring.</description>
-        <texturePath>Floors/WoodFloor3</texturePath>
+        <texturePath>Floors/Wood/WoodFloor3</texturePath>
         <obsoletes>
             <!-- [T] More Floors -->
             <li>FloorWood2</li>
@@ -80,7 +80,7 @@
     	<defName>StuffedWoodFloor4</defName>
     	<label>horizontal parquet</label>
     	<description>A pretty interwoven parquet.</description>
-        <texturePath>Floors/WoodFloor4</texturePath>
+        <texturePath>Floors/Wood/WoodFloor4</texturePath>
         <obsoletes>
             <!-- [T] More Floors -->
             <li>FloorWood3</li>
@@ -91,7 +91,7 @@
     	<defName>StuffedWoodFloor5</defName>
     	<label>mosaic parquet</label>
     	<description>An intricate mosaic parquet.</description>
-        <texturePath>Floors/WoodFloor5</texturePath>
+        <texturePath>Floors/Wood/WoodFloor5</texturePath>
         <obsoletes>
             <!-- [T] More Floors -->
             <li>FloorWood4</li>
@@ -102,7 +102,7 @@
     	<defName>StuffedWoodFloor6</defName>
     	<label>rough vertical planks</label>
     	<description>A rough plank flooring.</description>
-        <texturePath>Floors/WoodFloor6</texturePath>
+        <texturePath>Floors/Wood/WoodFloor6</texturePath>
         <obsoletes>
             <!-- [T] More Floors -->
             <li>FloorWood5</li>
@@ -113,7 +113,7 @@
     	<defName>StuffedWoodFloor7</defName>
     	<label>rustic planks</label>
     	<description>A rustic but beautiful plank flooring.</description>
-        <texturePath>Floors/WoodFloor7</texturePath>
+        <texturePath>Floors/Wood/WoodFloor7</texturePath>
         <obsoletes>
             <!-- [T] More Floors -->
             <li>FloorWood6</li>
