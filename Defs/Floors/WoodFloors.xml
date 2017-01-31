@@ -21,6 +21,22 @@
         </statBases>
         <stuffCost>5</stuffCost>
     </StuffedFloors.FloorTypeDef>
+
+    <!-- Floors and Fences -->
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodBase">
+    	<defName>StuffedPlywoodFloor</defName>
+    	<label>plywood booards</label>
+    	<description>Rough plywood boards, cheap and quick to build, but quite ugly.</description>
+        <texturePath>Floors/Wood/FloorPlywood</texturePath>
+        <obsoletes>
+            <li>FAFWoodTile</li>
+        </obsoletes>
+        <statBases>
+            <Beauty>-1</Beauty>
+            <WorkToBuild>75</WorkToBuild>
+        </statBases>
+        <stuffCost>2</stuffCost>
+    </StuffedFloors.FloorTypeDef>   
     
     <!-- [T] More Floors -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodBasicBase">
