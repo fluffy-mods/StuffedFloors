@@ -4,7 +4,7 @@
     <ArchitectSense.DesignationSubCategoryDef>
         <defName>SubCategory_Carpets</defName>
         <label>carpets</label>
-        <description>Carpets</description>
+        <description>Carpets; soft, fluffy, horrible to clean. They're pretty much the same everywhere, these are no different.</description>
         <defNames>
             <!-- Core -->
             <li>CarpetRed</li>
@@ -38,7 +38,7 @@
     <ArchitectSense.DesignationSubCategoryDef>
         <defName>SubCategory_CheckCarpets</defName>
         <label>checkered carpets</label>
-        <description>checker pattern carpets</description>
+        <description>checker pattern carpets, for when plain carpets just won't do</description>
         <defNames>
             <li>CheckCarpetRed</li>
             <li>CheckCarpetOrange</li>
@@ -60,7 +60,7 @@
     <ArchitectSense.DesignationSubCategoryDef>
         <defName>SubCategory_WoolCarpets</defName>
         <label>woolen carpets</label>
-        <description>woolen carpets</description>
+        <description>woolen carpets, for that extra warm fluffy feeling.</description>
         <defNames>
             <li>WoolCarpetRed</li>
             <li>WoolCarpetOrange</li>
@@ -78,6 +78,7 @@
         <preview>false</preview>
     </ArchitectSense.DesignationSubCategoryDef>
 
+    <!-- [T] More Floors -->
     <ArchitectSense.DesignationSubCategoryDef>
         <defName>SubCategory_StoneFloorChequered</defName>
         <label>Chequered slabs</label>
@@ -91,6 +92,21 @@
             <li>FloorStoneChequerLimestoneGranite</li>
             <li>FloorStoneChequerSlateSandstone</li>
             <li>FloorStoneChequerSlateGranite</li>
+        </defNames>
+        <designationCategory>Floors</designationCategory>
+        <preview>false</preview>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_HighTechFloors</defName>
+        <label>high tech</label>
+        <description>High-tech floors, for the hard-core tech enthusiasts. But is it really a good idea to give your floors sentience?</description>
+        <defNames>
+            <!-- [T] More Floors -->
+            <li>FloorPlasteel</li>
+
+            <!-- Floors & Fences -->
+            <li>FAFTechTile</li>
         </defNames>
         <designationCategory>Floors</designationCategory>
         <preview>false</preview>
