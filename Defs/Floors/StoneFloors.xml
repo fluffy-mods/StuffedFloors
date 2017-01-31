@@ -30,6 +30,36 @@
         <texturePath>Floors/Stone/CheckeredStone</texturePath>
     </StuffedFloors.FloorTypeDef> 
 -->
+    
+    <!-- Telkir's [T] More Floors -->
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
+    	<defName>StuffedStoneSlabs</defName>
+    	<label>slabs</label>
+    	<description>slabs, when looking for that neolithic vibe.</description>
+        <texturePath>Floors/Stone/StoneSlabs</texturePath>
+        <obsoletes>
+            <li>FloorStoneSlabsSandstone</li>
+            <li>FloorStoneSlabsGranite</li>
+            <li>FloorStoneSlabsLimestone</li>
+            <li>FloorStoneSlabsSlate</li>
+            <li>FloorStoneSlabsMarble</li>
+        </obsoletes>
+    </StuffedFloors.FloorTypeDef>   
+    
+    <!-- Telkir's [T] More Floors -->
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
+    	<defName>StuffedStoneRoughTiles</defName>
+    	<label>rough tiles</label>
+    	<description>rough stone tiles.</description>
+        <texturePath>Floors/Stone/StoneRough</texturePath>
+        <obsoletes>
+            <li>FloorStoneRoughSandstone</li>
+            <li>FloorStoneRoughGranite</li>
+            <li>FloorStoneRoughLimestone</li>
+            <li>FloorStoneRoughSlate</li>
+            <li>FloorStoneRoughMarble</li>
+        </obsoletes>
+    </StuffedFloors.FloorTypeDef> 
 	
     <!-- Telkir's [T] More Floors -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
@@ -46,6 +76,37 @@
         </obsoletes>
     </StuffedFloors.FloorTypeDef>
     
+    <!-- Telkir's [T] More Floors -->
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
+    	<defName>StuffedStoneMosaic</defName>
+    	<label>mosaic tiles</label>
+    	<description>Smooth tiles placed in a mosaic design.</description>
+        <texturePath>Floors/Stone/StoneMosaic</texturePath>
+        <obsoletes>
+            <li>FloorStoneMosaicSandstone</li>
+            <li>FloorStoneMosaicGranite</li>
+            <li>FloorStoneMosaicLimestone</li>
+            <li>FloorStoneMosaicSlate</li>
+            <li>FloorStoneMosaicMarble</li>
+        </obsoletes>
+    </StuffedFloors.FloorTypeDef>
+
+    <!-- CuproPanda's Extra Floors -->
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
+    	<defName>StuffedStoneCircle</defName>
+    	<label>circular tiles</label>
+    	<description>Smooth tiles laid in an interlocking circular pattern</description>
+        <texturePath>Floors/Stone/MedStone</texturePath>
+        <obsoletes>
+            <li>EXF_MedBrickSandstone</li>
+            <li>EXF_MedBrickGranite</li>
+            <li>EXF_MedBrickLimestone</li>
+            <li>EXF_MedBrickSlate</li>
+            <li>EXF_MedBrickMarble</li>
+        </obsoletes>
+    </StuffedFloors.FloorTypeDef>
+    
+    <!-- Telkir's [T] More Floors -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
     	<defName>StuffedStoneHex</defName>
     	<label>hexagonical tiles</label>
@@ -60,48 +121,7 @@
         </obsoletes>
     </StuffedFloors.FloorTypeDef>
     
-    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
-    	<defName>StuffedStoneMosaic</defName>
-    	<label>mosaic tiles</label>
-    	<description>Smooth tiles placed in a mosaic design.</description>
-        <texturePath>Floors/Stone/StoneMosaic</texturePath>
-        <obsoletes>
-            <li>FloorStoneMosaicSandstone</li>
-            <li>FloorStoneMosaicGranite</li>
-            <li>FloorStoneMosaicLimestone</li>
-            <li>FloorStoneMosaicSlate</li>
-            <li>FloorStoneMosaicMarble</li>
-        </obsoletes>
-    </StuffedFloors.FloorTypeDef>
-    
-    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
-    	<defName>StuffedStoneRoughTiles</defName>
-    	<label>rough tiles</label>
-    	<description>rough stone tiles.</description>
-        <texturePath>Floors/Stone/StoneRough</texturePath>
-        <obsoletes>
-            <li>FloorStoneRoughSandstone</li>
-            <li>FloorStoneRoughGranite</li>
-            <li>FloorStoneRoughLimestone</li>
-            <li>FloorStoneRoughSlate</li>
-            <li>FloorStoneRoughMarble</li>
-        </obsoletes>
-    </StuffedFloors.FloorTypeDef>
-    
-    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
-    	<defName>StuffedStoneSlabs</defName>
-    	<label>slabs</label>
-    	<description>slabs, when looking for that neolithic vibe.</description>
-        <texturePath>Floors/Stone/StoneSlabs</texturePath>
-        <obsoletes>
-            <li>FloorStoneSlabsSandstone</li>
-            <li>FloorStoneSlabsGranite</li>
-            <li>FloorStoneSlabsLimestone</li>
-            <li>FloorStoneSlabsSlate</li>
-            <li>FloorStoneSlabsMarble</li>
-        </obsoletes>
-    </StuffedFloors.FloorTypeDef>    
-    
+    <!-- Telkir's [T] More Floors -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
     	<defName>StuffedStoneRoughCobblestones</defName>
     	<label>rough cobblestones</label>
@@ -123,48 +143,6 @@
     </StuffedFloors.FloorTypeDef>
 
     <!-- CuproPanda's Extra Floors -->
-    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
-    	<defName>StuffedStoneBricks</defName>
-    	<label>bricks</label>
-    	<description>simple bricks, used all over the RimWorlds</description>
-        <texturePath>Floors/Stone/BrickFloor</texturePath>
-        <obsoletes>
-            <li>EXF_MBrickSandstone</li>
-            <li>EXF_MBrickGranite</li>
-            <li>EXF_MBrickLimestone</li>
-            <li>EXF_MBrickSlate</li>
-            <li>EXF_MBrickMarble</li>
-        </obsoletes>
-    </StuffedFloors.FloorTypeDef>
-
-    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
-    	<defName>StuffedStoneBricksHerringBone</defName>
-    	<label>herringbone bricks</label>
-    	<description>bricks in a herringbone pattern</description>
-        <texturePath>Floors/Stone/BrickHerringbone</texturePath>
-        <obsoletes>
-            <li>EXF_HerrBrickSandstone</li>
-            <li>EXF_HerrBrickGranite</li>
-            <li>EXF_HerrBrickLimestone</li>
-            <li>EXF_HerrBrickSlate</li>
-            <li>EXF_HerrBrickMarble</li>
-        </obsoletes>
-    </StuffedFloors.FloorTypeDef>
-
-    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
-    	<defName>StuffedStoneBricksUneven</defName>
-    	<label>uneven bricks</label>
-    	<description>bricks in an uneven pattern</description>
-        <texturePath>Floors/Stone/BrickUneven</texturePath>
-        <obsoletes>
-            <li>EXF_UEBrickSandstone</li>
-            <li>EXF_UEBrickGranite</li>
-            <li>EXF_UEBrickLimestone</li>
-            <li>EXF_UEBrickSlate</li>
-            <li>EXF_UEBrickMarble</li>
-        </obsoletes>
-    </StuffedFloors.FloorTypeDef>
-
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
     	<defName>StuffedStoneCobblestone</defName>
     	<label>cobblestones</label>
@@ -179,25 +157,57 @@
         </obsoletes>
     </StuffedFloors.FloorTypeDef>
 
-    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
-    	<defName>StuffedStoneCircle</defName>
-    	<label>circular tiles</label>
-    	<description>Smooth tiles laid in an interlocking circular pattern</description>
-        <texturePath>Floors/Stone/MedStone</texturePath>
+    <!-- CuproPanda's Extra Floors -->
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
+    	<defName>StuffedStoneBricks</defName>
+    	<label>bricks</label>
+    	<description>simple bricks, used all over the RimWorlds</description>
+        <texturePath>Floors/Stone/BrickFloor</texturePath>
         <obsoletes>
-            <li>EXF_MedBrickSandstone</li>
-            <li>EXF_MedBrickGranite</li>
-            <li>EXF_MedBrickLimestone</li>
-            <li>EXF_MedBrickSlate</li>
-            <li>EXF_MedBrickMarble</li>
+            <li>EXF_MBrickSandstone</li>
+            <li>EXF_MBrickGranite</li>
+            <li>EXF_MBrickLimestone</li>
+            <li>EXF_MBrickSlate</li>
+            <li>EXF_MBrickMarble</li>
         </obsoletes>
     </StuffedFloors.FloorTypeDef>
 
+    <!-- CuproPanda's Extra Floors -->
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
+    	<defName>StuffedStoneBricksHerringBone</defName>
+    	<label>herringbone bricks</label>
+    	<description>bricks in a herringbone pattern</description>
+        <texturePath>Floors/Stone/BrickHerringbone</texturePath>
+        <obsoletes>
+            <li>EXF_HerrBrickSandstone</li>
+            <li>EXF_HerrBrickGranite</li>
+            <li>EXF_HerrBrickLimestone</li>
+            <li>EXF_HerrBrickSlate</li>
+            <li>EXF_HerrBrickMarble</li>
+        </obsoletes>
+    </StuffedFloors.FloorTypeDef>
+
+    <!-- CuproPanda's Extra Floors -->
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
+    	<defName>StuffedStoneBricksUneven</defName>
+    	<label>uneven bricks</label>
+    	<description>bricks in an uneven pattern</description>
+        <texturePath>Floors/Stone/BrickUneven</texturePath>
+        <obsoletes>
+            <li>EXF_UEBrickSandstone</li>
+            <li>EXF_UEBrickGranite</li>
+            <li>EXF_UEBrickLimestone</li>
+            <li>EXF_UEBrickSlate</li>
+            <li>EXF_UEBrickMarble</li>
+        </obsoletes>
+    </StuffedFloors.FloorTypeDef>
+
+    <!-- CuproPanda's Extra Floors -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
     	<defName>StuffedStoneSmallBricks</defName>
     	<label>small bricks</label>
     	<description>Small bricks, placed by craf</description>
-        <texturePath>Floors/Stone/MedStone</texturePath>
+        <texturePath>Floors/Stone/SmallBricks</texturePath>
         <obsoletes>
             <li>EXF_MedBrickSandstone</li>
             <li>EXF_MedBrickGranite</li>

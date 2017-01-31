@@ -23,8 +23,8 @@
     </StuffedFloors.FloorTypeDef>
 
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsMetalBasicBase">
-      <defName>StuffedFloorsMetalTile</defName>
-      <label>metal tile</label>
+      <defName>StuffedFloorsMetalPlate</defName>
+      <label>metal plate</label>
       <description>A generic metal flooring.</description>
         <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
         <!-- this is the vanilla tile texture, quie a few obsoletions -->
@@ -41,6 +41,21 @@
             <li>BetaTile</li>
 
             <!-- oddly, Minerals & Materials doesn't define terrains for the metals it adds. -->
+        </obsoletes>
+    </StuffedFloors.FloorTypeDef>
+
+    <!-- CuproPanda's Extra Floors -->
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsMetalBasicBase">
+      <defName>StuffedFloorsMetalSmallPlate</defName>
+      <label>small metal plate</label>
+      <description>Small metal plates, riveted to the floor.</description>
+        <texturePath>Floors/Metal/MetalPlate</texturePath>
+        <obsoletes>
+            <li>EXF_PlateSilver</li>
+            <li>EXF_PlateGold</li>
+            <li>EXF_PlateSteel</li>
+            <li>EXF_PlatePlasteel</li>
+            <li>EXF_PlateUranium</li>
         </obsoletes>
     </StuffedFloors.FloorTypeDef>
 </Defs>
