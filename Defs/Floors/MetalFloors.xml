@@ -54,6 +54,9 @@
             <li>GoldTile</li>
             <!-- <li>SterileTile</li> -->
 
+            <!-- Floored -->
+            <li>PlasteelTile</li>
+
             <!-- Glitter Tech -->
             <li>TitatiumTile</li>
             <li>AlphaTile</li>
