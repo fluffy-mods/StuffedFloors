@@ -7,7 +7,7 @@
   <description>Allows building floors out of stuff*.
 
 &lt;size=24&gt;Important&lt;/size&gt;
-This mod &lt;b&gt;requires&lt;/b&gt; both HugsLib and Architect Sense to be loaded before it. HugsLib must be loaded before Architect Sense, and Architect Sense must be loaded before Stuffed Floors.
+This mod &lt;i&gt;requires&lt;/i&gt; both HugsLib and Architect Sense to be loaded before it. HugsLib must be loaded before Architect Sense, and Architect Sense must be loaded before Stuffed Floors.
 
 You can safely add this mod to you save games, but &lt;i&gt;you can not remove it&lt;/i&gt; from save games. (If you really must do this, you’ll have to remove all built stuffed floors added by this mod first).
 
@@ -15,22 +15,39 @@ You can safely add this mod to you save games, but &lt;i&gt;you can not remove i
 This mod does two things. First, using Architect Sense it provides a framework for modders to define their own stuffed floor types. Second, it uses this framework to create a number of new floors that are stuffed. 
 
 &lt;b&gt;For players&lt;/b&gt;
-Adds several floor types (borrowed with permission from Telkir’s More Floors) in a variety of stone, wood and metal types. Works great with other mods that add more resources, e.g. Minerals and Materials, Extended Woodworking and GlitterTech. 
+Adds several floor types (borrowed with permission from Telkir’s More Floors, CuproPanda’s Extra Floors and Pravus’ Fences and Floors) in a variety of stone, wood and metal types.
 
-This mod also cleans up the other floor types added by More Floors, Extended Woodworking, Minerals and Materials and GlitterTech. 
+Works great with other mods that add more resources, e.g.;
+
+
+Minerals and Materials
+Extended Woodworking
+GlitterTech. 
+
+This mod also organizes and where needed, removes the floors added by;
+
+
+Vanilla RimWorld
+More Floors
+Extended Woodworking
+Minerals and Materials
+GlitterTech
+Floored
 
 &lt;b&gt;For modders&lt;/b&gt;
 Adds a custom FloorTypeDef that derives from TerrainDef, and allows modders to create floortypes by setting a texture (grayscale for best effect, will be coloured by stuff) and a list of stuffCategories to generate terrain defs for. The resulting designators will be placed together in a category, and any vanilla or other mod’s terrains made obsolete can also be provided in the XML, and will then be hidden for the user (but not removed, so it won’t break save games).
 
 &lt;size=24&gt;Known issues&lt;/size&gt;
-While this mod will happily generate more floors for any mods that add materials to the metallic, stony and/or woody stuff types, it only cleans up the floor types added by More Floors, Extended Woodworking, Minerals and Materials and GlitterTech. Any other mods that add floor types may appear as duplicates. If you encounter such an issue, or know of mods that add more floors, please let me know! 
+While this mod will happily generate more floors for any mods that add materials to the metallic, stony and/or woody stuff types, it only cleans up the floors added by mods that are explicitly supported. Any other mods that add floor types may appear as duplicates. If you encounter such an issue, or know of mods that add more floors, please let me know! 
 
 &lt;size=24&gt;Technical details&lt;/size&gt;
-&lt;b&gt;*:&lt;/b&gt; This mod doesn’t actually allow building stuffed floors. Rather, it spoofs this behaviour by generating TerrainDefs for each of the stuffDefs handed to it, and then using ArchitectSense to group these terrains together and give a user experience similar to stuff selection on buildings. This mod doesn’t do anything destructive, it doesn’t make any detours, and doesn’t remove any defs. It does however remove a number of designators from the architect in order to hide them from the user.
+*: This mod doesn’t actually allow building stuffed floors. Rather, it spoofs this behaviour by generating TerrainDefs for each of the stuffDefs handed to it, and then using ArchitectSense to group these terrains together and give a user experience similar to stuff selection on buildings. This mod doesn’t do anything destructive, it doesn’t make any detours, and doesn’t remove any defs. It does however remove a number of designators from the architect in order to hide them from the user.
 
 &lt;size=24&gt;Contributors&lt;/size&gt;
 
-Telkir:    Original textures for most of the floors
+Telkir:    Permission to use textures for many of the floors
+CuproPanda:    Permission to use textures for even more floors
+Pravus:    Permission to use textures for yet more floors
 DarkSlayerEx:    Original idea, texture tweaks and moral support
 
 </description>
