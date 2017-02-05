@@ -61,8 +61,10 @@ namespace StuffedFloors
         { 
             DesignationSubCategoryDef subCategoryDef = new DesignationSubCategoryDef();
             subCategoryDef.label = floorType.label;
+            subCategoryDef.description = floorType.description;
             subCategoryDef.designationCategory = floorType.designationCategory;
             subCategoryDef.preview = false; // we want the stuff-like selector
+            subCategoryDef.emulateStuff = true;
 
             // poke ArchitectSense
             DesignatorUtility.AddSubCategory( DefDatabase<DesignationCategoryDef>.GetNamed( "Floors" ), subCategoryDef, terrainDefs.ToList() );
