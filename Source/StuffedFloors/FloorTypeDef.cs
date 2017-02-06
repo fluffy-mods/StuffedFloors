@@ -124,6 +124,13 @@ namespace StuffedFloors
                                        ? stuff.statFactors.GetStatFactorFromList( stat )
                                        : 1f;
 
+                    // lower impact of stuff beauty on floors
+                    if ( stat == StatDefOf.Beauty )
+                    {
+                        offset *= 1 / 3f;
+                        factor = Mathf.Sqrt( factor );
+                    }
+                    
                     // calculate new value
                     float final = ( value + offset ) * factor;
                     text.AppendLine( $"\tstuffed: ({value} + {offset}) x {factor} = {final}" );
