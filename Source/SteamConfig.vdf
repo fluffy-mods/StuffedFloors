@@ -51,10 +51,10 @@ All original code in this mod is licensed under the [url=https://opensource.org/
 Parts of the code in this mod, and some content may be licensed by their original authors. If this is the case, the original author & license will either be given in the source code, or be in a LICENSE file next to the content. Please do not decompile my mods, but use the original source code available on [url=https://github.com/FluffierThanThou/StuffedFloors/]GitHub[/url], so license information in the source code is preserved.
 
 [h1]Version[/h1]
-This is version v0.16.0.4
+This is version v0.16.0.5
 
 "
-  "changenote" "collapse more floors category"
+  "changenote" "add description for subCat defs, and use architect sense's new stuff emulation mode"
   "publishedfileid" "853043503"
 }
 
