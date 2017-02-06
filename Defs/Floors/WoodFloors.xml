@@ -79,6 +79,9 @@
             <li>WoodPlankLight</li>
             <li>WoodPlankRose</li>
             <li>WoodPlankWalnut</li>
+
+            <!-- Vegetable Garden -->
+            <li>IronwoodFloor</li>
         </obsoletes>
     </StuffedFloors.FloorTypeDef>
 	
