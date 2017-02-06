@@ -16,7 +16,7 @@
 
     <StuffedFloors.FloorTypeDef Name="StuffedFloorsStonePrettyBase" ParentName="StuffedFloorsStoneBase" Abstract="True">
         <statBases>
-            <WorkToBuild>2000</WorkToBuild>
+            <WorkToBuild>700</WorkToBuild>
             <Beauty>2</Beauty>
         </statBases>
         <stuffCost>5</stuffCost>
