@@ -29,6 +29,12 @@
             <!-- <li>CarpetPurple</li> -->
             <li>CarpetWhite</li>
             <li>CarpetBlack</li>
+
+            <!-- More Furniture -->
+            <li>CarpetBedGreen</li>
+            <li>CarpetBedOrange</li>
+            <li>CarpetBedBlue</li>
+            <li>CarpetBedMaroon</li>
         </defNames>
         <designationCategory>Floors</designationCategory>
         <preview>false</preview>
