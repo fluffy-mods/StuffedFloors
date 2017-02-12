@@ -19,9 +19,9 @@ This mod does two things. First, using Architect Sense it provides a framework f
 [b]For players[/b]
  Adds several floor types (borrowed with permission from Telkir’s [url=http://steamcommunity.com/sharedfiles/filedetails/?id=725623521]More Floors[/url], CuproPanda’s [url=https://ludeon.com/forums/index.php?topic=13400#msg135940]Extra Floors[/url] and Pravus’ [url=http://steamcommunity.com/sharedfiles/filedetails/?id=784370602]Fences and Floors[/url]) in a variety of stone, wood and metal types.
 
-Works great with other mods that add more resources, e.g. [url=http://steamcommunity.com/sharedfiles/filedetails/?id=728233992]Minerals and Materials[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=836912371]Extended Woodworking[/url] and [url=http://steamcommunity.com/sharedfiles/filedetails/?id=725576127]GlitterTech[/url].
+Works great with other mods that add more resources, e.g. [url=http://steamcommunity.com/sharedfiles/filedetails/?id=728233992]Minerals and Materials[/url] [url=http://steamcommunity.com/sharedfiles/filedetails/?id=852103845]Kura’s Extra Minerals[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=836912371]Extended Woodworking[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=822470192]Vegetable Garden[/url] and [url=http://steamcommunity.com/sharedfiles/filedetails/?id=725576127]GlitterTech[/url].
 
-This mod also organizes and where needed, removes the floors added by Vanilla RimWorld, [url=http://steamcommunity.com/sharedfiles/filedetails/?id=725623521]More Floors[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=836912371]Extended Woodworking[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=728233992]Minerals and Materials[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=725576127]GlitterTech[/url] and [url=http://steamcommunity.com/sharedfiles/filedetails/?id=801544922]Floored[/url].
+This mod also organizes and where needed, removes the floors added by Vanilla RimWorld, [url=http://steamcommunity.com/sharedfiles/filedetails/?id=725623521]More Floors[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=836912371]Extended Woodworking[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=728233992]Minerals and Materials[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=725576127]GlitterTech[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=739089840]More Furniture[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=822470192]Vegetable Garden[/url] and [url=http://steamcommunity.com/sharedfiles/filedetails/?id=801544922]Floored[/url].
 
 [b]For modders[/b]
  Adds a custom FloorTypeDef that derives from TerrainDef, and allows modders to create floortypes by setting a texture (grayscale for best effect, will be coloured by stuff) and a list of stuffCategories to generate terrain defs for. The resulting designators will be placed together in a category, and any vanilla or other mod’s terrains made obsolete can also be provided in the XML, and will then be hidden for the user (but not removed, so it won’t break save games).
@@ -51,10 +51,14 @@ All original code in this mod is licensed under the [url=https://opensource.org/
 Parts of the code in this mod, and some content may be licensed by their original authors. If this is the case, the original author & license will either be given in the source code, or be in a LICENSE file next to the content. Please do not decompile my mods, but use the original source code available on [url=https://github.com/FluffierThanThou/StuffedFloors/]GitHub[/url], so license information in the source code is preserved.
 
 [h1]Version[/h1]
-This is version v0.16.0.5
+This is version v0.16.0.6
 
 "
-  "changenote" "add description for subCat defs, and use architect sense's new stuff emulation mode"
+  "changenote" "significantly lower stuff beauty modifiers
+lower building times for pretty variants
+update description
+obsolete vegetable garden's ironwood floor
+add more furntiure's carpets to carpet subcategory"
   "publishedfileid" "853043503"
 }
 

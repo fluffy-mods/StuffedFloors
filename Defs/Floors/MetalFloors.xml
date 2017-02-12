@@ -9,7 +9,7 @@
     <StuffedFloors.FloorTypeDef Name="StuffedFloorsMetalBasicBase" ParentName="StuffedFloorsMetalBase" Abstract="True">
         <statBases>
             <Beauty>0</Beauty>
-            <WorkToBuild>500</WorkToBuild>
+            <WorkToBuild>200</WorkToBuild>
         </statBases>
         <stuffCost>3</stuffCost>
     </StuffedFloors.FloorTypeDef>
@@ -17,7 +17,7 @@
     <StuffedFloors.FloorTypeDef Name="StuffedFloorsMetalPrettyBase" ParentName="StuffedFloorsMetalBase" Abstract="True">
         <statBases>
             <Beauty>2</Beauty>
-            <WorkToBuild>1000</WorkToBuild>
+            <WorkToBuild>300</WorkToBuild>
         </statBases>
         <stuffCost>5</stuffCost>
     </StuffedFloors.FloorTypeDef>
