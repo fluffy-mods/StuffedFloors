@@ -118,4 +118,21 @@
         <designationCategory>Floors</designationCategory>
         <preview>false</preview>
     </ArchitectSense.DesignationSubCategoryDef>
+    
+    <!-- Vanilla -->
+    <!-- todo: replace with floortype generator -->
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Flagstones</defName>
+        <label>Flagstone</label>
+        <Description>Roughly-cut stone tiles. Not super pretty, but they make good surfaces for roads and outdoor walkways. Deconstructing flagstone yields no resources.</Description>
+		<defNames>
+            <li>FlagstoneSandstone</li>
+            <li>FlagstoneGranite</li>
+            <li>FlagstoneLimestone</li>
+            <li>FlagstoneSlate</li>
+            <li>FlagstoneMarble</li>
+        </defNames>
+        <designationCategory>Floors</designationCategory>
+        <preview>false</preview>
+    </ArchitectSense.DesignationSubCategoryDef>
 </Defs>

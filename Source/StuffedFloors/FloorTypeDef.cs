@@ -60,6 +60,9 @@ namespace StuffedFloors
                                       : new List<TerrainAffordance>( affordances );
             terrain.avoidWander = avoidWander;
             terrain.altitudeLayer = altitudeLayer;
+            terrain.buildingPrerequisites = buildingPrerequisites.NullOrEmpty()
+                                                ? new List<ThingDef>()
+                                                : new List<ThingDef>( buildingPrerequisites );
             terrain.burnedDef = burnedDef;
             terrain.changeable = changeable;
             terrain.driesTo = driesTo;
@@ -77,22 +80,27 @@ namespace StuffedFloors
                                        : new List<Type>( placeWorkers );
             terrain.placingDraggableDimensions = placingDraggableDimensions;
             terrain.renderPrecedence = renderPrecedence;
-            terrain.repairEffect = repairEffect;
             terrain.researchPrerequisites = researchPrerequisites.NullOrEmpty()
                                                 ? new List<ResearchProjectDef>()
                                                 : new List<ResearchProjectDef>( researchPrerequisites );
+            terrain.resourcesFractionWhenDeconstructed = resourcesFractionWhenDeconstructed;
             terrain.scatterType = scatterType;
             terrain.smoothedTerrain = smoothedTerrain;
             terrain.specialDisplayRadius = specialDisplayRadius;
             terrain.statBases = statBases.NullOrEmpty() ? new List<StatModifier>() : new List<StatModifier>( statBases );
-            terrain.texturePath = texturePath;
+            terrain.tags = tags.NullOrEmpty() ? new List<string>() : new List<string>( tags );
             terrain.takeFootprints = takeFootprints;
+            terrain.takeSplashes = takeSplashes;
             terrain.terrainFilthDef = terrainFilthDef;
             terrain.terrainAffordanceNeeded = terrainAffordanceNeeded;
-            
+            terrain.texturePath = texturePath;
+
+
             // apply stuff elements
             StuffProperties stuff = stuffThingDef.stuffProps;
             terrain.color = stuff.color;
+            terrain.constructEffect = stuff.constructEffect;
+            terrain.repairEffect = stuff.constructEffect;
             terrain.label = "ThingMadeOfStuffLabel".Translate( stuffThingDef.LabelAsStuff, label );
             terrain.description = description;
             terrain.defName = stuffThingDef.defName + "_" + defName;
