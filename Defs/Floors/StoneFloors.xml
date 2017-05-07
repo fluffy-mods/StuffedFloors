@@ -12,6 +12,9 @@
             <Beauty>0</Beauty>
         </statBases>
         <stuffCost>3</stuffCost>
+        <tags>
+        <li>Road</li>
+        </tags>
     </StuffedFloors.FloorTypeDef>
 
     <StuffedFloors.FloorTypeDef Name="StuffedFloorsStonePrettyBase" ParentName="StuffedFloorsStoneBase" Abstract="True">
