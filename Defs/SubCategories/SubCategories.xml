@@ -37,6 +37,7 @@
             <li>CarpetBedMaroon</li>
         </defNames>
         <designationCategory>Floors</designationCategory>
+        <emulateStuff>true</emulateStuff>
         <preview>false</preview>
         <!--<debug>true</debug>-->
     </ArchitectSense.DesignationSubCategoryDef>
@@ -60,6 +61,7 @@
             <li>CheckCarpetBlack</li>
         </defNames>
         <designationCategory>Floors</designationCategory>
+        <emulateStuff>true</emulateStuff>
         <preview>false</preview>
     </ArchitectSense.DesignationSubCategoryDef>
 
@@ -82,6 +84,7 @@
             <li>WoolCarpetBlack</li>
         </defNames>
         <designationCategory>Floors</designationCategory>
+        <emulateStuff>true</emulateStuff>
         <preview>false</preview>
     </ArchitectSense.DesignationSubCategoryDef>
 
@@ -101,6 +104,7 @@
             <li>FloorStoneChequerSlateGranite</li>
         </defNames>
         <designationCategory>Floors</designationCategory>
+        <emulateStuff>true</emulateStuff>
         <preview>false</preview>
     </ArchitectSense.DesignationSubCategoryDef>
 
@@ -116,6 +120,7 @@
             <li>FAFTechTile</li>
         </defNames>
         <designationCategory>Floors</designationCategory>
+        <emulateStuff>true</emulateStuff>
         <preview>false</preview>
     </ArchitectSense.DesignationSubCategoryDef>
     
@@ -133,6 +138,7 @@
             <li>FlagstoneMarble</li>
         </defNames>
         <designationCategory>Floors</designationCategory>
+        <emulateStuff>true</emulateStuff>
         <preview>false</preview>
         <!--<debug>true</debug>-->
     </ArchitectSense.DesignationSubCategoryDef>
