@@ -38,6 +38,7 @@
         </defNames>
         <designationCategory>Floors</designationCategory>
         <preview>false</preview>
+        <debug>true</debug>
     </ArchitectSense.DesignationSubCategoryDef>
 
     <!-- [T] More Floors -->

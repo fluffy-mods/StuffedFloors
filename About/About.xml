@@ -3,11 +3,11 @@
   <name>Stuffed Floors</name>
   <author>Fluffy</author>
   <url>https://ludeon.com/forums/index.php?topic=16120</url>
-  <targetVersion>0.16.1393</targetVersion>
+  <targetVersion>0.17.1530</targetVersion>
   <description>Allows building floors out of stuff*.
 
 &lt;size=24&gt;Important&lt;/size&gt;
-This mod &lt;i&gt;requires&lt;/i&gt; both HugsLib and Architect Sense to be loaded before it. HugsLib must be loaded before Architect Sense, and Architect Sense must be loaded before Stuffed Floors.
+This mod &lt;i&gt;requires&lt;/i&gt; Architect Sense to be loaded before it. 
 
 You can safely add this mod to you save games, but &lt;i&gt;you can not remove it&lt;/i&gt; from save games. (If you really must do this, you’ll have to remove all built stuffed floors added by this mod first).
 
@@ -29,6 +29,9 @@ While this mod will happily generate more floors for any mods that add materials
 
 &lt;size=24&gt;Technical details&lt;/size&gt;
 *: This mod doesn’t actually allow building stuffed floors. Rather, it spoofs this behaviour by generating TerrainDefs for each of the stuffDefs handed to it, and then using ArchitectSense to group these terrains together and give a user experience similar to stuff selection on buildings. This mod doesn’t do anything destructive, it doesn’t make any detours, and doesn’t remove any defs. It does however remove a number of designators from the architect in order to hide them from the user.
+
+&lt;size=24&gt;Powered by Harmony&lt;/size&gt;
+
 
 &lt;size=24&gt;Contributors&lt;/size&gt;
 

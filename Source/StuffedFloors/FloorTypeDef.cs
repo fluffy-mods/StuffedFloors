@@ -1,6 +1,8 @@
 ﻿#if DEBUG
-#define DEBUG_STUFFING
+//#define DEBUG_STUFFING
+//#define DEBUG_IMPLIED_DEFS
 #endif
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +30,9 @@ namespace StuffedFloors
         // Note that we're using strings instead of defs so that we can manually resolve references, and allow 
         // for obsoleting of defs regardless of wether the mods they belong to are actually active.
         public List<string> obsoletes = new List<string>();
+        
+        // a list of terrains that have been generated for this floorTypeDef
+        public List<TerrainDef> terrains = new List<TerrainDef>();
 
         // list of relevant stats that should be affected by stuff
         public List<StatDef> statsAffectedByStuff = new List<StatDef>();
@@ -55,6 +60,7 @@ namespace StuffedFloors
                                       : new List<TerrainAffordance>( affordances );
             terrain.avoidWander = avoidWander;
             terrain.altitudeLayer = altitudeLayer;
+            terrain.burnedDef = burnedDef;
             terrain.changeable = changeable;
             terrain.driesTo = driesTo;
             terrain.designationCategory = DefDatabase<DesignationCategoryDef>.GetNamed( "Floors" );
@@ -146,11 +152,11 @@ namespace StuffedFloors
                 terrain.statBases = stats;
             }
 
-            // we need to assign hashes
-            terrain.GiveShortHash();
+            //// we need to assign hashes
+            //terrain.GiveShortHash();
 
-            // done!
-            terrain.PostLoad();
+            //// done!
+            //terrain.PostLoad();
             return terrain;
         }
     }

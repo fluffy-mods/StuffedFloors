@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\harmony\0Harmony.dll</HintPath>
+    </Reference>
     <Reference Include="ArchitectSense">
       <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ArchitectSense\Assemblies\ArchitectSense.dll</HintPath>
       <Private>False</Private>
@@ -38,9 +41,8 @@
       <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="HugsLib">
-      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\294100\818773962\Assemblies\HugsLib.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="harmonycheck">
+      <HintPath>..\..\..\..\harmony\harmonycheck.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,7 +58,7 @@
   <ItemGroup>
     <Compile Include="Controller.cs" />
     <Compile Include="FloorTypeDef.cs" />
-    <Compile Include="ImpliedDefGenerator.cs" />
+    <Compile Include="HarmonyPatch_GenerateImpliedDefs_PreResolve.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
