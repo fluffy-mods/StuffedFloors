@@ -1,6 +1,7 @@
 ﻿#if DEBUG
+#define DEBUG_IMPLIED_DEFS
+//#define DEBUG_COSTLIST
 //#define DEBUG_STUFFING
-//#define DEBUG_IMPLIED_DEFS
 #endif
 
 using System;
@@ -95,7 +96,6 @@ namespace StuffedFloors
             terrain.terrainAffordanceNeeded = terrainAffordanceNeeded;
             terrain.texturePath = texturePath;
 
-
             // apply stuff elements
             StuffProperties stuff = stuffThingDef.stuffProps;
             terrain.color = stuff.color;
@@ -111,10 +111,7 @@ namespace StuffedFloors
             if (stuffCost > 0)
                 terrain.costList.Add( new ThingCountClass( stuffThingDef, Mathf.CeilToInt( stuffCost / stuffThingDef.VolumePerUnit ) ) );
 
-#if DEBUG_IMPLIED_DEFS
-            Log.Message($"Created {terrain.defName} from {stuffThingDef.defName}");
-#endif
-            
+
             // apply stuff offsets and factors, but apply them to a new list of statmodifiers, re-using the same list 
             // keeps the actual statmodifier entries around as references, and leads to exponentially increasing stats 
             // for terrains of the same base def and different stuffs
@@ -151,20 +148,24 @@ namespace StuffedFloors
 
                     StatUtility.SetStatValueInList( ref stats, stat, final );
                 }
-
+                
+#if DEBUG_IMPLIED_DEFS
+                Log.Message($"Created {terrain.defName} from {stuffThingDef.defName}");
+#if DEBUG_COSTLIST
+                foreach (ThingCountClass count in terrain.costList)
+                {
+                    Log.Message($"\t{count.thingDef.defName}: {count.count}");
+                }
+#endif
 #if DEBUG_STUFFING
                 Log.Message( text.ToString() );
+#endif
 #endif
 
                 // asign the stats, overwriting the statBases list
                 terrain.statBases = stats;
             }
-
-            //// we need to assign hashes
-            //terrain.GiveShortHash();
-
-            //// done!
-            //terrain.PostLoad();
+            
             return terrain;
         }
     }

@@ -22,7 +22,7 @@ namespace StuffedFloors
                     terrain.PostLoad();
 
                     // add to databases
-                    DefDatabase<TerrainDef>.AllDefs.Add( terrain );
+                    DefDatabase<TerrainDef>.Add( terrain );
                     floortype.terrains.Add( terrain );
                 }
             }

@@ -1,5 +1,7 @@
 ﻿#if DEBUG
-//#define DEBUG_HIDE_DEFS
+#define DEBUG_IMPLIED_DEFS
+//#define DEBUG_COSTLIST
+//#define DEBUG_STUFFING
 #endif
 
 using System;
@@ -16,6 +18,7 @@ namespace StuffedFloors
 {
     public class Controller : Mod
     {
+        // use static constructoronstartup for a late init point (after all defs of all mods are loaded).
         [StaticConstructorOnStartup]
         public static class Init
         {
@@ -25,10 +28,14 @@ namespace StuffedFloors
             }
         }
 
+        // constructor as an early init point (before any defs are loaded).
         public Controller( ModContentPack content ) : base( content )
         {
             var harmony = HarmonyInstance.Create( "Fluffy.StuffedFloors" );
             harmony.PatchAll( Assembly.GetExecutingAssembly() );
+
+            // Patches;
+            // HarmonyPatch_GenerateImpliedDefs_PreResolve Prefix to add implied terrains
         }
 
         public static void Initialize()
@@ -69,6 +76,13 @@ namespace StuffedFloors
             subCategoryDef.designationCategory = floorType.designationCategory;
             subCategoryDef.preview = false; // we want the stuff-like selector
             subCategoryDef.emulateStuff = true;
+
+#if DEBUG_IMPLIED_DEFS
+            var defs =
+                floorType.terrains.Select( td => "\t" + td.defName + "\t" + ( td.blueprintDef?.defName ?? "NULL" ) + "\t" +
+                                              ( td.frameDef?.defName ?? "NULL" ) ).ToArray();
+            Log.Message( $"Generated defs for {floorType.defName}:\n {String.Join("\n", defs )}" );
+#endif
 
             // poke ArchitectSense
             DesignatorUtility.AddSubCategory( DefDatabase<DesignationCategoryDef>.GetNamed( "Floors" ), subCategoryDef, floorType.terrains );
