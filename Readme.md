@@ -23,6 +23,8 @@ Adds a custom FloorTypeDef that derives from TerrainDef, and allows modders to c
 # Known issues
 While this mod will happily generate more floors for any mods that add materials to the metallic, stony and/or woody stuff types, it only cleans up the floors added by mods that are explicitly supported. Any other mods that add floor types may appear as duplicates. If you encounter such an issue, or know of mods that add more floors, please let me know! 
 
+Due to the extremely heavy-handed approach Erdelfs' MinePlan Designator uses to inject his designators, **MinePlan Designator is incompatible with Architect Sense, and thus also with Stuffed Floors**.
+
 # Technical details
 *: This mod doesn't actually allow building stuffed floors. Rather, it spoofs this behaviour by generating TerrainDefs for each of the stuffDefs handed to it, and then using ArchitectSense to group these terrains together and give a user experience similar to stuff selection on buildings. This mod doesn't do anything destructive, it doesn't make any detours, and doesn't remove any defs. It does however remove a number of designators from the architect in order to hide them from the user.
 
@@ -50,4 +52,4 @@ All original content (e.g. text, imagery, sounds) in this mod is licensed under 
 Parts of the code in this mod, and some content may be licensed by their original authors. If this is the case, the original author & license will either be given in the source code, or be in a LICENSE file next to the content. Please do not decompile my mods, but use the original source code available on [GitHub](https://github.com/FluffierThanThou/StuffedFloors/), so license information in the source code is preserved.
 
 # Version
-This is version v0.17.1.1
+This is version v0.17.1.2
