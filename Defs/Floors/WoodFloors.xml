@@ -85,6 +85,15 @@
 
             <!-- Vegetable Garden -->
             <li>IronwoodFloor</li>
+
+            <!-- extended woodworking + Veg Garden -->
+            <li>WoodPlankFloor_WeepingWillow</li>
+			<li>WoodPlankFloor_JapaneseMaple</li>
+			<li>WoodPlankFloor_CherryBlossom</li>
+			<li>WoodPlankFloor_Camellia</li>
+			<li>WoodPlankFloor_Acacia</li>
+			<li>WoodPlankFloor_Palm</li>
+			<li>WoodPlankFloor_RedMaple</li>                      
         </obsoletes>
     </StuffedFloors.FloorTypeDef>
 	
