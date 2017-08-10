@@ -24,6 +24,7 @@ namespace StuffedFloors
         {
             static Init()
             {
+                
                 Initialize();
             }
         }
@@ -60,14 +61,20 @@ namespace StuffedFloors
             }
 
             // remove category added by More Floors
-            var moreFloorsCategory = DefDatabase<DesignationCategoryDef>.GetNamedSilentFail("MoreFloors");
-            if (moreFloorsCategory != null)
+            LongEventHandler.QueueLongEvent(() => RemoveObsoleteCategory("MoreFloors"), "StuffedFloors.Initialize", false, null);
+        }
+
+        private static void RemoveObsoleteCategory( string categoryName )
+        {
+
+            var category = DefDatabase<DesignationCategoryDef>.GetNamedSilentFail(categoryName);
+            if (category != null)
             {
                 var floorsCategory = DefDatabase<DesignationCategoryDef>.GetNamed("Floors");
-                DesignatorUtility.MergeDesignationCategories(floorsCategory, moreFloorsCategory);
+                DesignatorUtility.MergeDesignationCategories(floorsCategory, category);
             }
         }
-        
+
         private static void CreateArchitectSubCategory( FloorTypeDef floorType )
         { 
             DesignationSubCategoryDef subCategoryDef = new DesignationSubCategoryDef();
