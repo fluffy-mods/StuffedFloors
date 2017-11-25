@@ -1,12 +1,11 @@
-
 "workshopitem"
 {
-  "appid" "294100"
-  "contentfolder" "D:\Games\steamapps\common\RimWorld\Mods\StuffedFloors"
-  "previewfile" "D:\Games\steamapps\common\RimWorld\Mods\StuffedFloors\About\Preview.png"
-  "visibilitiy" "0"
-  "title" "Stuffed Floors"
-  "description" "Allows building floors out of stuff*.
+"appid" "294100"
+"contentfolder" "D:\Games\steamapps\common\RimWorld\Mods\StuffedFloors"
+"previewfile" "D:\Games\steamapps\common\RimWorld\Mods\StuffedFloors\About\Preview.png"
+"visibilitiy" "0"
+"title" "Stuffed Floors"
+"description" "Allows building floors out of stuff*.
 
 [h1]Important[/h1]
 This mod [i]requires[/i] [url=http://steamcommunity.com/sharedfiles/filedetails/?id=852998459]Architect Sense[/url] to be loaded before it.
@@ -64,10 +63,9 @@ Show your appreciation by buying me a coffee (or contribute towards a nice singl
 [url=https://ko-fi.com/fluffymods][img]http://i.imgur.com/6P7Ap79.gif[/img][/url]
 
 [h1]Version[/h1]
-This is version v0.17.1.6
+This is version v0.18.0.1
 
 "
-  "changenote" ""
-  "publishedfileid" "853043503"
+"changenote" ""
+"publishedfileid" "853043503"
 }
-

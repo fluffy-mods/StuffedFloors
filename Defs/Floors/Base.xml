@@ -7,9 +7,9 @@
             <li>Heavy</li>
             <li>SmoothHard</li>
         </affordances>
-        <Fertility>0</Fertility>
+        <fertility>0</fertility>
         <constructEffect>ConstructDirt</constructEffect>
-        <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+        <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
         <statsAffectedByStuff>
             <li>WorkToBuild</li>

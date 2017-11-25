@@ -3,7 +3,7 @@
   <name>Stuffed Floors</name>
   <author>Fluffy</author>
   <url>https://ludeon.com/forums/index.php?topic=16120</url>
-  <targetVersion>0.17.1557</targetVersion>
+  <targetVersion>0.18.1722</targetVersion>
   <description>Allows building floors out of stuff*.
 
 &lt;size=24&gt;Important&lt;/size&gt;
@@ -45,7 +45,7 @@ duduluu:    Chinese translations
 DoctorVanGogh:    Add Extended Woodworking + Vegetable Garden obsoletions
 
 &lt;size=24&gt;Version&lt;/size&gt;
-This is version v0.17.1.6
+This is version v0.18.0.1
 
 </description>
 </ModMetaData>
