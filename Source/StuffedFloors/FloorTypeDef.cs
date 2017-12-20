@@ -118,7 +118,7 @@ namespace StuffedFloors
             if ( !statsAffectedByStuff.NullOrEmpty() )
             {
                 // prepare variables
-                var stats = new List<StatModifier>();
+                var stats = new List<StatModifier>( statBases );
                 StringBuilder text = new StringBuilder();
 
                 foreach ( StatDef stat in statsAffectedByStuff )

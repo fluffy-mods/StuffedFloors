@@ -26,9 +26,9 @@
     </StuffedFloors.FloorTypeDef>
 
     <!-- Floors and Fences -->
-    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodBase">
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodBasicBase">
     	<defName>StuffedPlywoodFloor</defName>
-    	<label>plywood booards</label>
+    	<label>plywood boards</label>
     	<description>Rough plywood boards, cheap and quick to build, but quite ugly.</description>
         <texturePath>Floors/Wood/FloorPlywood</texturePath>
         <obsoletes>

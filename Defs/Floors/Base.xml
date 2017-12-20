@@ -16,6 +16,7 @@
             <li>Beauty</li>
             <li>Cleanliness</li>
             <li>MarketValue</li>
+            <li>Flammability</li>
         </statsAffectedByStuff>
     </StuffedFloors.FloorTypeDef>
 </Defs>
