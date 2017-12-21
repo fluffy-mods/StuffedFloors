@@ -17,7 +17,7 @@
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\..\Assemblies\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="FloorTypeDef.cs" />
     <Compile Include="HarmonyPatch_GenerateImpliedDefs_PreResolve.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -10,7 +10,7 @@
     <StuffedFloors.FloorTypeDef Name="StuffedFloorsWoodBasicBase" ParentName="StuffedFloorsWoodBase" Abstract="True">
         <statBases>
             <Beauty>0</Beauty>
-            <WorkToBuild>150</WorkToBuild>
+            <WorkToBuild>250</WorkToBuild>
 			<Flammability>0.25</Flammability>
         </statBases>
         <stuffCost>3</stuffCost>
@@ -19,7 +19,7 @@
     <StuffedFloors.FloorTypeDef Name="StuffedFloorsWoodPrettyBase" ParentName="StuffedFloorsWoodBase" Abstract="True">
         <statBases>
             <Beauty>2</Beauty>
-            <WorkToBuild>250</WorkToBuild>
+            <WorkToBuild>400</WorkToBuild>
 			<Flammability>0.20</Flammability>
         </statBases>
         <stuffCost>5</stuffCost>

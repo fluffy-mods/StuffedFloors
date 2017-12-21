@@ -1,7 +1,7 @@
 ﻿#if DEBUG
 #define DEBUG_IMPLIED_DEFS
 //#define DEBUG_COSTLIST
-//#define DEBUG_STUFFING
+#define DEBUG_STUFFING
 #endif
 
 using System;
@@ -118,7 +118,7 @@ namespace StuffedFloors
             if ( !statsAffectedByStuff.NullOrEmpty() )
             {
                 // prepare variables
-                var stats = new List<StatModifier>( statBases );
+                var stats = new List<StatModifier>( statBases.Select( sb => sb.DeepCopy() ) );
                 StringBuilder text = new StringBuilder();
 
                 foreach ( StatDef stat in statsAffectedByStuff )
