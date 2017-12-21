@@ -63,9 +63,9 @@ Show your appreciation by buying me a coffee (or contribute towards a nice singl
 [url=https://ko-fi.com/fluffymods][img]http://i.imgur.com/6P7Ap79.gif[/img][/url]
 
 [h1]Version[/h1]
-This is version v0.18.0.3
+This is version v0.18.0.4
 
 "
-"changenote" "fix stuff stat offsets replacing statbases (floors are now flammable!)"
+"changenote" "fixed stupid build cost bug, rebalanced build times of all floors (stone is drastically lowered, wood slightly increased, and metal more than doubled). Build speeds should now be fast for wood, medium for metal, and somewhat high for stone."
 "publishedfileid" "853043503"
 }
