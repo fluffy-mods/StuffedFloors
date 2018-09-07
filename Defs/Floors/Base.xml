@@ -5,7 +5,7 @@
         <affordances>
             <li>Light</li>
             <li>Heavy</li>
-            <li>SmoothHard</li>
+            <li>Medium</li>
         </affordances>
         <fertility>0</fertility>
         <constructEffect>ConstructDirt</constructEffect>

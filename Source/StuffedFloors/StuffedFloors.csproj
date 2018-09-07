@@ -33,13 +33,11 @@
     <Reference Include="0Harmony">
       <HintPath>..\..\..\..\harmony\0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="ArchitectSense">
-      <HintPath>..\..\..\ArchitectSense\Assemblies\ArchitectSense.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="ArchitectSense, Version=18.0.3.12, Culture=neutral, PublicKeyToken=null">
+      <HintPath>F:\Steam\steamapps\common\RimWorld\Mods\RW_ArchitectSense-master\Assemblies\ArchitectSense.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\..\..\Games\steamapps\common\RimWorld\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="Assembly-CSharp, Version=0.19.6814.14609, Culture=neutral, PublicKeyToken=null">
+      <HintPath>F:\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="harmonycheck">
       <HintPath>..\..\..\..\harmony\harmonycheck.dll</HintPath>
@@ -50,9 +48,8 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\..\..\Games\steamapps\common\RimWorld\RimWorldWin_Data\Managed\UnityEngine.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>F:\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
