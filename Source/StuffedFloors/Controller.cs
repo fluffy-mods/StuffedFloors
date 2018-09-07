@@ -24,16 +24,19 @@ namespace StuffedFloors
         {
             static Init()
             {
-                
                 Initialize();
             }
         }
 
+        private static Controller _instance;
+        public static Controller Instance => _instance;
+        
         // constructor as an early init point (before any defs are loaded).
         public Controller( ModContentPack content ) : base( content )
         {
             var harmony = HarmonyInstance.Create( "Fluffy.StuffedFloors" );
             harmony.PatchAll( Assembly.GetExecutingAssembly() );
+            _instance = this;
 
             // Patches;
             // HarmonyPatch_GenerateImpliedDefs_PreResolve Prefix to add implied terrains

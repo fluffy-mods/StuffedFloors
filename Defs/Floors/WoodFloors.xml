@@ -43,7 +43,7 @@
     
     <!-- [T] More Floors -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodBasicBase">
-    	<defName>StuffedWoodFloor6</defName>
+    	<defName>StuffedWoodFloorRough</defName>
     	<label>rough vertical planks</label>
     	<description>A rough plank flooring.</description>
         <texturePath>Floors/Wood/WoodFloor6</texturePath>
@@ -54,7 +54,7 @@
 
     <!-- [T] More Floors -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodBasicBase">
-    	<defName>StuffedWoodFloor1</defName>
+    	<defName>StuffedWoodFloorBasic</defName>
     	<label>vertical planks</label>
     	<description>A basic plank flooring.</description>
         <texturePath>Floors/Wood/WoodFloor1</texturePath>
@@ -99,7 +99,7 @@
 	
     <!-- [T] More Floors -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodBasicBase">
-    	<defName>StuffedWoodFloor2</defName>
+    	<defName>StuffedWoodFloorRoughHorizontal</defName>
     	<label>rough horizontal planks</label>
     	<description>A rough plank flooring.</description>
         <texturePath>Floors/Wood/WoodFloor2</texturePath>
@@ -110,7 +110,7 @@
     
     <!-- [T] More Floors -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodBasicBase">
-    	<defName>StuffedWoodFloor3</defName>
+    	<defName>StuffedWoodFloorHorizontal</defName>
     	<label>horizontal planks</label>
     	<description>A basic plank flooring.</description>
         <texturePath>Floors/Wood/WoodFloor3</texturePath>
@@ -121,7 +121,7 @@
     
     <!-- [T] More Floors -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodPrettyBase">
-    	<defName>StuffedWoodFloor7</defName>
+    	<defName>StuffedWoodFloorRustic</defName>
     	<label>rustic planks</label>
     	<description>A rustic, beautiful plank flooring.</description>
         <texturePath>Floors/Wood/WoodFloor7</texturePath>
@@ -132,7 +132,7 @@
     
     <!-- [T] More Floors -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodPrettyBase">
-    	<defName>StuffedWoodFloor4</defName>
+    	<defName>StuffedWoodFloorParquetHorizontal</defName>
     	<label>horizontal parquet</label>
     	<description>A pretty interwoven parquet.</description>
         <texturePath>Floors/Wood/WoodFloor4</texturePath>
@@ -143,7 +143,7 @@
     
     <!-- [T] More Floors -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodPrettyBase">
-    	<defName>StuffedWoodFloor5</defName>
+    	<defName>StuffedWoodFloorParquetMosaic</defName>
     	<label>mosaic parquet</label>
     	<description>An intricate mosaic parquet.</description>
         <texturePath>Floors/Wood/WoodFloor5</texturePath>

@@ -54,11 +54,15 @@ namespace StuffedFloors
             
             // create new terrain
             TerrainDef terrain = new TerrainDef();
+            
+            // label it as ours
+            terrain.modContentPack = Controller.Instance.Content;
+            
             terrain.acceptFilth = acceptFilth;
             terrain.acceptTerrainSourceFilth = acceptTerrainSourceFilth;
             terrain.affordances = affordances.NullOrEmpty()
-                                      ? new List<TerrainAffordance>()
-                                      : new List<TerrainAffordance>( affordances );
+                                      ? new List<TerrainAffordanceDef>()
+                                      : new List<TerrainAffordanceDef>( affordances );
             terrain.avoidWander = avoidWander;
             terrain.altitudeLayer = altitudeLayer;
             terrain.buildingPrerequisites = buildingPrerequisites.NullOrEmpty()
@@ -67,11 +71,24 @@ namespace StuffedFloors
             terrain.burnedDef = burnedDef;
             terrain.changeable = changeable;
             terrain.driesTo = driesTo;
+            terrain.destroyBuildingsOnDestroyed = destroyBuildingsOnDestroyed;
+            terrain.destroyEffect = destroyEffect;
+            terrain.destroyEffectWater = destroyEffectWater;
+            terrain.destroyOnBombDamageThreshold = destroyOnBombDamageThreshold;
+            terrain.defaultPlacingRot = defaultPlacingRot;
             terrain.designationCategory = DefDatabase<DesignationCategoryDef>.GetNamed( "Floors" );
             terrain.edgeType = edgeType;
+            terrain.extinguishesFire = extinguishesFire;
+            terrain.extraDeteriorationFactor = extraDeteriorationFactor;
+            terrain.extraDraftedPerceivedPathCost = extraDraftedPerceivedPathCost;
+            terrain.extraNonDraftedPerceivedPathCost = extraNonDraftedPerceivedPathCost;
             terrain.fertility = fertility;
+            terrain.frameDef = frameDef;
+            terrain.generatedFilth = generatedFilth;
             terrain.holdSnow = holdSnow;
             terrain.layerable = layerable;
+            terrain.maxTechLevelToBuild = maxTechLevelToBuild;
+            terrain.minTechLevelToBuild = minTechLevelToBuild;
             terrain.menuHidden = menuHidden;
             terrain.passability = passability;
             terrain.pathCost = pathCost;
@@ -92,10 +109,16 @@ namespace StuffedFloors
             terrain.tags = tags.NullOrEmpty() ? new List<string>() : new List<string>( tags );
             terrain.takeFootprints = takeFootprints;
             terrain.takeSplashes = takeSplashes;
-            terrain.terrainFilthDef = terrainFilthDef;
             terrain.terrainAffordanceNeeded = terrainAffordanceNeeded;
             terrain.texturePath = texturePath;
-
+            terrain.tools = tools.NullOrEmpty() ? new List<Tool>() : new List<Tool>( tools );
+            terrain.traversedThought = traversedThought;
+            terrain.waterDepthMaterial = waterDepthMaterial;
+            terrain.waterDepthShader = waterDepthShader;
+            terrain.waterDepthShaderParameters = waterDepthShaderParameters.NullOrEmpty()
+                ? new List<ShaderParameter>()
+                : new List<ShaderParameter>( waterDepthShaderParameters );
+            
             // apply stuff elements
             StuffProperties stuff = stuffThingDef.stuffProps;
             terrain.color = stuff.color;
@@ -104,12 +127,12 @@ namespace StuffedFloors
             terrain.label = "ThingMadeOfStuffLabel".Translate( stuffThingDef.LabelAsStuff, label );
             terrain.description = description;
             terrain.defName = stuffThingDef.defName + "_" + defName;
-            terrain.costList = new List<ThingCountClass>();
+            terrain.costList = new List<ThingDefCountClass>();
             if (!costList.NullOrEmpty())
-                foreach ( ThingCountClass cost in costList )
-                    terrain.costList.Add( new ThingCountClass( cost.thingDef, cost.count ) );
+                foreach ( var cost in costList )
+                    terrain.costList.Add( new ThingDefCountClass( cost.thingDef, cost.count ) );
             if (stuffCost > 0)
-                terrain.costList.Add( new ThingCountClass( stuffThingDef, Mathf.CeilToInt( stuffCost / stuffThingDef.VolumePerUnit ) ) );
+                terrain.costList.Add( new ThingDefCountClass( stuffThingDef, Mathf.CeilToInt( stuffCost / stuffThingDef.VolumePerUnit ) ) );
 
 
             // apply stuff offsets and factors, but apply them to a new list of statmodifiers, re-using the same list 
