@@ -7,8 +7,6 @@
   <description>Allows building floors out of stuff*.
 
 &lt;size=24&gt;Important&lt;/size&gt;
-This mod &lt;i&gt;requires&lt;/i&gt; Architect Sense to be loaded before it. 
-
 You can safely add this mod to you save games, but &lt;i&gt;you can not remove it&lt;/i&gt; from save games. (If you really must do this, you’ll have to remove all built stuffed floors added by this mod first).
 
 &lt;size=24&gt;Features&lt;/size&gt;
@@ -25,12 +23,10 @@ This mod also organizes and where needed, removes the floors added by Vanilla Ri
 Adds a custom FloorTypeDef that derives from TerrainDef, and allows modders to create floortypes by setting a texture (grayscale for best effect, will be coloured by stuff) and a list of stuffCategories to generate terrain defs for. The resulting designators will be placed together in a category, and any vanilla or other mod’s terrains made obsolete can also be provided in the XML, and will then be hidden for the user (but not removed, so it won’t break save games).
 
 &lt;size=24&gt;Known issues&lt;/size&gt;
-While this mod will happily generate more floors for any mods that add materials to the metallic, stony and/or woody stuff types, it only cleans up the floors added by mods that are explicitly supported. Any other mods that add floor types may appear as duplicates. If you encounter such an issue, or know of mods that add more floors, please let me know! 
-
-Due to the extremely heavy-handed approach Erdelfs’ MinePlan Designator uses to inject his designators, &lt;b&gt;MinePlan Designator is incompatible with Architect Sense, and thus also with Stuffed Floors&lt;/b&gt;.
+While this mod will happily generate more floors for any mods that add materials to the metallic, stony and/or woody stuff types, it only cleans up the floors added by mods that are explicitly supported. Any other mods that add floor types may appear as duplicates. If you encounter such an issue, please let the author(s) of said mod(s) know so that they can correctly set up their designator groups! 
 
 &lt;size=24&gt;Technical details&lt;/size&gt;
-*: This mod doesn’t actually allow building stuffed floors. Rather, it spoofs this behaviour by generating TerrainDefs for each of the stuffDefs handed to it, and then using ArchitectSense to group these terrains together and give a user experience similar to stuff selection on buildings. This mod doesn’t do anything destructive, it doesn’t make any detours, and doesn’t remove any defs. It does however remove a number of designators from the architect in order to hide them from the user.
+*: This mod doesn’t actually allow building stuffed floors. Rather, it spoofs this behaviour by generating TerrainDefs for each of the stuffDefs handed to it, and then adds them to ‘DesignatorDropdownGroups’ to group these terrains together and give a user experience similar to stuff selection on buildings. The way it does this is exactly the same as the vanilla tile floors (which was stolen from an earlier version of this mod), but for more floors, and all available stuff types. This mod doesn’t do anything destructive, it doesn’t make any detours, and doesn’t remove any defs. It does however remove a number of designators from the architect in order to hide them from the user.
 
 &lt;size=24&gt;Powered by Harmony&lt;/size&gt;
 
@@ -45,7 +41,7 @@ duduluu:    Chinese translations
 DoctorVanGogh:    Add Extended Woodworking + Vegetable Garden obsoletions
 
 &lt;size=24&gt;Version&lt;/size&gt;
-This is version 0.7.30, for RimWorld 0.19.2009.
+This is version 0.8.31, for RimWorld 0.19.2009.
 
 </description>
 </ModMetaData>
