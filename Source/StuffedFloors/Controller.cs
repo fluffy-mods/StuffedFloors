@@ -8,11 +8,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using ArchitectSense;
 using Harmony;
 using RimWorld;
 using Verse;
-using DesignatorUtility = ArchitectSense.DesignatorUtility;
 
 namespace StuffedFloors
 {
@@ -47,21 +45,13 @@ namespace StuffedFloors
             // get all the floortypedefs from the game's library
             var floorTypes = DefDatabase<FloorTypeDef>.AllDefsListForReading;
 
-            // from this list of defs, generate a SubCategoryDef
-            floorTypes.ForEach( CreateArchitectSubCategory );
-
             // hide obsoleted vanilla and modded floors
-            foreach (string defName in floorTypes.SelectMany(type => type.obsoletes))
-            {
-                BuildableDef def = DefDatabase<TerrainDef>.GetNamedSilentFail(defName);
-                if ( def != null )
-                {
-#if DEBUG_HIDE_DEFS
-                    Log.Message( $"hiding {def.defName}" );
-#endif
-                    DesignatorUtility.HideDesignator(def);
-                }
-            }
+            var obsoleteDesignators = floorTypes
+                .SelectMany( f => f.obsoletes)
+                .Select( n => DefDatabase<TerrainDef>.GetNamedSilentFail( n ) )
+                .Where( t => t != null )
+                .Distinct();
+            DesignatorUtility.RemoveDesignators( obsoleteDesignators );
 
             // remove category added by More Floors
             LongEventHandler.QueueLongEvent(() => RemoveObsoleteCategory("MoreFloors"), "StuffedFloors.Initialize", false, null);
@@ -69,7 +59,6 @@ namespace StuffedFloors
 
         private static void RemoveObsoleteCategory( string categoryName )
         {
-
             var category = DefDatabase<DesignationCategoryDef>.GetNamedSilentFail(categoryName);
             if (category != null)
             {
@@ -77,27 +66,7 @@ namespace StuffedFloors
                 DesignatorUtility.MergeDesignationCategories(floorsCategory, category);
             }
         }
-
-        private static void CreateArchitectSubCategory( FloorTypeDef floorType )
-        { 
-            DesignationSubCategoryDef subCategoryDef = new DesignationSubCategoryDef();
-            subCategoryDef.label = floorType.label;
-            subCategoryDef.description = floorType.description;
-            subCategoryDef.designationCategory = floorType.designationCategory;
-            subCategoryDef.preview = false; // we want the stuff-like selector
-            subCategoryDef.emulateStuff = true;
-
-#if DEBUG_IMPLIED_DEFS
-            var defs =
-                floorType.terrains.Select( td => "\t" + td.defName + "\t" + ( td.blueprintDef?.defName ?? "NULL" ) + "\t" +
-                                              ( td.frameDef?.defName ?? "NULL" ) ).ToArray();
-            Log.Message( $"Generated defs for {floorType.defName}:\n {String.Join("\n", defs )}" );
-#endif
-
-            // poke ArchitectSense
-            DesignatorUtility.AddSubCategory( DefDatabase<DesignationCategoryDef>.GetNamed( "Floors" ), subCategoryDef, floorType.terrains );
-        }
-
+        
         private static Dictionary<StuffCategoryDef, List<ThingDef>> _stuffCache = new Dictionary<StuffCategoryDef, List<ThingDef>>();
 
         public static List<ThingDef> GetStuffDefsFor( List<StuffCategoryDef> stuffCategoryDefs )

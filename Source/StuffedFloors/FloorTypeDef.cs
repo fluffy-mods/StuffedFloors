@@ -1,7 +1,7 @@
 ﻿#if DEBUG
-#define DEBUG_IMPLIED_DEFS
+//#define DEBUG_IMPLIED_DEFS
 //#define DEBUG_COSTLIST
-#define DEBUG_STUFFING
+//#define DEBUG_STUFFING
 #endif
 
 using System;
@@ -38,6 +38,22 @@ namespace StuffedFloors
         // list of relevant stats that should be affected by stuff
         public List<StatDef> statsAffectedByStuff = new List<StatDef>();
 
+        private DesignatorDropdownGroupDef _designatorGroup;
+        public DesignatorDropdownGroupDef designatorGroup
+        {
+            get
+            {
+                if ( _designatorGroup == null )
+                {
+                    // create and register group.
+                    _designatorGroup = new DesignatorDropdownGroupDef();
+                    _designatorGroup.defName = defName;
+                    DefDatabase<DesignatorDropdownGroupDef>.Add( _designatorGroup );
+                }
+                return _designatorGroup;
+            }
+        }
+
         public override IEnumerable<string> ConfigErrors()
         {
             List<string> errors = base.ConfigErrors()?.ToList() ?? new List<string>();
@@ -57,7 +73,11 @@ namespace StuffedFloors
             
             // label it as ours
             terrain.modContentPack = Controller.Instance.Content;
+
+            // assign to designator group
+            terrain.designatorDropdown = designatorGroup;
             
+            // copy properties. Everything that could potentially be relevant.
             terrain.acceptFilth = acceptFilth;
             terrain.acceptTerrainSourceFilth = acceptTerrainSourceFilth;
             terrain.affordances = affordances.NullOrEmpty()
