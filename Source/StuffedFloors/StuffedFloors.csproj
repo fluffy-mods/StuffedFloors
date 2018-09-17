@@ -31,14 +31,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\harmony\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\..\..\harmony\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\dlls\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="harmonycheck">
-      <HintPath>..\..\..\..\harmony\harmonycheck.dll</HintPath>
+      <HintPath>..\..\..\..\..\harmony\harmonycheck.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
