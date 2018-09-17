@@ -54,16 +54,16 @@ namespace StuffedFloors
             DesignatorUtility.RemoveDesignators( obsoleteDesignators );
 
             // remove category added by More Floors
-            LongEventHandler.QueueLongEvent(() => RemoveObsoleteCategory("MoreFloors"), "StuffedFloors.Initialize", false, null);
+            RemoveObsoleteCategory( "MoreFloors" );
         }
 
         private static void RemoveObsoleteCategory( string categoryName )
         {
-            var category = DefDatabase<DesignationCategoryDef>.GetNamedSilentFail(categoryName);
+            var category = DefDatabase<DesignationCategoryDef>.GetNamedSilentFail( categoryName );
             if (category != null)
             {
-                var floorsCategory = DefDatabase<DesignationCategoryDef>.GetNamed("Floors");
-                DesignatorUtility.MergeDesignationCategories(floorsCategory, category);
+                var floorsCategory = DefDatabase<DesignationCategoryDef>.GetNamed( "Floors" );
+                DesignatorUtility.MergeDesignationCategories( floorsCategory, category );
             }
         }
         

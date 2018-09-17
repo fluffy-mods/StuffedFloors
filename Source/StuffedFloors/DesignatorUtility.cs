@@ -2,8 +2,6 @@
 // Copyright Karel Kroeze, 2018-2018
 
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using Harmony;
 using RimWorld;
 using Verse;
@@ -30,9 +28,9 @@ namespace StuffedFloors
         public static void MergeDesignationCategories( DesignationCategoryDef target, DesignationCategoryDef source )
         {
             // change designation category for all build designators in source
-            foreach ( var designator in source.AllResolvedDesignators )
-                if ( designator is Designator_Build build )
-                    build.PlacingDef.designationCategory = target;
+            foreach ( var terrain in DefDatabase<TerrainDef>.AllDefs )
+                if ( terrain.designationCategory == source )
+                    terrain.designationCategory = target;
 
             // add specials that don't exist in target yet
             foreach ( var designator in source.specialDesignatorClasses )
@@ -54,12 +52,12 @@ namespace StuffedFloors
 
         private static void RecacheDesignationCategory( DesignationCategoryDef category )
         {
-            Traverse.Create( category ).Method( "ResolveDesignators" ).GetValue();
+            category.ResolveReferences(); // calls ResolveDesignators, recreating cache;
         }
 
         private static void RecacheDesignationCategories()
         {
-            Traverse.Create(MainButtonDefOf.Architect.TabWindow).Method("CacheDesPanels").GetValue();
+            Traverse.Create( MainButtonDefOf.Architect.TabWindow ).Method( "CacheDesPanels" ).GetValue();
         }
     }
 }
