@@ -57,7 +57,9 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="FloorTypeDef.cs" />
     <Compile Include="HarmonyPatch_GenerateImpliedDefs_PreResolve.cs" />
+    <Compile Include="HarmonyPatch_WealthWatcher_CalculateWealthFloors.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WealthDebugger.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

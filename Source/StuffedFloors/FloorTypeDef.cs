@@ -1,7 +1,7 @@
 ﻿#if DEBUG
-//#define DEBUG_IMPLIED_DEFS
+#define DEBUG_IMPLIED_DEFS
 //#define DEBUG_COSTLIST
-//#define DEBUG_STUFFING
+#define DEBUG_STUFFING
 #endif
 
 using System;
