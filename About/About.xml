@@ -3,7 +3,9 @@
   <name>Stuffed Floors</name>
   <author>Fluffy</author>
   <url>https://ludeon.com/forums/index.php?topic=16120</url>
-  <supportedVersions><li>1.0</li></supportedVersions>
+  <supportedVersions>
+    <li>1.0</li>
+  </supportedVersions>
   <description>Allows building floors out of stuff*.
 
 &lt;size=24&gt;Important&lt;/size&gt;
@@ -39,9 +41,10 @@ Pravus:    Permission to use textures for yet more floors
 DarkSlayerEx:    Original idea, texture tweaks and moral support
 duduluu:    Chinese translations
 DoctorVanGogh:    Add Extended Woodworking + Vegetable Garden obsoletions
+cucumpear:    
 
 &lt;size=24&gt;Version&lt;/size&gt;
-This is version 1.1.59, for RimWorld 1.0.2059.
+This is version 1.2.60, for RimWorld 1.0.2150.
 
 </description>
 </ModMetaData>

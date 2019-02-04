@@ -34,6 +34,7 @@ While this mod will happily generate more floors for any mods that add materials
  - DarkSlayerEx:	Original idea, texture tweaks and moral support
  - duduluu:	Chinese translations
  - DoctorVanGogh:	Add Extended Woodworking + Vegetable Garden obsoletions
+ - cucumpear:	
 
 # Think you found a bug? 
 Please read [this guide](http://steamcommunity.com/sharedfiles/filedetails/?id=725234314) before creating a bug report,
@@ -54,4 +55,4 @@ Show your appreciation by buying me a coffee (or contribute towards a nice singl
 [![Buy Me a Coffee](http://i.imgur.com/EjWiUwx.gif)](https://ko-fi.com/fluffymods)
 
 # Version
-This is version 1.1.59, for RimWorld 1.0.2059.
+This is version 1.2.60, for RimWorld 1.0.2150.
