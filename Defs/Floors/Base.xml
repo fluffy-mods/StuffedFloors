@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <StuffedFloors.FloorTypeDef Name="StuffedFloorsBase" Abstract="True">
+		<renderPrecedence>201</renderPrecedence>
 		<layerable>true</layerable>
         <affordances>
             <li>Light</li>
