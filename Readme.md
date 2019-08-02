@@ -35,6 +35,7 @@ While this mod will happily generate more floors for any mods that add materials
  - duduluu:	Chinese translations
  - DoctorVanGogh:	Add Extended Woodworking + Vegetable Garden obsoletions
  - cucumpear:	
+ - Jorge Martínez:	Spanish and Latin Spanish translations
 
 # Think you found a bug? 
 Please read [this guide](http://steamcommunity.com/sharedfiles/filedetails/?id=725234314) before creating a bug report,
@@ -57,4 +58,4 @@ Show your appreciation by buying me a coffee (or contribute towards a nice singl
 [![I Have a Black Dog](https://i.ibb.co/ss59Rwy/New-Project-2.png)](https://www.youtube.com/watch?v=XiCrniLQGYc)
 
 # Version
-This is version 1.3.62, for RimWorld 1.0.2282.
+This is version 1.4.65, for RimWorld 1.0.2282.
