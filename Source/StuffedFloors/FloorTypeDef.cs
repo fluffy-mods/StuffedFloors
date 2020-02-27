@@ -78,18 +78,20 @@ namespace StuffedFloors
             terrain.designatorDropdown = designatorGroup;
             
             // copy properties. Everything that could potentially be relevant.
-            terrain.acceptFilth = acceptFilth;
-            terrain.acceptTerrainSourceFilth = acceptTerrainSourceFilth;
             terrain.affordances = affordances.NullOrEmpty()
                                       ? new List<TerrainAffordanceDef>()
                                       : new List<TerrainAffordanceDef>( affordances );
             terrain.avoidWander = avoidWander;
             terrain.altitudeLayer = altitudeLayer;
+            terrain.artisticSkillPrerequisite = artisticSkillPrerequisite;
+            terrain.blueprintDef = blueprintDef;
             terrain.buildingPrerequisites = buildingPrerequisites.NullOrEmpty()
                                                 ? new List<ThingDef>()
                                                 : new List<ThingDef>( buildingPrerequisites );
             terrain.burnedDef = burnedDef;
             terrain.changeable = changeable;
+            terrain.clearBuildingArea = clearBuildingArea;
+            terrain.constructionSkillPrerequisite = constructionSkillPrerequisite;
             terrain.driesTo = driesTo;
             terrain.destroyBuildingsOnDestroyed = destroyBuildingsOnDestroyed;
             terrain.destroyEffect = destroyEffect;
@@ -103,6 +105,7 @@ namespace StuffedFloors
             terrain.extraDraftedPerceivedPathCost = extraDraftedPerceivedPathCost;
             terrain.extraNonDraftedPerceivedPathCost = extraNonDraftedPerceivedPathCost;
             terrain.fertility = fertility;
+            terrain.filthAcceptanceMask = filthAcceptanceMask;
             terrain.frameDef = frameDef;
             terrain.generatedFilth = generatedFilth;
             terrain.holdSnow = holdSnow;

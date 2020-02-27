@@ -4,11 +4,10 @@
 //#define DEBUG_STUFFING
 #endif
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Harmony;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -32,7 +31,7 @@ namespace StuffedFloors
         // constructor as an early init point (before any defs are loaded).
         public Controller( ModContentPack content ) : base( content )
         {
-            var harmony = HarmonyInstance.Create( "Fluffy.StuffedFloors" );
+            var harmony = new Harmony( "Fluffy.StuffedFloors" );
             harmony.PatchAll( Assembly.GetExecutingAssembly() );
             _instance = this;
 

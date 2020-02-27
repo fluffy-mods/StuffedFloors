@@ -2,13 +2,13 @@
 // HarmonyPatch_GenerateImpliedDefs_PreResolve.cs
 // 2017-05-07
 
-using Harmony;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
 namespace StuffedFloors
 {
-    [HarmonyPatch( typeof(DefGenerator), "GenerateImpliedDefs_PreResolve" )]
+    [HarmonyPatch( typeof(DefGenerator), nameof( DefGenerator.GenerateImpliedDefs_PreResolve ) )]
     public class HarmonyPatch_GenerateImpliedDefs_PreResolve
     {
         public static void Prefix()
