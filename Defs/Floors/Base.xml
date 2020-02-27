@@ -10,7 +10,6 @@
         </affordances>
         <fertility>0</fertility>
         <constructEffect>ConstructDirt</constructEffect>
-        <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
         <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
         <statsAffectedByStuff>
             <li>WorkToBuild</li>
