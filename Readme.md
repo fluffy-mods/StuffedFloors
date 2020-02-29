@@ -1,4 +1,4 @@
-[![RimWorld Alpha 18](https://img.shields.io/badge/RimWorld-Alpha%2018-brightgreen.svg)](http://rimworldgame.com/)
+[![RimWorld 1](https://img.shields.io/badge/RimWorld-1-brightgreen.svg)](http://rimworldgame.com/)
 
 Allows building floors out of stuff*.
 
@@ -58,4 +58,4 @@ Show your appreciation by buying me a coffee (or contribute towards a nice singl
 [![I Have a Black Dog](https://i.ibb.co/ss59Rwy/New-Project-2.png)](https://www.youtube.com/watch?v=XiCrniLQGYc)
 
 # Version
-This is version 2.1.67, for RimWorld 1.1.2557.
+This is version 2.2.68, for RimWorld 1.1.2558.

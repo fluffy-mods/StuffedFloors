@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
-  <version>1.4.65</version>
-  <manifestUri>https://cdn.jsdelivr.net/gh/FluffierThanThou/StuffedFloors/About/Manifest.xml</manifestUri>
-  <downloadUri>https://github.com/FluffierThanThou/StuffedFloors/releases/v1.4.65</downloadUri>
+  <version>2.2.68</version>
+  <manifestUri>https://raw.githubusercontent.com/fluffy-mods/StuffedFloors/1/About/Manifest.xml</manifestUri>
+  <downloadUri>https://github.com/fluffy-mods/StuffedFloors/releases/v2.2.68</downloadUri>
 </Manifest>
