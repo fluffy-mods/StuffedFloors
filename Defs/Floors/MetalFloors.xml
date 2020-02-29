@@ -21,6 +21,9 @@
             <WorkToBuild>800</WorkToBuild>
         </statBases>
         <stuffCost>5</stuffCost>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
     </StuffedFloors.FloorTypeDef>
 
     <!-- Pravus' Floors and Fences -->

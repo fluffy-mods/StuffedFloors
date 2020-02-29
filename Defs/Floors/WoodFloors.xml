@@ -23,6 +23,9 @@
 			<Flammability>0.20</Flammability>
         </statBases>
         <stuffCost>5</stuffCost>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
     </StuffedFloors.FloorTypeDef>
 
     <!-- Floors and Fences -->

@@ -23,6 +23,9 @@
             <Beauty>2</Beauty>
         </statBases>
         <stuffCost>5</stuffCost>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
     </StuffedFloors.FloorTypeDef>
 
 <!-- This one really requires two stuffs to make sense, let's leave it to MoreFloors and just move it over.
