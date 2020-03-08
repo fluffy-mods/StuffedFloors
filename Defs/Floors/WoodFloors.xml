@@ -14,6 +14,9 @@
 			<Flammability>0.25</Flammability>
         </statBases>
         <stuffCost>3</stuffCost>
+        <tags>
+            <li>Floor</li>
+        </tags>
     </StuffedFloors.FloorTypeDef>
 
     <StuffedFloors.FloorTypeDef Name="StuffedFloorsWoodPrettyBase" ParentName="StuffedFloorsWoodBase" Abstract="True">
@@ -24,6 +27,7 @@
         </statBases>
         <stuffCost>5</stuffCost>
         <tags>
+            <li>Floor</li>
             <li>FineFloor</li>
         </tags>
     </StuffedFloors.FloorTypeDef>

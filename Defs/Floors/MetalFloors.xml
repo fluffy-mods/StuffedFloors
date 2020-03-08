@@ -12,7 +12,9 @@
             <WorkToBuild>400</WorkToBuild>
         </statBases>
         <stuffCost>3</stuffCost>
-        
+        <tags>
+            <li>Floor</li>
+        </tags>
     </StuffedFloors.FloorTypeDef>
 
     <StuffedFloors.FloorTypeDef Name="StuffedFloorsMetalPrettyBase" ParentName="StuffedFloorsMetalBase" Abstract="True">
@@ -22,6 +24,7 @@
         </statBases>
         <stuffCost>5</stuffCost>
         <tags>
+            <li>Floor</li>
             <li>FineFloor</li>
         </tags>
     </StuffedFloors.FloorTypeDef>
