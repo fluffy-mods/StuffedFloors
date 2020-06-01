@@ -2,10 +2,16 @@
 
 Allows building floors out of stuff*.
 
-# Important
+
+  
+  
+![Important](https://banners.karel-kroeze.nl/title/Important.png)
 You can safely add this mod to you save games, but *you can not remove it* from save games. (If you really must do this, you'll have to remove all built stuffed floors added by this mod first).
 
-# Features
+
+  
+  
+![Features](https://banners.karel-kroeze.nl/title/Features.png)
 This mod does two things. First, using Architect Sense it provides a framework for modders to define their own stuffed floor types. Second, it uses this framework to create a number of new floors that are stuffed. 
 
 **For players**
@@ -18,45 +24,71 @@ This mod also organizes and where needed, removes the floors added by Vanilla Ri
 **For modders**
 Adds a custom FloorTypeDef that derives from TerrainDef, and allows modders to create floortypes by setting a texture (grayscale for best effect, will be coloured by stuff) and a list of stuffCategories to generate terrain defs for. The resulting designators will be placed together in a category, and any vanilla or other mod's terrains made obsolete can also be provided in the XML, and will then be hidden for the user (but not removed, so it won't break save games).
 
-# Known issues
+
+  
+  
+![Known issues](https://banners.karel-kroeze.nl/title/Known%20issues.png)
 While this mod will happily generate more floors for any mods that add materials to the metallic, stony and/or woody stuff types, it only cleans up the floors added by mods that are explicitly supported. Any other mods that add floor types may appear as duplicates. If you encounter such an issue, please let the author(s) of said mod(s) know so that they can correctly set up their designator groups! 
 
-# Technical details
+
+  
+  
+![Technical details](https://banners.karel-kroeze.nl/title/Technical%20details.png)
 *: This mod doesn't actually allow building stuffed floors. Rather, it spoofs this behaviour by generating TerrainDefs for each of the stuffDefs handed to it, and then adds them to 'DesignatorDropdownGroups' to group these terrains together and give a user experience similar to stuff selection on buildings. The way it does this is exactly the same as the vanilla tile floors (which was stolen from an earlier version of this mod), but for more floors, and all available stuff types. This mod doesn't do anything destructive, it doesn't make any detours, and doesn't remove any defs. It does however remove a number of designators from the architect in order to hide them from the user.
 
-# Powered by Harmony
+
+  
+  
+![Powered by Harmony](https://banners.karel-kroeze.nl/title/Powered%20by%20Harmony.png)
 ![Powered by Harmony](https://camo.githubusercontent.com/074bf079275fa90809f51b74e9dd0deccc70328f/68747470733a2f2f7332342e706f7374696d672e6f72672f3538626c31727a33392f6c6f676f2e706e67)
 
-# Contributors
+
+  
+  
+![Contributors](https://banners.karel-kroeze.nl/title/Contributors.png)
  - Telkir:	Permission to use textures for many of the floors
  - CuproPanda:	Permission to use textures for even more floors
  - Pravus:	Permission to use textures for yet more floors
  - DarkSlayerEx:	Original idea, texture tweaks and moral support
  - duduluu:	Chinese translations
  - DoctorVanGogh:	Add Extended Woodworking + Vegetable Garden obsoletions
- - cucumpear:	
  - Jorge Martínez:	Spanish and Latin Spanish translations
  - Erdnussbrot:	German translation
 
-# Think you found a bug? 
+
+  
+  
+![Think you found a bug?](https://banners.karel-kroeze.nl/title/Think%20you%20found%20a%20bug%3F.png)
 Please read [this guide](http://steamcommunity.com/sharedfiles/filedetails/?id=725234314) before creating a bug report,
  and then create a bug report [here](https://github.com/fluffy-mods/StuffedFloors/issues)
 
-# Older versions
+
+  
+  
+![Older versions](https://banners.karel-kroeze.nl/title/Older%20versions.png)
 All current and past versions of this mod can be downloaded from [GitHub](https://github.com/fluffy-mods/StuffedFloors/releases).
 
-# License
+
+  
+  
+![License](https://banners.karel-kroeze.nl/title/License.png)
 All original code in this mod is licensed under the [MIT license](https://opensource.org/licenses/MIT). Do what you want, but give me credit. 
 All original content (e.g. text, imagery, sounds) in this mod is licensed under the [CC-BY-SA 4.0 license](http://creativecommons.org/licenses/by-sa/4.0/).
 
 Parts of the code in this mod, and some content may be licensed by their original authors. If this is the case, the original author & license will either be given in the source code, or be in a LICENSE file next to the content. Please do not decompile my mods, but use the original source code available on [GitHub](https://github.com/fluffy-mods/StuffedFloors/), so license information in the source code is preserved.
 
-# Are you enjoying my mods?
+
+  
+  
+![Are you enjoying my mods?](https://banners.karel-kroeze.nl/title/Are%20you%20enjoying%20my%20mods%3F.png)
 Show your appreciation by buying me a coffee (or contribute towards a nice single malt).
 
 [![Buy Me a Coffee](http://i.imgur.com/EjWiUwx.gif)](https://ko-fi.com/fluffymods)
 
 [![I Have a Black Dog](https://i.ibb.co/ss59Rwy/New-Project-2.png)](https://www.youtube.com/watch?v=XiCrniLQGYc)
 
-# Version
-This is version 2.6.73, for RimWorld 1.1.2610.
+
+  
+  
+![Version](https://banners.karel-kroeze.nl/title/Version.png)
+This is version 2.6.73, for RimWorld 1.1.2652.
