@@ -147,7 +147,7 @@
 
     <!-- Telkir's [T] More Floors -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
-    	<defName>StuffedStoneHerringbone</defName>
+    	<defName>StuffedStoneDigital</defName>
     	<label>digital tiles</label>
     	<description>Paving that cleverly uses two shapes of stone to create a vaguely digital pattern.</description>
         <texturePath>Terrain/Surfaces/StoneDigital</texturePath>
