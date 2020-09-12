@@ -100,6 +100,96 @@
         </obsoletes>
     </StuffedFloors.FloorTypeDef>
 
+    <!-- Telkir's [T] More Floors -->
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
+    	<defName>StuffedStoneStaggered</defName>
+    	<label>staggered tiles</label>
+    	<description>Stone tiles with rounded corners laid in a staggered pattern.</description>
+        <texturePath>Terrain/Surfaces/StoneStaggered</texturePath>
+        <obsoletes>
+            <li>FloorStoneStaggeredSandstone</li>
+            <li>FloorStoneStaggeredGranite</li>
+            <li>FloorStoneStaggeredLimestone</li>
+            <li>FloorStoneStaggeredSlate</li>
+            <li>FloorStoneStaggeredMarble</li>
+        </obsoletes>
+    </StuffedFloors.FloorTypeDef>
+    
+    <!-- Telkir's [T] More Floors -->
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
+    	<defName>StuffedStoneAlternating</defName>
+    	<label>alternating tiles</label>
+    	<description>Stone flooring with rounded bricks laid in a simple but pleasant alternating pattern.</description>
+        <texturePath>Terrain/Surfaces/StoneAlternating</texturePath>
+        <obsoletes>
+            <li>FloorStoneAlternatingSandstone</li>
+            <li>FloorStoneAlternatingGranite</li>
+            <li>FloorStoneAlternatingLimestone</li>
+            <li>FloorStoneAlternatingSlate</li>
+            <li>FloorStoneAlternatingMarble</li>
+        </obsoletes>
+    </StuffedFloors.FloorTypeDef>
+    
+    <!-- Telkir's [T] More Floors -->
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
+    	<defName>StuffedStoneHerringbone</defName>
+    	<label>herringbone paving tiles</label>
+    	<description>Stone bricks laid in a stylish herringbone pattern.</description>
+        <texturePath>Terrain/Surfaces/StoneHerringbone</texturePath>
+        <obsoletes>
+            <li>FloorStoneHerringboneSandstone</li>
+            <li>FloorStoneHerringboneGranite</li>
+            <li>FloorStoneHerringboneLimestone</li>
+            <li>FloorStoneHerringboneSlate</li>
+            <li>FloorStoneHerringboneMarble</li>
+        </obsoletes>
+    </StuffedFloors.FloorTypeDef>
+
+    <!-- Telkir's [T] More Floors -->
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
+    	<defName>StuffedStoneDigital</defName>
+    	<label>digital tiles</label>
+    	<description>Paving that cleverly uses two shapes of stone to create a vaguely digital pattern.</description>
+        <texturePath>Terrain/Surfaces/StoneDigital</texturePath>
+        <obsoletes>
+            <li>FloorStoneDigitalSandstone</li>
+            <li>FloorStoneDigitalGranite</li>
+            <li>FloorStoneDigitalLimestone</li>
+            <li>FloorStoneDigitalSlate</li>
+            <li>FloorStoneDigitalMarble</li>
+        </obsoletes>
+    </StuffedFloors.FloorTypeDef>
+
+    <!-- Telkir's [T] More Floors -->
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
+    	<defName>StuffedStoneDiamond</defName>
+    	<label>diamond tiles</label>
+    	<description>Intricate stone flooring cut around precisely-measured diamond spacer tiles. Pretty, but needs a lot of time to build.</description>
+        <texturePath>Terrain/Surfaces/StoneDiamond</texturePath>
+        <obsoletes>
+            <li>FloorStoneDiamondSandstone</li>
+            <li>FloorStoneDiamondGranite</li>
+            <li>FloorStoneDiamondLimestone</li>
+            <li>FloorStoneDiamondSlate</li>
+            <li>FloorStoneDiamondMarble</li>
+        </obsoletes>
+    </StuffedFloors.FloorTypeDef>
+    
+    <!-- Telkir's [T] More Floors -->
+    <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
+    	<defName>StuffedStoneArabesque</defName>
+    	<label>arabesque tiles</label>
+    	<description>Mastercrafted stone flooring with tiles painstakingly shaped into an arabesque pattern. Very nice to look at but demanding to build.</description>
+        <texturePath>Terrain/Surfaces/StoneArabesque</texturePath>
+        <obsoletes>
+            <li>FloorStoneArabesqueSandstone</li>
+            <li>FloorStoneArabesqueGranite</li>
+            <li>FloorStoneArabesqueLimestone</li>
+            <li>FloorStoneArabesqueSlate</li>
+            <li>FloorStoneArabesqueMarble</li>
+        </obsoletes>
+    </StuffedFloors.FloorTypeDef>
+
     <!-- CuproPanda's Extra Floors -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStonePrettyBase">
     	<defName>StuffedStoneCircle</defName>
