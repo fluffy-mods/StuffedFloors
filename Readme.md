@@ -36,6 +36,7 @@ While this mod will happily generate more floors for any mods that add materials
  - DoctorVanGogh:	Add Extended Woodworking + Vegetable Garden obsoletions
  - Jorge Martínez:	Spanish and Latin Spanish translations
  - Erdnussbrot:	German translation
+ - InsanityPrelude:	More Floors Stone Floors Update
 
 ![Think you found a bug?](https://banners.karel-kroeze.nl/title/Think%20you%20found%20a%20bug%3F.png)  
 Please read [this guide](http://steamcommunity.com/sharedfiles/filedetails/?id=725234314) before creating a bug report,
@@ -61,4 +62,4 @@ Become a supporter and show your appreciation by buying me a coffee (or contribu
 
 
 ![Version](https://banners.karel-kroeze.nl/title/Version.png)  
-This is version 2.7.74, for RimWorld 1.2.2719.
+This is version 2.8.78, for RimWorld 1.2.2753.

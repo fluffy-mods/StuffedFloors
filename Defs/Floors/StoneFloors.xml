@@ -55,7 +55,6 @@
     </StuffedFloors.FloorTypeDef>   
     
     <!-- Telkir's [T] More Floors -->
-    <!-- TODO: If A18 hasn't fixed the buildable hash collision, rename this def in an attempt to bandage the situation -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneBasicBase">
     	<defName>StuffedStoneRoughTiles</defName>
     	<label>rough tiles</label>
@@ -105,7 +104,7 @@
     	<defName>StuffedStoneStaggered</defName>
     	<label>staggered tiles</label>
     	<description>Stone tiles with rounded corners laid in a staggered pattern.</description>
-        <texturePath>Terrain/Surfaces/StoneStaggered</texturePath>
+        <texturePath>Floors/Stone/StoneStaggered</texturePath>
         <obsoletes>
             <li>FloorStoneStaggeredSandstone</li>
             <li>FloorStoneStaggeredGranite</li>
@@ -120,7 +119,7 @@
     	<defName>StuffedStoneAlternating</defName>
     	<label>alternating tiles</label>
     	<description>Stone flooring with rounded bricks laid in a simple but pleasant alternating pattern.</description>
-        <texturePath>Terrain/Surfaces/StoneAlternating</texturePath>
+        <texturePath>Floors/Stone/StoneAlternating</texturePath>
         <obsoletes>
             <li>FloorStoneAlternatingSandstone</li>
             <li>FloorStoneAlternatingGranite</li>
@@ -135,7 +134,7 @@
     	<defName>StuffedStoneHerringbone</defName>
     	<label>herringbone paving tiles</label>
     	<description>Stone bricks laid in a stylish herringbone pattern.</description>
-        <texturePath>Terrain/Surfaces/StoneHerringbone</texturePath>
+        <texturePath>Floors/Stone/StoneHerringbone</texturePath>
         <obsoletes>
             <li>FloorStoneHerringboneSandstone</li>
             <li>FloorStoneHerringboneGranite</li>
@@ -150,7 +149,7 @@
     	<defName>StuffedStoneDigital</defName>
     	<label>digital tiles</label>
     	<description>Paving that cleverly uses two shapes of stone to create a vaguely digital pattern.</description>
-        <texturePath>Terrain/Surfaces/StoneDigital</texturePath>
+        <texturePath>Floors/Stone/StoneDigital</texturePath>
         <obsoletes>
             <li>FloorStoneDigitalSandstone</li>
             <li>FloorStoneDigitalGranite</li>
@@ -165,7 +164,7 @@
     	<defName>StuffedStoneDiamond</defName>
     	<label>diamond tiles</label>
     	<description>Intricate stone flooring cut around precisely-measured diamond spacer tiles. Pretty, but needs a lot of time to build.</description>
-        <texturePath>Terrain/Surfaces/StoneDiamond</texturePath>
+        <texturePath>Floors/Stone/StoneDiamond</texturePath>
         <obsoletes>
             <li>FloorStoneDiamondSandstone</li>
             <li>FloorStoneDiamondGranite</li>
@@ -180,7 +179,7 @@
     	<defName>StuffedStoneArabesque</defName>
     	<label>arabesque tiles</label>
     	<description>Mastercrafted stone flooring with tiles painstakingly shaped into an arabesque pattern. Very nice to look at but demanding to build.</description>
-        <texturePath>Terrain/Surfaces/StoneArabesque</texturePath>
+        <texturePath>Floors/Stone/StoneArabesque</texturePath>
         <obsoletes>
             <li>FloorStoneArabesqueSandstone</li>
             <li>FloorStoneArabesqueGranite</li>
@@ -327,7 +326,7 @@
     	<defName>StuffedSmoothTiles</defName>
     	<label>smooth tiles</label>		
         <description>Refined, carefully-cut stone tiles for a castle feeling. Pretty to look at, but they take a long time to lay.</description>
-		<texturePath>Terrain/Surfaces/TileStone</texturePath>        
+		<texturePath>Floors/Stone/TileStone</texturePath>        
         <obsoletes>
             <!-- vanilla -->
             <li>TileSandstone</li>
