@@ -16,6 +16,7 @@ namespace StuffedFloors
 {
     public class FloorTypeDef : TerrainDef
     {
+        private const int FINE_BEAUTY_THRESHOLD = 4;
         // TerrainDef basically contains all the fields we need, so just derive from that.
         // note that we're hardwiring stuffed terrains to the Floors category, that way we
         // can leave designationCategory on null for the floorType, and we don't have to deal
@@ -211,7 +212,17 @@ namespace StuffedFloors
                 // asign the stats, overwriting the statBases list
                 terrain.statBases = stats;
             }
-            
+
+            // apply FineFloor tag if beauty > threshold
+            float beauty;
+            if (!terrain.tags.Any(t => t == "FineFloor") && ( beauty = terrain.GetStatValueAbstract(StatDefOf.Beauty) ) > FINE_BEAUTY_THRESHOLD )
+            {
+#if DEBUG
+                Log.Message($"fine floor tag added to {terrain.defName} (beauty {beauty})");
+#endif
+                terrain.tags.Add("FineFloor");
+            }
+
             return terrain;
         }
     }
