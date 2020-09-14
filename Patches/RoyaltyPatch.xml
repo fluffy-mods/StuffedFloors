@@ -1,0 +1,27 @@
+<!-- This one can only run if Royalty is detected, because it requires Royalty's Fine Tile texture.-->
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+	  <mods>
+      <li>Royalty</li>
+	  </mods>
+    <match Class="PatchOperationInsert">
+      <xpath>*/StuffedFloors.FloorTypeDef[defName = "StuffedSmoothTiles"]</xpath>
+      <value>
+        <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneRoyalBase">
+          <defName>StuffedFineTiles</defName>
+          <label>fine tiles</label>		
+        <description>A royal floor made of exquisite stone tiles, made with no compromises, for expressing economic status. Slow to construct.</description>
+        <texturePath>Terrain/Surfaces/TileStoneFine</texturePath>        
+          <obsoletes>
+            <!-- vanilla -->
+            <li>FineTileSandstone</li>
+            <li>FineTileGranite</li>
+            <li>FineTileLimestone</li>
+            <li>FineTileSlate</li>
+            <li>FineTileMarble</li>
+          </obsoletes>
+        </StuffedFloors.FloorTypeDef>
+      </value>
+    </match>
+	</Operation>
+</Patch>
