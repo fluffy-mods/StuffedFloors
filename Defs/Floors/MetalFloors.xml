@@ -9,9 +9,10 @@
     <StuffedFloors.FloorTypeDef Name="StuffedFloorsMetalBasicBase" ParentName="StuffedFloorsMetalBase" Abstract="True">
         <statBases>
             <Beauty>0</Beauty>
-            <WorkToBuild>400</WorkToBuild>
+            <WorkToBuild>800</WorkToBuild>
+            <Cleanliness>0.2</Cleanliness>
         </statBases>
-        <stuffCost>3</stuffCost>
+        <stuffCost>7</stuffCost>
         <tags>
             <li>Floor</li>
         </tags>
@@ -20,9 +21,9 @@
     <StuffedFloors.FloorTypeDef Name="StuffedFloorsMetalPrettyBase" ParentName="StuffedFloorsMetalBase" Abstract="True">
         <statBases>
             <Beauty>2</Beauty>
-            <WorkToBuild>800</WorkToBuild>
+            <WorkToBuild>1500</WorkToBuild>
         </statBases>
-        <stuffCost>5</stuffCost>
+        <stuffCost>7</stuffCost>
         <tags>
             <li>Floor</li>
             <li>FineFloor</li>
@@ -51,7 +52,7 @@
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsMetalBasicBase">
       <defName>StuffedFloorsMetalPlate</defName>
       <label>metal plates</label>
-      <description>A generic metal flooring.</description>
+      <description>A generic metal flooring.  Somewhat easy to keep clean.</description>
         <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
         <!-- this is the vanilla tile texture, quie a few obsoletions -->
         <obsoletes>
@@ -77,7 +78,7 @@
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsMetalBasicBase">
       <defName>StuffedFloorsMetalSmallPlate</defName>
       <label>small metal plates</label>
-      <description>Small metal plates, riveted to the floor.</description>
+      <description>Small metal plates, riveted to the floor.  Somewhat easy to keep clean.</description>
         <texturePath>Floors/Metal/MetalPlate</texturePath>
         <obsoletes>
             <li>EXF_PlateSilver</li>
