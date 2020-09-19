@@ -112,6 +112,7 @@
         <texturePath>Floors/Wood/WoodFloor2</texturePath>
         <obsoletes>
             <li>FloorWood1</li>
+            <li>FloorWoodRustic</li>
         </obsoletes>
     </StuffedFloors.FloorTypeDef>
     
@@ -123,6 +124,7 @@
         <texturePath>Floors/Wood/WoodFloor3</texturePath>
         <obsoletes>
             <li>FloorWood2</li>
+            <li>FloorWoodWide</li>
         </obsoletes>
     </StuffedFloors.FloorTypeDef>
     
@@ -134,6 +136,7 @@
         <texturePath>Floors/Wood/WoodFloor7</texturePath>
         <obsoletes>
             <li>FloorWood6</li>
+            <li>FloorWoodBarn</li>
         </obsoletes>
     </StuffedFloors.FloorTypeDef>
     
@@ -145,6 +148,7 @@
         <texturePath>Floors/Wood/WoodFloor4</texturePath>
         <obsoletes>
             <li>FloorWood3</li>
+            <li>FloorWoodLight</li>
         </obsoletes>
     </StuffedFloors.FloorTypeDef>
     
@@ -156,6 +160,7 @@
         <texturePath>Floors/Wood/WoodFloor5</texturePath>
         <obsoletes>
             <li>FloorWood4</li>
+            <li>FloorWoodMosaic</li>
         </obsoletes>
     </StuffedFloors.FloorTypeDef> 
 </Defs>
