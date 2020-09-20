@@ -329,7 +329,7 @@
       <defName>StuffedSmoothTiles</defName>
       <label>smooth tiles</label>    
     <description>A fancy floor made of refined, carefully-cut stone tiles for a castle feeling.</description>
-    <texturePath>Floors/Stone/TileStone</texturePath>        
+    <texturePath>Terrain/Surfaces/TileStone</texturePath>        
         <obsoletes>
           <!-- vanilla -->
           <li>TileSandstone</li>
