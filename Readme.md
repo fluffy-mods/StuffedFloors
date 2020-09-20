@@ -27,6 +27,7 @@ While this mod will happily generate more floors for any mods that add materials
 ![Powered by Harmony](https://banners.karel-kroeze.nl/title/Powered%20by%20Harmony.png)  
 ![Powered by Harmony](https://camo.githubusercontent.com/074bf079275fa90809f51b74e9dd0deccc70328f/68747470733a2f2f7332342e706f7374696d672e6f72672f3538626c31727a33392f6c6f676f2e706e67)
 
+
 ![Contributors](https://banners.karel-kroeze.nl/title/Contributors.png)
  - Telkir:	Permission to use textures for many of the floors
  - CuproPanda:	Permission to use textures for even more floors
@@ -36,7 +37,7 @@ While this mod will happily generate more floors for any mods that add materials
  - DoctorVanGogh:	Add Extended Woodworking + Vegetable Garden obsoletions
  - Jorge Martínez:	Spanish and Latin Spanish translations
  - Erdnussbrot:	German translation
- - InsanityPrelude:	More Floors Stone Floors Update
+ - InsanityPrelude:	Floor updates and balance pass for 1.2
  - An Anonymous Donor:	Russian translation
 
 ![Think you found a bug?](https://banners.karel-kroeze.nl/title/Think%20you%20found%20a%20bug%3F.png)  
@@ -63,4 +64,4 @@ Become a supporter and show your appreciation by buying me a coffee (or contribu
 
 
 ![Version](https://banners.karel-kroeze.nl/title/Version.png)  
-This is version 2.12.91, for RimWorld 1.2.2753.
+This is version 2.13.92, for RimWorld 1.2.2753.
