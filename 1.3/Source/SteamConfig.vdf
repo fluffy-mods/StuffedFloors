@@ -1,0 +1,71 @@
+"workshopitem"
+{
+"appid" "294100"
+"contentfolder" "D:\Games\steamapps\common\RimWorld\Mods\StuffedFloors"
+"previewfile" "D:\Games\steamapps\common\RimWorld\Mods\StuffedFloors\About\Preview.png"
+"visibilitiy" "0"
+"title" "Stuffed Floors"
+"description" "Allows building floors out of stuff*.
+
+[h1]Important[/h1]
+This mod [i]requires[/i] [url=http://steamcommunity.com/sharedfiles/filedetails/?id=852998459]Architect Sense[/url] to be loaded before it.
+
+You can safely add this mod to you save games, but [i]you can not remove it[/i] from save games. (If you really must do this, you’ll have to remove all built stuffed floors added by this mod first).
+
+[h1]Features[/h1]
+This mod does two things. First, using Architect Sense it provides a framework for modders to define their own stuffed floor types. Second, it uses this framework to create a number of new floors that are stuffed.
+
+[b]For players[/b]
+ Adds several floor types (borrowed with permission from Telkir’s [url=http://steamcommunity.com/sharedfiles/filedetails/?id=725623521]More Floors[/url], CuproPanda’s [url=https://ludeon.com/forums/index.php?topic=13400#msg135940]Extra Floors[/url] and Pravus’ [url=http://steamcommunity.com/sharedfiles/filedetails/?id=784370602]Fences and Floors[/url]) in a variety of stone, wood and metal types.
+
+Works great with other mods that add more resources, e.g. [url=http://steamcommunity.com/sharedfiles/filedetails/?id=728233992]Minerals and Materials[/url] [url=http://steamcommunity.com/sharedfiles/filedetails/?id=852103845]Kura’s Extra Minerals[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=836912371]Extended Woodworking[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=822470192]Vegetable Garden[/url] and [url=http://steamcommunity.com/sharedfiles/filedetails/?id=725576127]GlitterTech[/url].
+
+This mod also organizes and where needed, removes the floors added by Vanilla RimWorld, [url=http://steamcommunity.com/sharedfiles/filedetails/?id=725623521]More Floors[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=836912371]Extended Woodworking[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=728233992]Minerals and Materials[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=725576127]GlitterTech[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=739089840]More Furniture[/url], [url=http://steamcommunity.com/sharedfiles/filedetails/?id=822470192]Vegetable Garden[/url] and [url=http://steamcommunity.com/sharedfiles/filedetails/?id=801544922]Floored[/url].
+
+[b]For modders[/b]
+ Adds a custom FloorTypeDef that derives from TerrainDef, and allows modders to create floortypes by setting a texture (grayscale for best effect, will be coloured by stuff) and a list of stuffCategories to generate terrain defs for. The resulting designators will be placed together in a category, and any vanilla or other mod’s terrains made obsolete can also be provided in the XML, and will then be hidden for the user (but not removed, so it won’t break save games).
+
+[h1]Known issues[/h1]
+While this mod will happily generate more floors for any mods that add materials to the metallic, stony and/or woody stuff types, it only cleans up the floors added by mods that are explicitly supported. Any other mods that add floor types may appear as duplicates. If you encounter such an issue, or know of mods that add more floors, please let me know!
+
+Due to the extremely heavy-handed approach Erdelfs’ MinePlan Designator uses to inject his designators, [b]MinePlan Designator is incompatible with Architect Sense, and thus also with Stuffed Floors[/b]
+.
+
+[h1]Technical details[/h1]
+*: This mod doesn’t actually allow building stuffed floors. Rather, it spoofs this behaviour by generating TerrainDefs for each of the stuffDefs handed to it, and then using ArchitectSense to group these terrains together and give a user experience similar to stuff selection on buildings. This mod doesn’t do anything destructive, it doesn’t make any detours, and doesn’t remove any defs. It does however remove a number of designators from the architect in order to hide them from the user.
+
+[h1]Powered by Harmony[/h1]
+[img]https://camo.githubusercontent.com/074bf079275fa90809f51b74e9dd0deccc70328f/68747470733a2f2f7332342e706f7374696d672e6f72672f3538626c31727a33392f6c6f676f2e706e67[/img]
+
+[h1]Contributors[/h1]
+ - Telkir: Permission to use textures for many of the floors
+ - CuproPanda: Permission to use textures for even more floors
+ - Pravus: Permission to use textures for yet more floors
+ - DarkSlayerEx: Original idea, texture tweaks and moral support
+ - duduluu: Chinese translations
+ - DoctorVanGogh: Add Extended Woodworking + Vegetable Garden obsoletions
+ 
+
+[h1]Think you found a bug?[/h1]
+Please read [url=http://steamcommunity.com/sharedfiles/filedetails/?id=725234314]this guide[/url] before creating a bug report, and then create a bug report [url=https://github.com/FluffierThanThou/StuffedFloors/issues]here[/url]
+
+[h1]Older versions[/h1]
+All current and past versions of this mod can be downloaded from [url=https://github.com/FluffierThanThou/StuffedFloors/releases]GitHub[/url].
+
+[h1]License[/h1]
+All original code in this mod is licensed under the [url=https://opensource.org/licenses/MIT]MIT license[/url]. Do what you want, but give me credit. All original content (e.g. text, imagery, sounds) in this mod is licensed under the [url=http://creativecommons.org/licenses/by-sa/4.0/]CC-BY-SA 4.0 license[/url].
+
+Parts of the code in this mod, and some content may be licensed by their original authors. If this is the case, the original author & license will either be given in the source code, or be in a LICENSE file next to the content. Please do not decompile my mods, but use the original source code available on [url=https://github.com/FluffierThanThou/StuffedFloors/]GitHub[/url], so license information in the source code is preserved.
+
+[h1]Are you enjoying my mods?[/h1]
+Show your appreciation by buying me a coffee (or contribute towards a nice single malt).
+
+[url=https://ko-fi.com/fluffymods][img]http://i.imgur.com/6P7Ap79.gif[/img][/url]
+
+[h1]Version[/h1]
+This is version v0.18.0.4
+
+"
+"changenote" "fixed stupid build cost bug, rebalanced build times of all floors (stone is drastically lowered, wood slightly increased, and metal more than doubled). Build speeds should now be fast for wood, medium for metal, and somewhat high for stone."
+"publishedfileid" "853043503"
+}
