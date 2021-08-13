@@ -1,15 +1,9 @@
-﻿#if DEGUG
+#if DEGUG
 #define DEBUG_WEALTH
 #endif
 
-using System.Linq;
-using RimWorld;
-using HarmonyLib;
-using UnityEngine;
-using Verse;
 
-namespace StuffedFloors
-{
+namespace StuffedFloors {
 #if DEBUG_WEALTH
     public class WealthDebugger : MapComponent {
         public WealthDebugger( Map map ) : base( map ){}

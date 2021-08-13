@@ -1,0 +1,115 @@
+{
+    "name": "Stuffed Floors",
+    "sourceDir": ".",
+    "targetDir": "StuffedFloors",
+    "url": "https://github.com/fluffy-mods/StuffedFloors",
+    "version": {
+        "major": 3,
+        "minor": 0,
+        "build": 101
+    },
+    "author": {
+        "name": "Fluffy",
+        "url": "https://github.com/fluffy-mods/",
+        "email": "fluffy.l2032@gmail.com"
+    },
+    "git": {
+        "owner": "fluffy-mods",
+        "repo": "StuffedFloors",
+        "url": "https://github.com/fluffy-mods/StuffedFloors"
+    },
+    "dependencies": [
+        {
+            "type": "required",
+            "id": "brrainz.harmony",
+            "name": "Harmony",
+            "steamId": 2009463077,
+            "download": "https://github.com/pardeike/HarmonyRimWorld/releases/latest"
+        }
+    ],
+    "changelog": [],
+    "contributions": [
+        {
+            "hash": "03ecd689760f4d092f063934788b1cee6bd98a56",
+            "author": "InsanityPrelude",
+            "description": "Rebalancing of costs, renaming and fixed descriptions for all stone floors.  All stone floors and all metal floors now have identical material costs in keeping with vanilla tendencies.  The only exception is the new \"Royal\" tier of stone floors which currently only includes Arabesque flooring and \"Fine Tile\" flooring (which only shows up if Royalty is installed.)   I haven't interfered with wood material costs which seem to be in a decent spot to me. (#27)"
+        },
+        {
+            "hash": "bd64c0c6e8a1efe2eda80b223faee4e09de362a2",
+            "author": "InsanityPrelude",
+            "description": "Adds MoreFloors identically textured wooden floors to the obsoletes for the Stuffed Floors which use the matching textures.  More Floors instances of the floors are differently colored, but \"coloring the floors\" is a completely different issue from \"making the floors out of any stuff\" and doesn't seem like sufficient reason to leave them there.  With these obsoletes, there are no more duplicate entries between More Floors and Stuffed Floors, leaving just Plasteel Floor, Straw, Check Carpet, and Wool Carpet pretty much. (#28)"
+        },
+        {
+            "hash": "087363f4f0c187b74c06a132bf7060c971982e67",
+            "author": "InsanityPrelude",
+            "description": "More Floors Stone Floors Update (#26)"
+        },
+        {
+            "hash": "9fd8dc2b0e4f8ec11296884c6e801dafe2d8f9b3",
+            "author": "Jorge Martínez",
+            "description": "Add Spanish and Latin American Spanish translations (#19)"
+        },
+        {
+            "hash": "4d02013c086ff5c31f6d834f3c96af87b2357ff8",
+            "author": "cucumpear",
+            "description": "Hard Edge fix (#14)"
+        },
+        {
+            "hash": "11f6e64035b3e22ff76cbd79ec48bd6afe378951",
+            "author": "DoctorVanGogh",
+            "description": "Add Extended Woodworking + Vegetable Garden extra floors to obsoletion list (#6)"
+        },
+        {
+            "hash": "fbb0c202d3a954c0725556add9e5817c18bd9083",
+            "author": "duduluu",
+            "description": "Add Chinese translation"
+        }
+    ],
+    "contributors": {
+        "InsanityPrelude": [
+            {
+                "hash": "03ecd68",
+                "author": "InsanityPrelude",
+                "description": "Rebalancing of costs, renaming and fixed descriptions for all stone floors.  All stone floors and all metal floors now have identical material costs in keeping with vanilla tendencies.  The only exception is the new \"Royal\" tier of stone floors which currently only includes Arabesque flooring and \"Fine Tile\" flooring (which only shows up if Royalty is installed.)   I haven't interfered with wood material costs which seem to be in a decent spot to me. (#27)"
+            },
+            {
+                "hash": "bd64c0c",
+                "author": "InsanityPrelude",
+                "description": "Adds MoreFloors identically textured wooden floors to the obsoletes for the Stuffed Floors which use the matching textures.  More Floors instances of the floors are differently colored, but \"coloring the floors\" is a completely different issue from \"making the floors out of any stuff\" and doesn't seem like sufficient reason to leave them there.  With these obsoletes, there are no more duplicate entries between More Floors and Stuffed Floors, leaving just Plasteel Floor, Straw, Check Carpet, and Wool Carpet pretty much. (#28)"
+            },
+            {
+                "hash": "087363f",
+                "author": "InsanityPrelude",
+                "description": "More Floors Stone Floors Update (#26)"
+            }
+        ],
+        "Jorge Martínez": [
+            {
+                "hash": "9fd8dc2",
+                "author": "Jorge Martínez",
+                "description": "Add Spanish and Latin American Spanish translations (#19)"
+            }
+        ],
+        "cucumpear": [
+            {
+                "hash": "4d02013",
+                "author": "cucumpear",
+                "description": "Hard Edge fix (#14)"
+            }
+        ],
+        "DoctorVanGogh": [
+            {
+                "hash": "11f6e64",
+                "author": "DoctorVanGogh",
+                "description": "Add Extended Woodworking + Vegetable Garden extra floors to obsoletion list (#6)"
+            }
+        ],
+        "duduluu": [
+            {
+                "hash": "fbb0c20",
+                "author": "duduluu",
+                "description": "Add Chinese translation"
+            }
+        ]
+    }
+}

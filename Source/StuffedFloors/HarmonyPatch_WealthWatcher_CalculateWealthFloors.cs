@@ -1,4 +1,4 @@
-﻿// HarmonyPatch_WealthWatcher_CalculateWealthFloors.cs
+// HarmonyPatch_WealthWatcher_CalculateWealthFloors.cs
 // Copyright Karel Kroeze, 2018-2018
 
 using System.Collections.Generic;
@@ -6,8 +6,7 @@ using HarmonyLib;
 using RimWorld;
 using Verse;
 
-namespace StuffedFloors
-{
+namespace StuffedFloors {
     /**
      * The vanilla game stores cached market values in WealthWatcher.cachedTerrainMarketValue,
      * and indexes this list by def.index. Somehow, even though this cache is initialized after
@@ -21,32 +20,31 @@ namespace StuffedFloors
      * 
      *      - Fluffy.
      */
-    [HarmonyPatch( typeof( WealthWatcher ), "CalculateWealthFloors" )]
-    public class HarmonyPatch_WealthWatcher_CalculateWealthFloors
-    {
-        public static bool Prefix( Map ___map, ref float __result )
-        {
-            var terrainGrid = ___map.terrainGrid.topGrid;
-            var fogGrid = ___map.fogGrid.fogGrid;
-            var n = terrainGrid.Length;
-            var counts = new Dictionary<TerrainDef, int>();
-            var total = 0f;
+    [HarmonyPatch(typeof(WealthWatcher), "CalculateWealthFloors")]
+    public class HarmonyPatch_WealthWatcher_CalculateWealthFloors {
+        public static bool Prefix(Map ___map, ref float __result) {
+            TerrainDef[] terrainGrid = ___map.terrainGrid.topGrid;
+            bool[] fogGrid = ___map.fogGrid.fogGrid;
+            int n = terrainGrid.Length;
+            Dictionary<TerrainDef, int> counts = new Dictionary<TerrainDef, int>();
+            float total = 0f;
 
             // note that an argument for checking for ownership could be made, but that doesn't
             // exist for floors, so it's a moot point.
-            for ( int i = 0; i < n; i++ )
-            {
-                if ( !fogGrid[i] )
-                {
-                    if ( counts.ContainsKey( terrainGrid[i] ) )
+            for (int i = 0; i < n; i++) {
+                if (!fogGrid[i]) {
+                    if (counts.ContainsKey(terrainGrid[i])) {
                         counts[terrainGrid[i]] += 1;
-                    else
+                    } else {
                         counts[terrainGrid[i]] = 1;
+                    }
                 }
             }
 
-            foreach ( var terrainCount in counts )
-                total += terrainCount.Key.GetStatValueAbstract( StatDefOf.MarketValue ) * terrainCount.Value;
+            foreach (KeyValuePair<TerrainDef, int> terrainCount in counts) {
+                total += terrainCount.Key.GetStatValueAbstract(StatDefOf.MarketValue) * terrainCount.Value;
+            }
+
             __result = total;
 
             return false;
