@@ -5,7 +5,7 @@
     "url": "https://github.com/fluffy-mods/StuffedFloors",
     "version": {
         "major": 3,
-        "minor": 2,
+        "minor": 3,
         "build": 108
     },
     "author": {
@@ -28,6 +28,15 @@
         }
     ],
     "changelog": [
+        {
+            "date": "2021-08-13T20:48:55.000Z",
+            "message": "cut down description to fit on the workshop",
+            "author": {
+                "name": "Fluffy",
+                "email": "fluffy.l2032@gmail.com"
+            },
+            "hash": "15365ead4fa76f0d46b06e5e049673e259ce227a"
+        },
         {
             "date": "2021-08-13T20:16:10.000Z",
             "message": "floors without additional non-stuff costs are no longer free",
@@ -159,24 +168,5 @@
             }
         ]
     },
-    "attributions": [
-        {
-            "description": "stone slab floor texture",
-            "author": "Danrok",
-            "license": "public domain",
-            "url": "http://www.aoaforums.com/forum/digital-image-photo-video-audio-editing/48795-camoflage-seamless-texture-maps-free-use-4.html#post519491"
-        },
-        {
-            "description": "stone tile and wood floor textures",
-            "author": "Ludeon Studios",
-            "license": "fair use",
-            "url": "https://ludeon.com/"
-        },
-        {
-            "description": "metal plate, metal grating and plywood floor textures",
-            "author": "Pravus",
-            "license": "BY",
-            "url": "https://ludeon.com/forums/index.php?topic=26964.msg272812#msg272812"
-        }
-    ]
+    "attributions": []
 }

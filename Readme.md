@@ -48,10 +48,6 @@ All original content (e.g. text, imagery, sounds) in this mod is licensed under 
 
 Parts of the code in this mod, and some of the content may be licensed by their original authors. If this is the case, the original author & license will either be given in the source code, or be in a LICENSE file next to the content. Please do not decompile my mods, but use the original source code available on [GitHub](https://github.com/fluffy-mods/StuffedFloors/), so license information in the source code is preserved.
 
-Parts of this mod were created by, or derived from works created by;
-- Danrok: stone slab floor texture ([public domain](http://www.aoaforums.com/forum/digital-image-photo-video-audio-editing/48795-camoflage-seamless-texture-maps-free-use-4.html#post519491))
-- Ludeon Studios: stone tile and wood floor textures ([fair use](https://ludeon.com/))
-- Pravus: metal plate, metal grating and plywood floor textures ([BY](https://ludeon.com/forums/index.php?topic&#x3D;26964.msg272812#msg272812))
 
 
 ![Are you enjoying my mods?](https://banners.karel-kroeze.nl/title/Are%20you%20enjoying%20my%20mods%3F.png)  
