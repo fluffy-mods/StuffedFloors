@@ -5,7 +5,7 @@
     "url": "https://github.com/fluffy-mods/StuffedFloors",
     "version": {
         "major": 3,
-        "minor": 1,
+        "minor": 2,
         "build": 106
     },
     "author": {
@@ -28,6 +28,15 @@
         }
     ],
     "changelog": [
+        {
+            "date": "2021-08-13T20:16:10.000Z",
+            "message": "floors without additional non-stuff costs are no longer free",
+            "author": {
+                "name": "Fluffy",
+                "email": "fluffy.l2032@gmail.com"
+            },
+            "hash": "da5d40c1c3c79907d82414fdaff0e56fb413886a"
+        },
         {
             "date": "2021-08-13T16:13:36.000Z",
             "message": "release v3.1.105",
