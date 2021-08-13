@@ -1,7 +1,6 @@
 // Extensions.cs
 // Copyright Karel Kroeze, 2017-2017
 
-using System;
 using System.Collections.Generic;
 using RimWorld;
 using Verse;

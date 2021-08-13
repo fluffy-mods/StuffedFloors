@@ -1,7 +1,6 @@
 // HarmonyPatch_WealthWatcher_CalculateWealthFloors.cs
 // Copyright Karel Kroeze, 2018-2018
 
-using System;
 using System.Collections.Generic;
 using HarmonyLib;
 using RimWorld;

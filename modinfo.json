@@ -5,7 +5,7 @@
     "url": "https://github.com/fluffy-mods/StuffedFloors",
     "version": {
         "major": 3,
-        "minor": 0,
+        "minor": 1,
         "build": 104
     },
     "author": {
@@ -28,6 +28,24 @@
         }
     ],
     "changelog": [
+        {
+            "date": "2021-08-13T16:11:42.000Z",
+            "message": "update preview image",
+            "author": {
+                "name": "Fluffy",
+                "email": "fluffy.l2032@gmail.com"
+            },
+            "hash": "d0fe5048a7a21162c9896a17b1549947ea3043e6"
+        },
+        {
+            "date": "2021-08-13T15:37:44.000Z",
+            "message": "copy over some new terrain data from source terrains",
+            "author": {
+                "name": "Fluffy",
+                "email": "fluffy.l2032@gmail.com"
+            },
+            "hash": "b6c35108d96b2fa6fec0922935e0e19bfeaa44b4"
+        },
         {
             "date": "2021-08-13T10:15:53.000Z",
             "message": "add specified contributions for floor textures",
