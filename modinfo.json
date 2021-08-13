@@ -32,37 +32,39 @@
         {
             "hash": "03ecd689760f4d092f063934788b1cee6bd98a56",
             "author": "InsanityPrelude",
-            "description": "Rebalancing of costs, renaming and fixed descriptions for all stone floors.  All stone floors and all metal floors now have identical material costs in keeping with vanilla tendencies.  The only exception is the new \"Royal\" tier of stone floors which currently only includes Arabesque flooring and \"Fine Tile\" flooring (which only shows up if Royalty is installed.)   I haven't interfered with wood material costs which seem to be in a decent spot to me. (#27)"
+            "description": "Extensive cost balancing and 3rd party mod integration updates"
         },
         {
             "hash": "bd64c0c6e8a1efe2eda80b223faee4e09de362a2",
             "author": "InsanityPrelude",
-            "description": "Adds MoreFloors identically textured wooden floors to the obsoletes for the Stuffed Floors which use the matching textures.  More Floors instances of the floors are differently colored, but \"coloring the floors\" is a completely different issue from \"making the floors out of any stuff\" and doesn't seem like sufficient reason to leave them there.  With these obsoletes, there are no more duplicate entries between More Floors and Stuffed Floors, leaving just Plasteel Floor, Straw, Check Carpet, and Wool Carpet pretty much. (#28)"
+            "description": "Adds MoreFloors identically textured wooden floors to the obsoletes for the Stuffed Floors which use the matching textures.  More Floors instances of the floors are differently colored, but \"coloring the floors\" is a completely different issue from \"making the floors out of any stuff\" and doesn't seem like sufficient reason to leave them there.  With these obsoletes, there are no more duplicate entries between More Floors and Stuffed Floors, leaving just Plasteel Floor, Straw, Check Carpet, and Wool Carpet pretty much. (#28)",
+            "suppressed": true
         },
         {
             "hash": "087363f4f0c187b74c06a132bf7060c971982e67",
             "author": "InsanityPrelude",
-            "description": "More Floors Stone Floors Update (#26)"
+            "description": "More Floors Stone Floors Update (#26)",
+            "suppressed": true
         },
         {
             "hash": "9fd8dc2b0e4f8ec11296884c6e801dafe2d8f9b3",
             "author": "Jorge Martínez",
-            "description": "Add Spanish and Latin American Spanish translations (#19)"
+            "description": "Spanish translations"
         },
         {
             "hash": "4d02013c086ff5c31f6d834f3c96af87b2357ff8",
             "author": "cucumpear",
-            "description": "Hard Edge fix (#14)"
+            "description": "Fix for hard floor edge rendering"
         },
         {
             "hash": "11f6e64035b3e22ff76cbd79ec48bd6afe378951",
             "author": "DoctorVanGogh",
-            "description": "Add Extended Woodworking + Vegetable Garden extra floors to obsoletion list (#6)"
+            "description": "Extended Woodworking and Vegetable Garden integrations"
         },
         {
             "hash": "fbb0c202d3a954c0725556add9e5817c18bd9083",
             "author": "duduluu",
-            "description": "Add Chinese translation"
+            "description": "Chinese translation"
         }
     ],
     "contributors": {
@@ -70,46 +72,98 @@
             {
                 "hash": "03ecd68",
                 "author": "InsanityPrelude",
-                "description": "Rebalancing of costs, renaming and fixed descriptions for all stone floors.  All stone floors and all metal floors now have identical material costs in keeping with vanilla tendencies.  The only exception is the new \"Royal\" tier of stone floors which currently only includes Arabesque flooring and \"Fine Tile\" flooring (which only shows up if Royalty is installed.)   I haven't interfered with wood material costs which seem to be in a decent spot to me. (#27)"
-            },
-            {
-                "hash": "bd64c0c",
-                "author": "InsanityPrelude",
-                "description": "Adds MoreFloors identically textured wooden floors to the obsoletes for the Stuffed Floors which use the matching textures.  More Floors instances of the floors are differently colored, but \"coloring the floors\" is a completely different issue from \"making the floors out of any stuff\" and doesn't seem like sufficient reason to leave them there.  With these obsoletes, there are no more duplicate entries between More Floors and Stuffed Floors, leaving just Plasteel Floor, Straw, Check Carpet, and Wool Carpet pretty much. (#28)"
-            },
-            {
-                "hash": "087363f",
-                "author": "InsanityPrelude",
-                "description": "More Floors Stone Floors Update (#26)"
+                "description": "Extensive cost balancing and 3rd party mod integration updates"
             }
         ],
         "Jorge Martínez": [
             {
                 "hash": "9fd8dc2",
                 "author": "Jorge Martínez",
-                "description": "Add Spanish and Latin American Spanish translations (#19)"
+                "description": "Spanish translations"
             }
         ],
         "cucumpear": [
             {
                 "hash": "4d02013",
                 "author": "cucumpear",
-                "description": "Hard Edge fix (#14)"
+                "description": "Fix for hard floor edge rendering"
             }
         ],
         "DoctorVanGogh": [
             {
                 "hash": "11f6e64",
                 "author": "DoctorVanGogh",
-                "description": "Add Extended Woodworking + Vegetable Garden extra floors to obsoletion list (#6)"
+                "description": "Extended Woodworking and Vegetable Garden integrations"
             }
         ],
         "duduluu": [
             {
                 "hash": "fbb0c20",
                 "author": "duduluu",
-                "description": "Add Chinese translation"
+                "description": "Chinese translation"
             }
         ]
-    }
+    },
+    "attributions": [
+        {
+            "description": "stone slab floor texture",
+            "author": "Danrok",
+            "license": "public domain",
+            "url": "http://www.aoaforums.com/forum/digital-image-photo-video-audio-editing/48795-camoflage-seamless-texture-maps-free-use-4.html#post519491"
+        },
+        {
+            "description": "rough stone texture",
+            "author": "Dmitriy Chugai, Telkir",
+            "license": "BY-NC",
+            "url": "https://ludeon.com/forums/index.php?topic=4373.0"
+        },
+        {
+            "description": "metal plate, brick, herringbone, cobblestone, medium stone, small brick floor textures",
+            "author": "CuproPanda",
+            "license": "CC0",
+            "url": "https://ludeon.com/forums/index.php?topic=13400.msg126304#msg126304"
+        },
+        {
+            "description": "stone tile and wood floor textures",
+            "author": "Ludeon Studios",
+            "license": "fair use",
+            "url": "https://ludeon.com/"
+        },
+        {
+            "description": "wood floor texture",
+            "author": "Ftextures, Telkir",
+            "license": "BY/BY-NC",
+            "url": "https://ludeon.com/forums/index.php?topic=4373.0"
+        },
+        {
+            "description": "additional wooden floor textures",
+            "author": "Telkir",
+            "license": "BY-NC",
+            "url": "https://ludeon.com/forums/index.php?topic=4373.0"
+        },
+        {
+            "description": "even more wooden floors",
+            "author": "SketchupTut, Telkir",
+            "license": "BY-NC/CC0?",
+            "url": "https://ludeon.com/forums/index.php?topic=4373.0"
+        },
+        {
+            "description": "metal plate, metal grating and plywood floor textures",
+            "author": "Pravus",
+            "license": "BY",
+            "url": "https://ludeon.com/forums/index.php?topic=26964.msg272812#msg272812"
+        },
+        {
+            "description": "stone hex floor texture",
+            "author": "BurningWell, Telkir",
+            "license": "BY-NC",
+            "url": "https://ludeon.com/forums/index.php?topic=4373.0"
+        },
+        {
+            "description": "stone mosaic texture",
+            "author": "ihdwallpaperz, Telkir",
+            "license": "BY-NC",
+            "url": "https://ludeon.com/forums/index.php?topic=4373.0"
+        }
+    ]
 }
