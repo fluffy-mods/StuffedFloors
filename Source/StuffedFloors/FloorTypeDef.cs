@@ -65,37 +65,54 @@ namespace StuffedFloors {
                 throw new ArgumentException(stuffThingDef.defName + " is not a stuff!");
             }
 
+
+            StuffProperties stuff = stuffThingDef.stuffProps;
+
             // create new terrain
-            TerrainDef terrain = new TerrainDef {
+            TerrainDef terrain = new() {
 
                 // label it as ours
                 modContentPack = Controller.Instance.Content,
 
-                // assign to designator group
+                // set/change custom data
                 designatorDropdown = designatorGroup,
+                designationCategory = DefDatabase<DesignationCategoryDef>.GetNamed("Floors"),
+                generated = true,
+                useStuffTerrainAffordance = false,
+
+                // apply stuff elements
+                color = stuff.color,
+                constructEffect = stuff.constructEffect,
+                defName = stuffThingDef.defName + "_" + defName,
+                label = "ThingMadeOfStuffLabel".Translate(stuffThingDef.LabelAsStuff, label),
+                repairEffect = stuff.constructEffect,
 
                 // copy properties. Everything that could potentially be relevant.
-                affordances = affordances.NullOrEmpty()
-                                      ? new List<TerrainAffordanceDef>()
-                                      : new List<TerrainAffordanceDef>(affordances),
+                affordances = affordances.DeepCopy(),
+                autoRebuildable = autoRebuildable,
                 avoidWander = avoidWander,
                 altitudeLayer = altitudeLayer,
                 artisticSkillPrerequisite = artisticSkillPrerequisite,
+                blocksAltitudes = blocksAltitudes.NullOrEmpty() ? new() : new(blocksAltitudes),
                 blueprintDef = blueprintDef,
-                buildingPrerequisites = buildingPrerequisites.NullOrEmpty()
-                                                ? new List<ThingDef>()
-                                                : new List<ThingDef>(buildingPrerequisites),
+                bridge = bridge,
+                buildingPrerequisites = buildingPrerequisites.DeepCopy(),
                 burnedDef = burnedDef,
+                canGenerateDefaultDesignator = canGenerateDefaultDesignator,
                 changeable = changeable,
                 clearBuildingArea = clearBuildingArea,
                 constructionSkillPrerequisite = constructionSkillPrerequisite,
-                driesTo = driesTo,
+                costList = costList.DeepCopy(),
+                costListForDifficulty = costListForDifficulty.DeepCopy(),
+                description = description,
+                descriptionHyperlinks = descriptionHyperlinks,
+                defaultPlacingRot = defaultPlacingRot,
                 destroyBuildingsOnDestroyed = destroyBuildingsOnDestroyed,
                 destroyEffect = destroyEffect,
                 destroyEffectWater = destroyEffectWater,
                 destroyOnBombDamageThreshold = destroyOnBombDamageThreshold,
-                defaultPlacingRot = defaultPlacingRot,
-                designationCategory = DefDatabase<DesignationCategoryDef>.GetNamed("Floors"),
+                dominantStyleCategory = dominantStyleCategory,
+                driesTo = driesTo,
                 edgeType = edgeType,
                 extinguishesFire = extinguishesFire,
                 extraDeteriorationFactor = extraDeteriorationFactor,
@@ -106,68 +123,56 @@ namespace StuffedFloors {
                 frameDef = frameDef,
                 generatedFilth = generatedFilth,
                 holdSnow = holdSnow,
+                installBlueprintDef = installBlueprintDef,
+                isAltar = isAltar,
                 layerable = layerable,
                 maxTechLevelToBuild = maxTechLevelToBuild,
                 minTechLevelToBuild = minTechLevelToBuild,
-                // menuHidden = menuHidden,
+                modExtensions = modExtensions.NullOrEmpty() ? new() : new(modExtensions),
                 passability = passability,
                 pathCost = pathCost,
                 pathCostIgnoreRepeat = pathCostIgnoreRepeat,
-                placeWorkers = placeWorkers.NullOrEmpty()
-                                       ? new List<Type>()
-                                       : new List<Type>(placeWorkers),
+                placeWorkers = placeWorkers.NullOrEmpty() ? new () : new (placeWorkers),
                 placingDraggableDimensions = placingDraggableDimensions,
                 renderPrecedence = renderPrecedence,
-                researchPrerequisites = researchPrerequisites.NullOrEmpty()
-                                                ? new List<ResearchProjectDef>()
-                                                : new List<ResearchProjectDef>(researchPrerequisites),
+                researchPrerequisites = researchPrerequisites.DeepCopy(),
                 resourcesFractionWhenDeconstructed = resourcesFractionWhenDeconstructed,
                 scatterType = scatterType,
                 smoothedTerrain = smoothedTerrain,
                 specialDisplayRadius = specialDisplayRadius,
-                statBases = statBases.NullOrEmpty() ? new List<StatModifier>() : new List<StatModifier>(statBases),
-                tags = tags.NullOrEmpty() ? new List<string>() : new List<string>(tags),
+                statBases = statBases.DeepCopy(),
+                tags = tags.NullOrEmpty() ? new() : new(tags),
                 takeFootprints = takeFootprints,
                 takeSplashes = takeSplashes,
                 terrainAffordanceNeeded = terrainAffordanceNeeded,
                 texturePath = texturePath,
-                tools = tools.NullOrEmpty() ? new List<Tool>() : new List<Tool>(tools),
+                tools = tools.NullOrEmpty() ? new() : new(tools),
                 traversedThought = traversedThought,
                 waterDepthMaterial = waterDepthMaterial,
                 waterDepthShader = waterDepthShader,
-                waterDepthShaderParameters = waterDepthShaderParameters.NullOrEmpty()
-                ? new List<ShaderParameter>()
-                : new List<ShaderParameter>(waterDepthShaderParameters)
+                waterDepthShaderParameters = waterDepthShaderParameters.NullOrEmpty() ? new () : new (waterDepthShaderParameters)
             };
 
-            // apply stuff elements
-            StuffProperties stuff = stuffThingDef.stuffProps;
-            terrain.color = stuff.color;
-            terrain.constructEffect = stuff.constructEffect;
-            terrain.repairEffect = stuff.constructEffect;
-            terrain.label = "ThingMadeOfStuffLabel".Translate(stuffThingDef.LabelAsStuff, label);
-            terrain.description = description;
-            terrain.defName = stuffThingDef.defName + "_" + defName;
-            terrain.costList = new List<ThingDefCountClass>();
-            if (!costList.NullOrEmpty()) {
-                foreach (ThingDefCountClass cost in costList) {
-                    terrain.costList.Add(new ThingDefCountClass(cost.thingDef, cost.count));
+            if (stuffCost > 0) {
+                if (terrain.costList is not null) {
+                    terrain.costList.Add(new(stuffThingDef, Mathf.CeilToInt(stuffCost / stuffThingDef.VolumePerUnit)));
+                }
+                // I think this is only used for turrets, but it could theoretically be used for terrain as well.
+                if (terrain.costListForDifficulty?.costList is not null) {
+                    terrain.costListForDifficulty.costList.Add(new(stuffThingDef, Mathf.CeilToInt(stuffCost / stuffThingDef.VolumePerUnit)));
                 }
             }
 
-            if (stuffCost > 0) {
-                terrain.costList.Add(new ThingDefCountClass(stuffThingDef, Mathf.CeilToInt(stuffCost / stuffThingDef.VolumePerUnit)));
+            if (useStuffTerrainAffordance) {
+                terrain.terrainAffordanceNeeded = stuffThingDef.terrainAffordanceNeeded;
             }
-
 
             // apply stuff offsets and factors, but apply them to a new list of statmodifiers, re-using the same list
             // keeps the actual statmodifier entries around as references, and leads to exponentially increasing stats
             // for terrains of the same base def and different stuffs
             if (!statsAffectedByStuff.NullOrEmpty()) {
                 // prepare variables
-                List<StatModifier> stats = new List<StatModifier>( statBases.Select( sb => sb.DeepCopy() ) );
-                StringBuilder text = new StringBuilder();
-
+                StringBuilder text = new();
                 foreach (StatDef stat in statsAffectedByStuff) {
                     // get base/default value
                     float value = terrain.statBases.GetStatValueFromList( stat, stat.defaultBaseValue );
@@ -178,8 +183,8 @@ namespace StuffedFloors {
 
                     // apply factor
                     float factor = ( value >= 0 || stat.applyFactorsIfNegative )
-                                       ? stuff.statFactors.GetStatFactorFromList( stat )
-                                       : 1f;
+                        ? stuff.statFactors.GetStatFactorFromList( stat )
+                        : 1f;
 
                     // lower impact of stuff beauty on floors
                     if (stat == StatDefOf.Beauty) {
@@ -191,7 +196,7 @@ namespace StuffedFloors {
                     float final = ( value + offset ) * factor;
                     text.AppendLine($"\tstuffed: ({value} + {offset}) x {factor} = {final}");
 
-                    StatUtility.SetStatValueInList(ref stats, stat, final);
+                    StatUtility.SetStatValueInList(ref terrain.statBases, stat, final);
                 }
 
 #if DEBUG_IMPLIED_DEFS
@@ -207,13 +212,11 @@ namespace StuffedFloors {
 #endif
 #endif
 
-                // asign the stats, overwriting the statBases list
-                terrain.statBases = stats;
             }
 
             // apply FineFloor tag if beauty > threshold
-            float beauty;
-            if (!terrain.tags.Any(t => t == "FineFloor") && (beauty = terrain.GetStatValueAbstract(StatDefOf.Beauty)) > FINE_BEAUTY_THRESHOLD) {
+            float beauty = terrain.GetStatValueAbstract(StatDefOf.Beauty);
+            if (!terrain.tags.Any(t => t == "FineFloor") && beauty > FINE_BEAUTY_THRESHOLD) {
 #if DEBUG
                 Log.Message($"fine floor tag added to {terrain.defName} (beauty {beauty})");
 #endif

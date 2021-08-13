@@ -21,11 +21,11 @@ Adds a custom FloorTypeDef that derives from TerrainDef, and allows modders to c
 ![Powered by Harmony](https://banners.karel-kroeze.nl/title/Powered%20by%20Harmony.png)  ![Powered by Harmony](https://camo.githubusercontent.com/074bf079275fa90809f51b74e9dd0deccc70328f/68747470733a2f2f7332342e706f7374696d672e6f72672f3538626c31727a33392f6c6f676f2e706e67)
 
 ![Contributors](https://banners.karel-kroeze.nl/title/Contributors.png)  
-InsanityPrelude: [Rebalancing of costs, renaming and fixed descriptions for all stone floors.  All stone floors and all metal floors now have identical material costs in keeping with vanilla tendencies.  The only exception is the new &quot;Royal&quot; tier of stone floors which currently only includes Arabesque flooring and &quot;Fine Tile&quot; flooring (which only shows up if Royalty is installed.)   I haven&#x27;t interfered with wood material costs which seem to be in a decent spot to me. (#27)](https://github.com/fluffy-mods/StuffedFloors/commit/03ecd68), [Adds MoreFloors identically textured wooden floors to the obsoletes for the Stuffed Floors which use the matching textures.  More Floors instances of the floors are differently colored, but &quot;coloring the floors&quot; is a completely different issue from &quot;making the floors out of any stuff&quot; and doesn&#x27;t seem like sufficient reason to leave them there.  With these obsoletes, there are no more duplicate entries between More Floors and Stuffed Floors, leaving just Plasteel Floor, Straw, Check Carpet, and Wool Carpet pretty much. (#28)](https://github.com/fluffy-mods/StuffedFloors/commit/bd64c0c), [More Floors Stone Floors Update (#26)](https://github.com/fluffy-mods/StuffedFloors/commit/087363f)
-Jorge Martínez: [Add Spanish and Latin American Spanish translations (#19)](https://github.com/fluffy-mods/StuffedFloors/commit/9fd8dc2)
-cucumpear: [Hard Edge fix (#14)](https://github.com/fluffy-mods/StuffedFloors/commit/4d02013)
-DoctorVanGogh: [Add Extended Woodworking + Vegetable Garden extra floors to obsoletion list (#6)](https://github.com/fluffy-mods/StuffedFloors/commit/11f6e64)
-duduluu: [Add Chinese translation](https://github.com/fluffy-mods/StuffedFloors/commit/fbb0c20)
+InsanityPrelude: [Extensive cost balancing and 3rd party mod integration updates](https://github.com/fluffy-mods/StuffedFloors/commit/03ecd68)
+Jorge Martínez: [Spanish translations](https://github.com/fluffy-mods/StuffedFloors/commit/9fd8dc2)
+cucumpear: [Fix for hard floor edge rendering](https://github.com/fluffy-mods/StuffedFloors/commit/4d02013)
+DoctorVanGogh: [Extended Woodworking and Vegetable Garden integrations](https://github.com/fluffy-mods/StuffedFloors/commit/11f6e64)
+duduluu: [Chinese translation](https://github.com/fluffy-mods/StuffedFloors/commit/fbb0c20)
 
 
 ![Think you found a bug?](https://banners.karel-kroeze.nl/title/Think%20you%20found%20a%20bug%3F.png)  
@@ -44,6 +44,17 @@ All original content (e.g. text, imagery, sounds) in this mod is licensed under 
 
 Parts of the code in this mod, and some of the content may be licensed by their original authors. If this is the case, the original author & license will either be given in the source code, or be in a LICENSE file next to the content. Please do not decompile my mods, but use the original source code available on [GitHub](https://github.com/fluffy-mods/StuffedFloors/), so license information in the source code is preserved.
 
+Parts of this mod were created by, or derived from works created by;
+- Danrok: stone slab floor texture ([public domain](http://www.aoaforums.com/forum/digital-image-photo-video-audio-editing/48795-camoflage-seamless-texture-maps-free-use-4.html#post519491))
+- Dmitriy Chugai, Telkir: rough stone texture ([BY-NC](https://ludeon.com/forums/index.php?topic&#x3D;4373.0))
+- CuproPanda: metal plate, brick, herringbone, cobblestone, medium stone, small brick floor textures ([CC0](https://ludeon.com/forums/index.php?topic&#x3D;13400.msg126304#msg126304))
+- Ludeon Studios: stone tile and wood floor textures ([fair use](https://ludeon.com/))
+- Ftextures, Telkir: wood floor texture ([BY/BY-NC](https://ludeon.com/forums/index.php?topic&#x3D;4373.0))
+- Telkir: additional wooden floor textures ([BY-NC](https://ludeon.com/forums/index.php?topic&#x3D;4373.0))
+- SketchupTut, Telkir: even more wooden floors ([BY-NC/CC0?](https://ludeon.com/forums/index.php?topic&#x3D;4373.0))
+- Pravus: metal plate, metal grating and plywood floor textures ([BY](https://ludeon.com/forums/index.php?topic&#x3D;26964.msg272812#msg272812))
+- BurningWell, Telkir: stone hex floor texture ([BY-NC](https://ludeon.com/forums/index.php?topic&#x3D;4373.0))
+- ihdwallpaperz, Telkir: stone mosaic texture ([BY-NC](https://ludeon.com/forums/index.php?topic&#x3D;4373.0))
 
 
 ![Are you enjoying my mods?](https://banners.karel-kroeze.nl/title/Are%20you%20enjoying%20my%20mods%3F.png)  
