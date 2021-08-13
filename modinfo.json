@@ -6,7 +6,7 @@
     "version": {
         "major": 3,
         "minor": 2,
-        "build": 106
+        "build": 108
     },
     "author": {
         "name": "Fluffy",
@@ -167,58 +167,16 @@
             "url": "http://www.aoaforums.com/forum/digital-image-photo-video-audio-editing/48795-camoflage-seamless-texture-maps-free-use-4.html#post519491"
         },
         {
-            "description": "rough stone texture",
-            "author": "Dmitriy Chugai, Telkir",
-            "license": "BY-NC",
-            "url": "https://ludeon.com/forums/index.php?topic=4373.0"
-        },
-        {
-            "description": "metal plate, brick, herringbone, cobblestone, medium stone, small brick floor textures",
-            "author": "CuproPanda",
-            "license": "CC0",
-            "url": "https://ludeon.com/forums/index.php?topic=13400.msg126304#msg126304"
-        },
-        {
             "description": "stone tile and wood floor textures",
             "author": "Ludeon Studios",
             "license": "fair use",
             "url": "https://ludeon.com/"
         },
         {
-            "description": "wood floor texture",
-            "author": "Ftextures, Telkir",
-            "license": "BY/BY-NC",
-            "url": "https://ludeon.com/forums/index.php?topic=4373.0"
-        },
-        {
-            "description": "additional wooden floor textures",
-            "author": "Telkir",
-            "license": "BY-NC",
-            "url": "https://ludeon.com/forums/index.php?topic=4373.0"
-        },
-        {
-            "description": "even more wooden floors",
-            "author": "SketchupTut, Telkir",
-            "license": "BY-NC/CC0?",
-            "url": "https://ludeon.com/forums/index.php?topic=4373.0"
-        },
-        {
             "description": "metal plate, metal grating and plywood floor textures",
             "author": "Pravus",
             "license": "BY",
             "url": "https://ludeon.com/forums/index.php?topic=26964.msg272812#msg272812"
-        },
-        {
-            "description": "stone hex floor texture",
-            "author": "BurningWell, Telkir",
-            "license": "BY-NC",
-            "url": "https://ludeon.com/forums/index.php?topic=4373.0"
-        },
-        {
-            "description": "stone mosaic texture",
-            "author": "ihdwallpaperz, Telkir",
-            "license": "BY-NC",
-            "url": "https://ludeon.com/forums/index.php?topic=4373.0"
         }
     ]
 }

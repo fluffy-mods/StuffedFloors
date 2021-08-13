@@ -1,24 +1,28 @@
 Allows building floors out of stuff*.
 
-![Important](https://banners.karel-kroeze.nl/title/Important.png)  You can safely add this mod to you save games, but *you can not remove it* from save games. (If you really must do this, you'll have to remove all built stuffed floors added by this mod first).
+![Important](https://banners.karel-kroeze.nl/title/Important.png)  
+You can safely add this mod to you save games, but *you can not remove it* from save games. (If you really must do this, you'll have to remove all built stuffed floors added by this mod first).
 
-![Features](https://banners.karel-kroeze.nl/title/Features.png)  This mod does two things. First, using Architect Sense it provides a framework for modders to define their own stuffed floor types. Second, it uses this framework to create a number of new floors that are stuffed. 
+![Features](https://banners.karel-kroeze.nl/title/Features.png)  
+This mod does two things. First, using Architect Sense it provides a framework for modders to define their own stuffed floor types. Second, it uses this framework to create a number of new floors that are stuffed.
 
 **For players**
-Adds several floor types (borrowed with permission from Telkir's [More Floors](http://steamcommunity.com/sharedfiles/filedetails/?id=725623521), CuproPanda's [Extra Floors](https://ludeon.com/forums/index.php?topic=13400#msg135940) and Pravus' [Fences and Floors](http://steamcommunity.com/sharedfiles/filedetails/?id=784370602)) in a variety of stone, wood and metal types.
+Adds several new floors, and existing floors from Telkir's [More Floors](http://steamcommunity.com/sharedfiles/filedetails/?id=725623521), CuproPanda's [Extra Floors](https://ludeon.com/forums/index.php?topic=13400#msg135940) and Pravus' [Fences and Floors](http://steamcommunity.com/sharedfiles/filedetails/?id=784370602) in all types of stone, metal, wood.
 
-Works great with other mods that add more resources, e.g. [Minerals and Materials](http://steamcommunity.com/sharedfiles/filedetails/?id=728233992) [Kura's Extra Minerals](http://steamcommunity.com/sharedfiles/filedetails/?id=852103845), [Extended Woodworking](http://steamcommunity.com/sharedfiles/filedetails/?id=836912371), [Vegetable Garden](http://steamcommunity.com/sharedfiles/filedetails/?id=822470192) and [GlitterTech](http://steamcommunity.com/sharedfiles/filedetails/?id=725576127). 
+Works great with other mods that add more resources, e.g. [Minerals and Materials](http://steamcommunity.com/sharedfiles/filedetails/?id=728233992) [Kura's Extra Minerals](http://steamcommunity.com/sharedfiles/filedetails/?id=852103845), [Extended Woodworking](http://steamcommunity.com/sharedfiles/filedetails/?id=836912371), [Vegetable Garden](http://steamcommunity.com/sharedfiles/filedetails/?id=822470192) and [GlitterTech](http://steamcommunity.com/sharedfiles/filedetails/?id=725576127).
 
-This mod also organizes and where needed, removes the floors added by Vanilla RimWorld, [More Floors](http://steamcommunity.com/sharedfiles/filedetails/?id=725623521), [Extended Woodworking](http://steamcommunity.com/sharedfiles/filedetails/?id=836912371), [Minerals and Materials](http://steamcommunity.com/sharedfiles/filedetails/?id=728233992), [GlitterTech](http://steamcommunity.com/sharedfiles/filedetails/?id=725576127), [More Furniture](http://steamcommunity.com/sharedfiles/filedetails/?id=739089840), [Vegetable Garden](http://steamcommunity.com/sharedfiles/filedetails/?id=822470192) and [Floored](http://steamcommunity.com/sharedfiles/filedetails/?id=801544922).
+This mod also organizes and where needed, removes non-stuffed versions of the floors added by RimWorld, [More Floors](http://steamcommunity.com/sharedfiles/filedetails/?id=725623521), [Extended Woodworking](http://steamcommunity.com/sharedfiles/filedetails/?id=836912371), [Minerals and Materials](http://steamcommunity.com/sharedfiles/filedetails/?id=728233992), [GlitterTech](http://steamcommunity.com/sharedfiles/filedetails/?id=725576127), [More Furniture](http://steamcommunity.com/sharedfiles/filedetails/?id=739089840), [Vegetable Garden](http://steamcommunity.com/sharedfiles/filedetails/?id=822470192), and [Floored](http://steamcommunity.com/sharedfiles/filedetails/?id=801544922).
+
+Other mods can easily add more floors using existing materials, or completely new types of materials.
 
 **For modders**
-Adds a custom FloorTypeDef that derives from TerrainDef, and allows modders to create floortypes by setting a texture (grayscale for best effect, will be coloured by stuff) and a list of stuffCategories to generate terrain defs for. The resulting designators will be placed together in a category, and any vanilla or other mod's terrains made obsolete can also be provided in the XML, and will then be hidden for the user (but not removed, so it won't break save games).
+Adds a custom FloorTypeDef that derives from TerrainDef, and allows modders to create floortypes by setting a texture and a list of stuffCategories to generate terrain defs for. Removing now obsolete terrainDefs and/or architect categories is also easily handled. See [GitHub](https://github.com/fluffy-mods/StuffedFloors/wiki/For-Modders) for a guide on using Stuffed Floors in other mods.
 
-![Known issues](https://banners.karel-kroeze.nl/title/Known%20issues.png)  While this mod will happily generate more floors for any mods that add materials to the metallic, stony and/or woody stuff types, it only cleans up the floors added by mods that are explicitly supported. Any other mods that add floor types may appear as duplicates. If you encounter such an issue, please let the author(s) of said mod(s) know so that they can correctly set up their designator groups! 
+![Known issues](https://banners.karel-kroeze.nl/title/Known%20issues.png)  
+While this mod will happily generate more floors for any mods that add materials to the metallic, stony and/or woody stuff types, it only cleans up the floors added by mods that are explicitly supported. Any other mods that add floor types may appear as duplicates. If you encounter such an issue, please let the author(s) of said mod(s) know so that they can correctly set up their designator groups!
 
-![Technical details](https://banners.karel-kroeze.nl/title/Technical%20details.png)  *: This mod doesn't actually allow building stuffed floors. Rather, it spoofs this behaviour by generating TerrainDefs for each of the stuffDefs handed to it, and then adds them to 'DesignatorDropdownGroups' to group these terrains together and give a user experience similar to stuff selection on buildings. The way it does this is exactly the same as the vanilla tile floors (which was stolen from an earlier version of this mod), but for more floors, and all available stuff types. This mod doesn't do anything destructive, it doesn't make any detours, and doesn't remove any defs. It does however remove a number of designators from the architect in order to hide them from the user.
-
-![Powered by Harmony](https://banners.karel-kroeze.nl/title/Powered%20by%20Harmony.png)  ![Powered by Harmony](https://camo.githubusercontent.com/074bf079275fa90809f51b74e9dd0deccc70328f/68747470733a2f2f7332342e706f7374696d672e6f72672f3538626c31727a33392f6c6f676f2e706e67)
+![Powered by Harmony](https://banners.karel-kroeze.nl/title/Powered%20by%20Harmony.png)  
+![Powered by Harmony](https://raw.githubusercontent.com/pardeike/Harmony/master/HarmonyLogo.png)
 
 ![Contributors](https://banners.karel-kroeze.nl/title/Contributors.png)  
 InsanityPrelude: [Extensive cost balancing and 3rd party mod integration updates](https://github.com/fluffy-mods/StuffedFloors/commit/03ecd68)
@@ -46,15 +50,8 @@ Parts of the code in this mod, and some of the content may be licensed by their 
 
 Parts of this mod were created by, or derived from works created by;
 - Danrok: stone slab floor texture ([public domain](http://www.aoaforums.com/forum/digital-image-photo-video-audio-editing/48795-camoflage-seamless-texture-maps-free-use-4.html#post519491))
-- Dmitriy Chugai, Telkir: rough stone texture ([BY-NC](https://ludeon.com/forums/index.php?topic&#x3D;4373.0))
-- CuproPanda: metal plate, brick, herringbone, cobblestone, medium stone, small brick floor textures ([CC0](https://ludeon.com/forums/index.php?topic&#x3D;13400.msg126304#msg126304))
 - Ludeon Studios: stone tile and wood floor textures ([fair use](https://ludeon.com/))
-- Ftextures, Telkir: wood floor texture ([BY/BY-NC](https://ludeon.com/forums/index.php?topic&#x3D;4373.0))
-- Telkir: additional wooden floor textures ([BY-NC](https://ludeon.com/forums/index.php?topic&#x3D;4373.0))
-- SketchupTut, Telkir: even more wooden floors ([BY-NC/CC0?](https://ludeon.com/forums/index.php?topic&#x3D;4373.0))
 - Pravus: metal plate, metal grating and plywood floor textures ([BY](https://ludeon.com/forums/index.php?topic&#x3D;26964.msg272812#msg272812))
-- BurningWell, Telkir: stone hex floor texture ([BY-NC](https://ludeon.com/forums/index.php?topic&#x3D;4373.0))
-- ihdwallpaperz, Telkir: stone mosaic texture ([BY-NC](https://ludeon.com/forums/index.php?topic&#x3D;4373.0))
 
 
 ![Are you enjoying my mods?](https://banners.karel-kroeze.nl/title/Are%20you%20enjoying%20my%20mods%3F.png)  
