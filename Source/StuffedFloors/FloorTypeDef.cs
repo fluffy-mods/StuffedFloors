@@ -1,6 +1,6 @@
 #if DEBUG
 #define DEBUG_IMPLIED_DEFS
-//#define DEBUG_COSTLIST
+#define DEBUG_COSTLIST
 #define DEBUG_STUFFING
 #endif
 
@@ -29,16 +29,16 @@ namespace StuffedFloors {
         // a list of vanilla or modded terrains that are made obsolete by this category and should be removed.
         // Note that we're using strings instead of defs so that we can manually resolve references, and allow
         // for obsoleting of defs regardless of wether the mods they belong to are actually active.
-        public List<string> obsoletes = new List<string>();
+        public List<string> obsoletes = new();
 
         // a list of terrains that have been generated for this floorTypeDef
-        public List<TerrainDef> terrains = new List<TerrainDef>();
+        public List<TerrainDef> terrains = new();
 
         // list of relevant stats that should be affected by stuff
-        public List<StatDef> statsAffectedByStuff = new List<StatDef>();
+        public List<StatDef> statsAffectedByStuff = new();
 
         private DesignatorDropdownGroupDef _designatorGroup;
-        public DesignatorDropdownGroupDef designatorGroup {
+        public DesignatorDropdownGroupDef DesignatorGroup {
             get {
                 if (_designatorGroup == null) {
                     // create and register group.
@@ -75,7 +75,7 @@ namespace StuffedFloors {
                 modContentPack = Controller.Instance.Content,
 
                 // set/change custom data
-                designatorDropdown = designatorGroup,
+                designatorDropdown = DesignatorGroup,
                 designationCategory = DefDatabase<DesignationCategoryDef>.GetNamed("Floors"),
                 generated = true,
                 useStuffTerrainAffordance = false,
@@ -202,8 +202,7 @@ namespace StuffedFloors {
 #if DEBUG_IMPLIED_DEFS
                 Log.Message($"Created {terrain.defName} from {stuffThingDef.defName}");
 #if DEBUG_COSTLIST
-                foreach (ThingCountClass count in terrain.costList)
-                {
+                foreach (ThingDefCountClass count in terrain.costList) {
                     Log.Message($"\t{count.thingDef.defName}: {count.count}");
                 }
 #endif

@@ -11,24 +11,23 @@ namespace StuffedFloors {
             return new StatModifier { stat = statModifier.stat, value = statModifier.value };
         }
 
-        public static List<ThingDefCountClass> DeepCopy(this List<ThingDefCountClass> costList) {
-            if (costList is null) {
-                return null;
-            }
-
+        public static List<ThingDefCountClass> DeepCopy(this List<ThingDefCountClass> source) {
             List<ThingDefCountClass> copy = new();
-            foreach (ThingDefCountClass cost in costList) {
+            if (source is null) {
+                return copy;
+            }
+            foreach (ThingDefCountClass cost in source) {
                 copy.Add(new(cost.thingDef, cost.count));
             }
             return copy;
         }
 
         public static List<StatModifier> DeepCopy(this List<StatModifier> source) {
-            if (source is null) {
-                return null;
-            }
 
             List<StatModifier> copy = new();
+            if (source is null) {
+                return copy;
+            }
             foreach (StatModifier stat in source) {
                 copy.Add(stat.DeepCopy());
             }

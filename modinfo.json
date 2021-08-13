@@ -6,7 +6,7 @@
     "version": {
         "major": 3,
         "minor": 1,
-        "build": 105
+        "build": 106
     },
     "author": {
         "name": "Fluffy",
@@ -28,6 +28,15 @@
         }
     ],
     "changelog": [
+        {
+            "date": "2021-08-13T16:13:36.000Z",
+            "message": "release v3.1.105",
+            "author": {
+                "name": "Fluffy",
+                "email": "fluffy.l2032@gmail.com"
+            },
+            "hash": "5a588e83bc1ca97807c0b1c259f03f43cbb11c4a"
+        },
         {
             "date": "2021-08-13T16:11:42.000Z",
             "message": "update preview image",
