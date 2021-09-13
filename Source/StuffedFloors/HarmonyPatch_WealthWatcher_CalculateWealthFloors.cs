@@ -27,14 +27,16 @@ namespace StuffedFloors {
             bool[] fogGrid = ___map.fogGrid.fogGrid;
             int n = terrainGrid.Length;
 
-            DefMap<TerrainDef, int> counts = new();
+            Dictionary<TerrainDef, int> counts = new();
             float total = 0f;
 
             // note that an argument for checking for ownership could be made, but that doesn't
             // exist for floors, so it's a moot point.
             for (int i = 0; i < n; i++) {
-                if (!fogGrid[i]) {
-                    counts[terrainGrid[i]] += 1;
+                if (!fogGrid[i])
+                {
+                    var terrainDef = terrainGrid[i];
+                    counts[terrainDef] = counts.GetValueSafe(terrainDef) + 1;
                 }
             }
 
