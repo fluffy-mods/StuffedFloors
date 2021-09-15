@@ -33,9 +33,8 @@ namespace StuffedFloors {
             // note that an argument for checking for ownership could be made, but that doesn't
             // exist for floors, so it's a moot point.
             for (int i = 0; i < n; i++) {
-                if (!fogGrid[i])
-                {
-                    var terrainDef = terrainGrid[i];
+                if (!fogGrid[i]) {
+                    TerrainDef terrainDef = terrainGrid[i];
                     counts[terrainDef] = counts.GetValueSafe(terrainDef) + 1;
                 }
             }

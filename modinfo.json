@@ -6,7 +6,7 @@
     "version": {
         "major": 3,
         "minor": 3,
-        "build": 108
+        "build": 120
     },
     "author": {
         "name": "Fluffy",
@@ -28,6 +28,15 @@
         }
     ],
     "changelog": [
+        {
+            "date": "2021-09-13T22:16:57.000Z",
+            "message": "Fixed floor wealth patch",
+            "author": {
+                "name": "Doug Benham",
+                "email": "dougbenham@cox.net"
+            },
+            "hash": "6be24b2d82a3038de4ba3752c9daaea33af3e354"
+        },
         {
             "date": "2021-08-13T20:48:55.000Z",
             "message": "cut down description to fit on the workshop",
@@ -129,6 +138,11 @@
             "hash": "fbb0c202d3a954c0725556add9e5817c18bd9083",
             "author": "duduluu",
             "description": "Chinese translation"
+        },
+        {
+            "hash": "6be24b2d82a3038de4ba3752c9daaea33af3e354",
+            "author": "Doug Benham",
+            "description": "Fixed floor wealth patch"
         }
     ],
     "contributors": {
@@ -165,6 +179,13 @@
                 "hash": "fbb0c20",
                 "author": "duduluu",
                 "description": "Chinese translation"
+            }
+        ],
+        "Doug Benham": [
+            {
+                "hash": "6be24b2",
+                "author": "Doug Benham",
+                "description": "Fixed floor wealth patch"
             }
         ]
     },

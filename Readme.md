@@ -30,6 +30,7 @@ Jorge Martínez: [Spanish translations](https://github.com/fluffy-mods/StuffedFl
 cucumpear: [Fix for hard floor edge rendering](https://github.com/fluffy-mods/StuffedFloors/commit/4d02013)
 DoctorVanGogh: [Extended Woodworking and Vegetable Garden integrations](https://github.com/fluffy-mods/StuffedFloors/commit/11f6e64)
 duduluu: [Chinese translation](https://github.com/fluffy-mods/StuffedFloors/commit/fbb0c20)
+Doug Benham: [Fixed floor wealth patch](https://github.com/fluffy-mods/StuffedFloors/commit/6be24b2)
 
 
 ![Think you found a bug?](https://banners.karel-kroeze.nl/title/Think%20you%20found%20a%20bug%3F.png)  
