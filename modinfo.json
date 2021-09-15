@@ -29,6 +29,15 @@
     ],
     "changelog": [
         {
+            "date": "2021-09-15T19:12:48.000Z",
+            "message": "release v3.4.121",
+            "author": {
+                "name": "Fluffy",
+                "email": "karel.kroeze@gmail.com"
+            },
+            "hash": "fd0d3acce31f8ad19fd89c43d2800c4504528ed9"
+        },
+        {
             "date": "2021-09-13T22:16:57.000Z",
             "message": "Fixed floor wealth patch",
             "author": {
