@@ -5,8 +5,8 @@
     "url": "https://github.com/fluffy-mods/StuffedFloors",
     "version": {
         "major": 3,
-        "minor": 3,
-        "build": 120
+        "minor": 4,
+        "build": 121
     },
     "author": {
         "name": "Fluffy",
@@ -142,7 +142,7 @@
         {
             "hash": "6be24b2d82a3038de4ba3752c9daaea33af3e354",
             "author": "Doug Benham",
-            "description": "Fixed floor wealth patch"
+            "description": "fix terrain wealth overestimation"
         }
     ],
     "contributors": {
@@ -185,7 +185,7 @@
             {
                 "hash": "6be24b2",
                 "author": "Doug Benham",
-                "description": "Fixed floor wealth patch"
+                "description": "fix terrain wealth overestimation"
             }
         ]
     },
