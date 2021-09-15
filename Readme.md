@@ -1,9 +1,11 @@
 Allows building floors out of stuff*.
 
 ![Important](https://banners.karel-kroeze.nl/title/Important.png)  
+
 You can safely add this mod to you save games, but *you can not remove it* from save games. (If you really must do this, you'll have to remove all built stuffed floors added by this mod first).
 
 ![Features](https://banners.karel-kroeze.nl/title/Features.png)  
+
 This mod does two things. First, using Architect Sense it provides a framework for modders to define their own stuffed floor types. Second, it uses this framework to create a number of new floors that are stuffed.
 
 **For players**
@@ -19,9 +21,11 @@ Other mods can easily add more floors using existing materials, or completely ne
 Adds a custom FloorTypeDef that derives from TerrainDef, and allows modders to create floortypes by setting a texture and a list of stuffCategories to generate terrain defs for. Removing now obsolete terrainDefs and/or architect categories is also easily handled. See [GitHub](https://github.com/fluffy-mods/StuffedFloors/wiki/For-Modders) for a guide on using Stuffed Floors in other mods.
 
 ![Known issues](https://banners.karel-kroeze.nl/title/Known%20issues.png)  
+
 While this mod will happily generate more floors for any mods that add materials to the metallic, stony and/or woody stuff types, it only cleans up the floors added by mods that are explicitly supported. Any other mods that add floor types may appear as duplicates. If you encounter such an issue, please let the author(s) of said mod(s) know so that they can correctly set up their designator groups!
 
 ![Powered by Harmony](https://banners.karel-kroeze.nl/title/Powered%20by%20Harmony.png)  
+
 ![Powered by Harmony](https://raw.githubusercontent.com/pardeike/Harmony/master/HarmonyLogo.png)
 
 ![Contributors](https://banners.karel-kroeze.nl/title/Contributors.png)  
