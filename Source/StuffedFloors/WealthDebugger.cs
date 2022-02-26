@@ -1,3 +1,6 @@
+// WealthDebugger.cs
+// Copyright Karel Kroeze, 2017-2021
+
 #if DEGUG
 #define DEBUG_WEALTH
 #endif
