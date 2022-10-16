@@ -5,7 +5,7 @@
     "url": "https://github.com/fluffy-mods/StuffedFloors",
     "version": {
         "major": 3,
-        "minor": 6,
+        "minor": 7,
         "build": 125
     },
     "author": {
@@ -28,6 +28,15 @@
         }
     ],
     "changelog": [
+        {
+            "date": "2022-10-16T20:17:27.000Z",
+            "message": "initial build for 1.4, refactor file structure",
+            "author": {
+                "name": "Fluffy",
+                "email": "fluffy.l2032@gmail.com"
+            },
+            "hash": "d77e7c08cc594be39b5d929389d0cd090a53017e"
+        },
         {
             "date": "2022-02-26T16:17:38.000Z",
             "message": "drastically reduce cost of stone floors",
