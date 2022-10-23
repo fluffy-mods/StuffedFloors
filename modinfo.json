@@ -5,8 +5,8 @@
     "url": "https://github.com/fluffy-mods/StuffedFloors",
     "version": {
         "major": 3,
-        "minor": 6,
-        "build": 125
+        "minor": 7,
+        "build": 126
     },
     "author": {
         "name": "Fluffy",
@@ -28,6 +28,15 @@
         }
     ],
     "changelog": [
+        {
+            "date": "2022-10-23T20:47:32.000Z",
+            "message": "patches for VFE and Ideology (Biotech is coming)",
+            "author": {
+                "name": "Fluffy",
+                "email": "fluffy.l2032@gmail.com"
+            },
+            "hash": "cbd428f3e2e8e8e4ae90d1a2cc20e1a66a014c29"
+        },
         {
             "date": "2022-10-23T20:31:06.000Z",
             "message": "Merge pull request #37 from Kyoutaigo/1.3",
