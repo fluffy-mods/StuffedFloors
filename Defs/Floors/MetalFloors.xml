@@ -29,6 +29,22 @@
             <li>FineFloor</li>
         </tags>
     </StuffedFloors.FloorTypeDef>
+	
+	<StuffedFloors.FloorTypeDef Name="StuffedFloorsMetalRoyalBase" ParentName="StuffedFloorsMetalBase" Abstract="True">
+		<statBases>
+			<Beauty>4</Beauty>
+			<WorkToBuild>1800</WorkToBuild>
+			<Cleanliness>0.2</Cleanliness>
+		</statBases>
+		<stuffCost>14</stuffCost>
+		<researchPrerequisites>
+			<li>Machining</li>
+		</researchPrerequisites>
+		<tags>
+			<li>Floor</li>
+			<li>FineFloor</li>
+		</tags>					
+	</StuffedFloors.FloorTypeDef>
 
     <!-- Pravus' Floors and Fences -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsMetalBasicBase">
@@ -39,6 +55,7 @@
 		<statBases>
 			<Beauty>-2</Beauty>
 			<Cleanliness>0.4</Cleanliness>
+			<FilthMultiplier>0.05</FilthMultiplier>
 		</statBases>
         <obsoletes>
             <li>FAFMetalTileA</li>
