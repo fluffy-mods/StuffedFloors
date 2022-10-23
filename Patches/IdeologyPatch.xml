@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Ideology</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>*/StuffedFloors.FloorTypeDef[@Name = "StuffedFloorsWoodRoyalBase"]</xpath>
+						<value>
+					<!-- Ideology bases -->
+						<StuffedFloors.FloorTypeDef Name="StuffedFloorsWoodIdeologyBase" ParentName="StuffedFloorsWoodRoyalBase" Abstract="True">
+								<statBases Inherit="False">
+									<Beauty>5</Beauty>
+									<WorkToBuild>900</WorkToBuild>
+									<Flammability>0.15</Flammability>
+									<StyleDominance>1</StyleDominance>
+								</statBases>
+								<canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+								<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+							</StuffedFloors.FloorTypeDef>
+							<StuffedFloors.FloorTypeDef Name="StuffedFloorsStoneIdeologyBase" ParentName="StuffedFloorsStoneRoyalBase" Abstract="True">
+								<statBases Inherit="False">
+									<Beauty>5</Beauty>
+									<WorkToBuild>500</WorkToBuild>
+									<StyleDominance>1</StyleDominance>
+								</statBases>
+								<canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+								<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+							</StuffedFloors.FloorTypeDef>
+							<StuffedFloors.FloorTypeDef Name="StuffedFloorsMetalIdeologyBase" ParentName="StuffedFloorsMetalRoyalBase" Abstract="True">
+								<statBases Inherit="False">
+									<Beauty>4</Beauty>
+									<WorkToBuild>1800</WorkToBuild>
+									<Cleanliness>0.2</Cleanliness>
+									<StyleDominance>1</StyleDominance>
+								</statBases>
+								<canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+								<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+							</StuffedFloors.FloorTypeDef>
+						<!-- Morbid -->
+							<StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneIdeologyBase">
+								<defName>StuffedMorbidStoneTile</defName>
+								<label>morbid tile</label>		
+								<description>Fine stone tiles in a morbid style.</description>
+								<texturePath>Terrain/Surfaces/MorbidTile</texturePath>
+								<dominantStyleCategory>Morbid</dominantStyleCategory>
+								<obsoletes>
+									<li>Tile_MorbidSandstone</li>
+									<li>Tile_MorbidGranite</li>
+									<li>Tile_MorbidLimestone</li>
+									<li>Tile_MorbidSlate</li>
+									<li>Tile_MorbidMarble</li>
+								</obsoletes>
+							</StuffedFloors.FloorTypeDef>
+						<!-- Spikecore -->
+							<StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneIdeologyBase">
+								<defName>StuffedSpikecoreStoneTile</defName>
+								<label>spikecore tile</label>		
+								<description>Fine stone tiles in a spikecore style.</description>
+								<texturePath>Terrain/Surfaces/SpikecoreTile</texturePath>
+								<dominantStyleCategory>Spikecore</dominantStyleCategory>
+								<obsoletes>
+									<li>Tile_SpikecoreSandstone</li>
+									<li>Tile_SpikecoreGranite</li>
+									<li>Tile_SpikecoreLimestone</li>
+									<li>Tile_SpikecoreSlate</li>
+									<li>Tile_SpikecoreMarble</li>
+								</obsoletes>
+							</StuffedFloors.FloorTypeDef>
+							<StuffedFloors.FloorTypeDef ParentName="StuffedFloorsMetalIdeologyBase">
+								<defName>StuffedSpikecoreMetalPlates</defName>
+								<label>spikecore plates</label>		
+								<description>Fine metal plates decorated in an aggressive spikecore style.</description>
+								<texturePath>Terrain/Surfaces/SpikecorePlates</texturePath>
+								<dominantStyleCategory>Spikecore</dominantStyleCategory>
+								<obsoletes>
+									<li>Plates_Spikecore</li>
+								</obsoletes>
+							</StuffedFloors.FloorTypeDef>
+						<!-- Totemic -->
+							<StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodIdeologyBase">
+								<defName>StuffedTotemicWoodBoards</defName>
+								<label>totemic boards</label>		
+								<description>Fine wood boards decorated in a totemic style.</description>
+								<texturePath>Terrain/Surfaces/TotemicBoards</texturePath>
+								<dominantStyleCategory>Totemic</dominantStyleCategory>
+								<obsoletes>
+									<li>Boards_Totemic</li>
+								</obsoletes>
+							</StuffedFloors.FloorTypeDef>
+							<StuffedFloors.FloorTypeDef ParentName="StuffedFloorsStoneIdeologyBase">
+								<defName>StuffedTotemicStoneTiles</defName>
+								<label>totemic tiles</label>		
+								<description>Fine stone tiles in a totemic style.</description>
+								<texturePath>Terrain/Surfaces/TotemicTiles</texturePath>
+								<dominantStyleCategory>Totemic</dominantStyleCategory>
+								<obsoletes>
+									<li>Tile_TotemicSandstone</li>
+									<li>Tile_TotemicGranite</li>
+									<li>Tile_TotemicLimestone</li>
+									<li>Tile_TotemicSlate</li>
+									<li>Tile_TotemicMarble</li>
+								</obsoletes>
+							</StuffedFloors.FloorTypeDef>
+						<!-- Transhumanist -->
+							<StuffedFloors.FloorTypeDef ParentName="StuffedFloorsMetalIdeologyBase">
+								<defName>StuffedTechistMetalTile</defName>
+								<label>hex tile</label>		
+								<description>Fine metal plates with a hexagonal pattern for that ultra-technological look.</description>
+								<texturePath>Terrain/Surfaces/HexTile</texturePath>
+								<obsoletes>
+									<li>Tile_Transhumanist</li>
+								</obsoletes>
+							</StuffedFloors.FloorTypeDef>
+						</value>
+				</li>
+				<!-- And re-add the new designators -->				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/MemeDef[defName="Transhumanist"]/addDesignators/li[text()="Tile_Transhumanist"]</xpath>		
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/StyleCategoryDef[defName="Spikecore"]/addDesignators/li[text()="Plates_Spikecore"]</xpath>		
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/StyleCategoryDef[defName="Totemic"]/addDesignators/li[text()="Boards_Totemic"]</xpath>	
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/MemeDef[defName="Transhumanist"]/addDesignatorGroups</xpath>
+					<value>
+						<li>StuffedTechistMetalTile</li>
+					</value>		
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/StyleCategoryDef[defName="Spikecore"]/addDesignatorGroups</xpath>
+					<value>
+						<li>StuffedSpikecoreMetalPlates</li>
+					</value>		
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/StyleCategoryDef[defName="Totemic"]/addDesignatorGroups</xpath>
+					<value>
+						<li>StuffedTotemicWoodBoards</li>
+					</value>		
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/StyleCategoryDef[defName="Morbid"]/addDesignatorGroups/li[text()="Floor_Morbid_Stone"]</xpath>
+					<value>
+						<li>StuffedMorbidStoneTile</li>
+					</value>		
+				</li>		
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/StyleCategoryDef[defName="Spikecore"]/addDesignatorGroups/li[text()="Floor_Spikecore_Tile"]</xpath>
+					<value>
+						<li>StuffedSpikecoreStoneTile</li>
+					</value>		
+				</li>		
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/StyleCategoryDef[defName="Totemic"]/addDesignatorGroups/li[text()="Floor_Totemic_Tile"]</xpath>
+					<value>
+						<li>StuffedTotemicStoneTiles</li>
+					</value>		
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
