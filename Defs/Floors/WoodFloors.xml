@@ -32,6 +32,32 @@
         </tags>
     </StuffedFloors.FloorTypeDef>
 
+	<StuffedFloors.FloorTypeDef Name="StuffedFloorsWoodRoyalBase" ParentName="StuffedFloorsWoodBase" Abstract="True">
+		<statBases>
+			<Beauty>5</Beauty>
+			<WorkToBuild>800</WorkToBuild> <!-- was 1000 -->
+			<Flammability>0.15</Flammability>
+		</statBases>
+		<stuffCost>10</stuffCost>
+		<tags>
+			<li>Floor</li>
+			<li>FineFloor</li>
+		</tags>
+	</StuffedFloors.FloorTypeDef>
+	
+	<!-- Vanilla -->
+	<StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodBasicBase">
+    	<defName>StuffedWoodFloorVanilla</defName>
+    	<label>basic planks</label>
+    	<description>Wood plank flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>
+        <texturePath>Terrain/Surfaces/WoodFloor</texturePath>
+        <!-- this is the vanilla floor texture, lots of obsoletions -->
+        <obsoletes>
+             <!-- vanilla wood plank -->
+            <li>WoodPlankFloor</li>                     
+        </obsoletes>
+    </StuffedFloors.FloorTypeDef>
+
     <!-- Floors and Fences -->
     <StuffedFloors.FloorTypeDef ParentName="StuffedFloorsWoodBasicBase">
     	<defName>StuffedPlywoodFloor</defName>
@@ -67,9 +93,6 @@
         <texturePath>Floors/Wood/WoodFloor1</texturePath>
         <!-- this is the vanilla floor texture, lots of obsoletions -->
         <obsoletes>
-             <!-- vanilla wood plank -->
-            <li>WoodPlankFloor</li>
-    
             <!-- extended woodworking -->
             <li>WoodPlankFloor_Oak</li>
             <li>WoodPlankFloor_Poplar</li>

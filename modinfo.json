@@ -6,7 +6,7 @@
     "version": {
         "major": 3,
         "minor": 7,
-        "build": 125
+        "build": 126
     },
     "author": {
         "name": "Fluffy",
@@ -29,13 +29,49 @@
     ],
     "changelog": [
         {
-            "date": "2022-10-16T20:17:27.000Z",
-            "message": "initial build for 1.4, refactor file structure",
+            "date": "2022-10-23T20:47:32.000Z",
+            "message": "patches for VFE and Ideology (Biotech is coming)",
             "author": {
                 "name": "Fluffy",
                 "email": "fluffy.l2032@gmail.com"
             },
-            "hash": "d77e7c08cc594be39b5d929389d0cd090a53017e"
+            "hash": "cbd428f3e2e8e8e4ae90d1a2cc20e1a66a014c29"
+        },
+        {
+            "date": "2022-10-23T20:31:06.000Z",
+            "message": "Merge pull request #37 from Kyoutaigo/1.3",
+            "author": {
+                "name": "Fluffy",
+                "email": "karel.kroeze@gmail.com"
+            },
+            "hash": "85d654c6f768607ab88226fba6a1f4c15b890852"
+        },
+        {
+            "date": "2022-10-23T19:05:51.000Z",
+            "message": "Ideology patch and VFE Architect patches",
+            "author": {
+                "name": "Kyoutaigo",
+                "email": "116508465+Kyoutaigo@users.noreply.github.com"
+            },
+            "hash": "6d10b5416471ffee107ac3ec0c035cf57e8d8d0d"
+        },
+        {
+            "date": "2022-10-23T19:04:50.000Z",
+            "message": "Add Royal Base and Filth multiplier for grate",
+            "author": {
+                "name": "Kyoutaigo",
+                "email": "116508465+Kyoutaigo@users.noreply.github.com"
+            },
+            "hash": "4f287d90c465f267d89cfefd6bc042c83892456a"
+        },
+        {
+            "date": "2022-10-23T19:02:55.000Z",
+            "message": "Add Royal base, and vanilla planks",
+            "author": {
+                "name": "Kyoutaigo",
+                "email": "116508465+Kyoutaigo@users.noreply.github.com"
+            },
+            "hash": "6eab06f3d34b8d621b7d9e4983599003f0883628"
         },
         {
             "date": "2022-02-26T16:17:38.000Z",
@@ -170,6 +206,23 @@
             "hash": "6be24b2d82a3038de4ba3752c9daaea33af3e354",
             "author": "Doug Benham",
             "description": "fix terrain wealth overestimation"
+        },
+        {
+            "hash": "6d10b5416471ffee107ac3ec0c035cf57e8d8d0d",
+            "author": "Kyoutaigo",
+            "description": "Ideology and VFE patches"
+        },
+        {
+            "hash": "4f287d90c465f267d89cfefd6bc042c83892456a",
+            "author": "Kyoutaigo",
+            "description": "Add Royal Base and Filth multiplier for grate",
+            "suppressed": true
+        },
+        {
+            "hash": "6eab06f3d34b8d621b7d9e4983599003f0883628",
+            "author": "Kyoutaigo",
+            "description": "Add Royal base, and vanilla planks",
+            "suppressed": true
         }
     ],
     "contributors": {
@@ -213,6 +266,13 @@
                 "hash": "6be24b2",
                 "author": "Doug Benham",
                 "description": "fix terrain wealth overestimation"
+            }
+        ],
+        "Kyoutaigo": [
+            {
+                "hash": "6d10b54",
+                "author": "Kyoutaigo",
+                "description": "Ideology and VFE patches"
             }
         ]
     },
